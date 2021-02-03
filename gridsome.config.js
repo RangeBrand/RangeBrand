@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'RangeBrand',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -18,4 +18,7 @@ module.exports = {
       use: "gridsome-plugin-tailwindcss",
     },
   ],
+  templates: {
+    Brand: '/brands/:path',
+  },
 }
