@@ -20,11 +20,11 @@ query Brand ($path: String!) {
 }
 </page-query>
 <script>
-  export default {
-  metaInfo() {
-    return {
-      title: this.$page.brand.title
-    }
-  }
-}
+export default {
+    metaInfo() {
+        return {
+            title: this.$page.brand.title,
+        };
+    },
+};
 </script>

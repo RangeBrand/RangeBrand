@@ -4,7 +4,8 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "lint": "eslint . --ext .js,.vue"
   },
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
@@ -14,6 +15,17 @@
   },
   "devDependencies": {
     "autoprefixer": "^7",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.19.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^7.5.0",
     "gridsome-plugin-tailwindcss": "^4.1.1",
     "postcss": "^7",
     "postcss-flexbugs-fixes": "^4",
