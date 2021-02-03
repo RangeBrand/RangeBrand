@@ -20,10 +20,17 @@ module.exports = {
         {
             use: 'gridsome-plugin-flexsearch',
             options: {
-                searchFields: ['title'],
+                searchFields: [
+                    'title',
+                ],
                 collections: [{
                     typeName: 'Brand',
-                    fields: ['title'],
+                    fields: [
+                        'id',
+                        'title',
+                        'colors',
+                        'path',
+                    ],
                 }],
                 flexsearch: {
                     encode: false,

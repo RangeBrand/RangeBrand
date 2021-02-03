@@ -1,23 +1,20 @@
 <template>
-    <ul>
-        <li v-for="brand in brands" :key="brand.node.id">
-            <g-link :to="brand.node.path" rel="bookmark">
-                <strong>
-                    {{ brand.node.title }}
-                </strong>
-                <ul>
-                    <li v-for="color in brand.node.colors" :key="color">
-                        <code dir="ltr" :style="{backgroundColor: `#${color}`}">
-                            #{{ color }}
-                        </code>
-                    </li>
-                </ul>
-            </g-link>
-        </li>
-    </ul>
+    <div>
+        <ul>
+            <brand-item v-for="brand in brands"
+                        :key="brand.node.id"
+                        :brand="brand"/>
+        </ul>
+        <slot/>
+    </div>
 </template>
 <script>
+import BrandItem from '~/components/brands/list/item';
+
 export default {
+    components: {
+        BrandItem,
+    },
     props: {
         brands: {
             type: Array,
