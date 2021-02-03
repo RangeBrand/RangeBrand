@@ -1,0 +1,22 @@
+{
+  "name": "rangebrand",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-json": "^0.2.1",
+    "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
+    "postcss": "^7",
+    "postcss-flexbugs-fixes": "^4",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^2.0.1-compat"
+  }
+}
