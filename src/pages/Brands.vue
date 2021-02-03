@@ -1,5 +1,8 @@
 <template>
     <Layout>
+        <input type="text" v-model="searchTerm" class="bg-red-500">
+        {{ searchResults }}
+        <hr>
         <ul>
             <li v-for="brand in $page.brands.edges" :key="brand.node.id">
                 <g-link :to="brand.node.path" rel="bookmark">
@@ -44,7 +47,12 @@ query Brands ($page: Int) {
 <script>
 import { Pager } from 'gridsome';
 
+import Search from 'gridsome-plugin-flexsearch/SearchMixin';
+
 export default {
+  mixins: [
+    Search,
+  ],
   components: {
     Pager
   },

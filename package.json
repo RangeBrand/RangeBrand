@@ -9,7 +9,8 @@
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-json": "^0.2.1",
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-flexsearch": "^1.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^7",

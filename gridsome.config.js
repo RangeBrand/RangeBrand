@@ -10,12 +10,28 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'data/brands/*.json',
         typeName: 'Brand',
+        path: 'data/brands/*.json',
       }
     },
     {
       use: "gridsome-plugin-tailwindcss",
+    },
+    {
+      use: 'gridsome-plugin-flexsearch',
+      options: {
+        searchFields: ['title'],
+        collections: [{
+          typeName: 'Brand',
+          fields: ['title']
+        }],
+        flexsearch: {
+          encode: false,
+          rtl: true,
+          split: /\s+/,
+          tokenize: "forward"
+        },
+      },
     },
   ],
   templates: {
