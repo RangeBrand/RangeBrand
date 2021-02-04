@@ -9,6 +9,23 @@ const META_TAGS = [
         content: 'utf-8',
     },
 ];
+const LINKS = [
+    {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v27.2.0/dist/font-face.css',
+    },
+];
+
+const HEAD = [
+    {
+        key: 'meta',
+        items: META_TAGS,
+    },
+    {
+        key: 'link',
+        items: LINKS,
+    },
+];
 
 export default function (Vue, { router, head, isClient }) {
     // Set default layout as a global component
@@ -19,8 +36,10 @@ export default function (Vue, { router, head, isClient }) {
         lang: 'fa',
         dir: 'rtl',
     };
-    // Add meta tags
-    META_TAGS.forEach(tag => {
-        head.meta.push(tag);
+    // Add tags to head
+    HEAD.forEach(type => {
+        type.items.forEach(tag => {
+            head[type.key].push(tag);
+        });
     });
 };
