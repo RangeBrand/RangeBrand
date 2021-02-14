@@ -1,6 +1,10 @@
 <template>
     <div>
-        <ul>
+        <ul class="flex flex-wrap -mx-2
+                   sm:-mx-2
+                   md:-mx-4
+                   lg:-mx-1
+                   xl:-mx-4">
             <brand-item v-for="brand in brands"
                         :key="brand.node.id"
                         :brand="brand"/>

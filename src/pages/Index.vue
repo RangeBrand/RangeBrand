@@ -1,21 +1,9 @@
 <template>
     <Layout>
         <div class="h-screen relative z-50 bg-rb-violet-100">
-            <div class="text-rb-violet-900 container relative mx-auto flex h-full
-                        pb-16 px-4">
+            <div class="text-rb-violet-900 container relative mx-auto flex h-full pb-16 px-4">
                 <g-image src="~/assets/images/aare.svg"
-                         style="
-                        height: 140%;
-                        right: 20%;
-                        transform: scaleX(-1);
-                    "
-                         class="
-                            absolute
-                            bottom-20
-                            max-w-none
-                            w-auto
-                            z-0
-                        "/>
+                         class="absolute bottom-20 max-w-none w-auto z-0 banner"/>
                 <div class="w-1/3 flex flex-wrap content-end z-10">
                     <div>
                         <h1 class="block text-9xl py-4 font-black">
@@ -29,7 +17,7 @@
                         </p>
                         <div class="flex items-center text-md py-4">
                             <g-link to="/brands/"
-                                    class="block bg-rb-violet-500 hover:bg-rb-violet-600 text-white py-4 px-10">
+                                    class="block rounded-full bg-rb-violet-500 hover:bg-rb-violet-600 text-white py-4 px-10">
                                 مشاهده برندها
                             </g-link>
                             <a href="https://github.com/"
@@ -56,8 +44,6 @@
                         </li>
                     </ul>
                 </div>
-            <!-- <div class="w-2/3 flex relative flex-wrap content-end"> -->
-            <!-- </div> -->
             </div>
         </div>
         <div class="container mx-auto">
@@ -67,3 +53,10 @@
         </div>
     </Layout>
 </template>
+<style scoped>
+    .banner {
+        height: 140%;
+        right: 20%;
+        transform: scaleX(-1);
+    }
+</style>

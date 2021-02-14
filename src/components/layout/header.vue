@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed z-50 top-0 right-0 left-0 bg-rb-violet-100">
+    <header class="fixed z-50 top-0 right-0 left-0 bg-rb-violet-100 border-b border-grey-300">
         <div class="container mx-auto">
             <div class="flex items-center">
                 <div>
