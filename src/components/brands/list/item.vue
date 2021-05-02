@@ -11,7 +11,8 @@
                     :style="{backgroundColor: `#${color}`}"
                     class="item-color flex-grow h-40 w-1 transition-all duration-300 ease-in-out hover:w-20 overflow-hidden">
                     <code dir="ltr"
-                          class="h-full justify-center items-center text-lg font-bold px-4 hidden opacity-0 hover:opacity-100 transition duration-500 ease-in-out">
+                          :class="isLight(color) ? 'text-black' : 'text-white'"
+                          class="h-full justify-center items-center text-lg font-bold px-4 hidden opacity-0 text-opacity-80 hover:opacity-100 transition duration-500 ease-in-out">
                         {{ color.toUpperCase() }}
                     </code>
                 </li>
@@ -34,6 +35,8 @@
     </li>
 </template>
 <script>
+import { isLight } from '~/scripts/luminance';
+
 export default {
     props: {
         brand: {
@@ -41,6 +44,9 @@ export default {
             default: () => ({}),
             require: true,
         },
+    },
+    methods: {
+        isLight,
     },
 };
 </script>
