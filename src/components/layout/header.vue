@@ -9,14 +9,11 @@
                 </div>
                 <nav>
                     <ul class="flex mx-4">
-                        <li>
-                            <g-link to="/brands/" class="p-4 block hover:text-rb-carnelian-500">
-                                برندها
-                            </g-link>
-                        </li>
-                        <li>
-                            <g-link to="/about/" class="p-4 block hover:text-rb-carnelian-500">
-                                درباره ما
+                        <li v-for="link in links" :key="link.name">
+                            <g-link :to="link.to"
+                                    class="p-4 block border-b-4 border-rb-violet-100 -mb-1 transition-all duration-300 ease-in-out hover:text-rb-carnelian-500 hover:border-rb-carnelian-500"
+                                    active-class="text-rb-violet-500 border-rb-violet-500">
+                                {{ link.title }}
                             </g-link>
                         </li>
                     </ul>
@@ -25,3 +22,21 @@
         </div>
     </header>
 </template>
+<script>
+export default {
+    data: () => ({
+        links: [
+            {
+                name: 'brands',
+                to: '/brands/',
+                title: 'برندها',
+            },
+            {
+                name: 'about',
+                to: '/about/',
+                title: 'درباره‌ ما',
+            },
+        ],
+    }),
+};
+</script>
