@@ -1,7 +1,7 @@
 <template>
     <Layout>
-        <div class="h-screen relative z-50 bg-rb-violet-100">
-            <div class="text-rb-violet-900 container relative mx-auto flex h-full pb-16 px-4">
+        <div class="h-screen -mt-20 relative z-50 bg-rb-violet-100">
+            <div class="text-rb-violet-900 container relative mx-auto overflow-x-hidden flex h-full pb-16 px-4">
                 <g-image src="~/assets/images/aare.svg"
                          class="absolute bottom-20 max-w-none w-auto z-0 banner"/>
                 <div class="w-1/3 flex flex-wrap content-end z-10">

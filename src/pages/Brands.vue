@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <div class="container mx-auto mt-20 px-4">
+        <div class="container mx-auto px-4">
             <div class="-mx-2 py-8">
                 <div class="relative">
                     <input type="text"
@@ -56,7 +56,7 @@ export default {
         Search,
     ],
     metaInfo: {
-        title: 'Brands',
+        title: 'برندها',
     },
 };
 </script>

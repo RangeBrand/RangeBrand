@@ -4,19 +4,19 @@
                md:my-4 md:px-4 md:w-1/2
                lg:my-1 lg:px-1 lg:w-1/3
                xl:my-2 xl:px-2 xl:w-1/5">
-        <div class="px-4 pt-4 rounded-lg h-full bg-rb-violet-100 border border-rb-violet-200">
+        <div class="px-4 pt-4 rounded-lg h-full bg-rb-violet-100">
             <ul class="flex -mt-8 overflow-hidden rounded-lg shadow-lg">
                 <li v-for="color in brand.node.colors"
-                    :key="color"
+                    :key="`${brand.node.path.replace(/\//g, '_')}${color}`"
                     :style="{backgroundColor: `#${color}`}"
-                    class="item-color flex-1 flex-grow h-40">
+                    class="item-color flex-grow h-40 w-1 transition-all duration-300 ease-in-out hover:w-20 overflow-hidden">
                     <code dir="ltr"
-                          class="h-full justify-center items-center hidden text-lg px-4">
+                          class="h-full justify-center items-center text-lg font-bold px-4 hidden opacity-0 hover:opacity-100 transition duration-500 ease-in-out">
                         {{ color.toUpperCase() }}
                     </code>
                 </li>
             </ul>
-            <div class="px-5 py-3">
+            <div class="px-3 py-3">
                 <!-- <g-link :to="brand.node.path"
                         rel="bookmark"
                         class="text-rb-violet-900 hover:text-rb-carnelian-500">

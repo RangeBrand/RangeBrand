@@ -31,4 +31,9 @@ module.exports = {
             },
         },
     },
+    variants: {
+        extend: {
+            width: ['hover', 'focus'],
+        },
+    },
 };

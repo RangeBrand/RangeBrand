@@ -1,5 +1,5 @@
 <template>
-    <div class="overflow-x-hidden font-sans">
+    <div class="mt-20 font-sans">
         <custom-header/>
         <slot/>
     </div>
