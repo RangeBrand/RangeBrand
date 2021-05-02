@@ -40,6 +40,13 @@ module.exports = {
                 },
             },
         },
+        {
+            use: 'gridsome-plugin-vue-toasted',
+            options: {
+                position: 'bottom-right',
+                duration: 2000,
+            },
+        },
     ],
     templates: {
         Brand: '/brands/:path',

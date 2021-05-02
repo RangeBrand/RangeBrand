@@ -12,8 +12,9 @@
                     class="item-color flex-grow h-40 w-1 transition-all duration-300 ease-in-out hover:w-20 overflow-hidden">
                     <code dir="ltr"
                           :class="isLight(color) ? 'text-black' : 'text-white'"
-                          class="h-full justify-center items-center text-lg font-bold px-4 hidden opacity-0 text-opacity-80 hover:opacity-100 transition duration-500 ease-in-out">
-                        {{ color.toUpperCase() }}
+                          class="h-full justify-center items-center text-lg font-bold px-4 cursor-pointer select-none hidden opacity-0 text-opacity-80 uppercase hover:opacity-100 transition duration-500 ease-in-out"
+                          @click="copyToClipboard(color)">
+                        {{ color }}
                     </code>
                 </li>
             </ul>
@@ -47,6 +48,13 @@ export default {
     },
     methods: {
         isLight,
+        copyToClipboard(color) {
+            navigator.clipboard.writeText(`#${color.toUpperCase()}`).then(() => {
+                this.$toasted.show('کپی شد!');
+            }, (err) => {
+                console.error('Could not copy text: ', err);
+            });
+        },
     },
 };
 </script>
