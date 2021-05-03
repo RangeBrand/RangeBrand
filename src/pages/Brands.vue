@@ -1,9 +1,9 @@
 <template>
     <Layout>
         <div class="container mx-auto px-4">
-            <searchbar v-model="searchTerm"/>
+            <Search v-model="searchTerm"/>
             <brands-list :brands="brands">
-                <Pager :info="$page.brands.pageInfo"/>
+                <pagination v-show="!hasSearch" :info="$page.brands.pageInfo"/>
             </brands-list>
         </div>
     </Layout>
@@ -28,24 +28,27 @@ query Brands ($page: Int) {
 }
 </page-query>
 <script>
-import searchbar from '~/components/search';
+import Search from '~/components/search';
 import BrandsList from '~/components/brands/list';
-import { Pager } from 'gridsome';
+import Pagination from '~/components/pagination';
 
-import Search from 'gridsome-plugin-flexsearch/SearchMixin';
+import SearchMixin from 'gridsome-plugin-flexsearch/SearchMixin';
 
 export default {
     components: {
         BrandsList,
-        searchbar,
-        Pager,
+        Search,
+        Pagination,
     },
     mixins: [
-        Search,
+        SearchMixin,
     ],
     computed: {
+        hasSearch() {
+            return this.searchTerm.length > 2;
+        },
         brands() {
-            if (this.searchTerm.length > 2) {
+            if (this.hasSearch) {
                 return this.searchResults;
             } else {
                 return this.$page.brands.edges;

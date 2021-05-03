@@ -26,7 +26,7 @@
                         {{ brand.node.title }}
                     </strong>
                 </g-link> -->
-                <span class="text-rb-violet-900">
+                <span class="text-black text-opacity-80">
                     <strong>
                         {{ brand.node.title }}
                     </strong>
