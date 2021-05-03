@@ -1,0 +1,7 @@
+.flex-center {
+    @apply flex flex-wrap items-center;
+}
+
+.smooth-transition {
+    @apply transition-all duration-300 ease-in-out
+}

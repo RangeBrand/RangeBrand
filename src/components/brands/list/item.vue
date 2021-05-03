@@ -1,39 +1,33 @@
 <template>
-    <li class="my-2 px-2 pt-4 w-full item
-               sm:my-2 sm:px-2 sm:w-1/2
-               md:my-4 md:px-4 md:w-1/2
-               lg:my-1 lg:px-1 lg:w-1/3
-               xl:my-2 xl:px-2 xl:w-1/5">
-        <div class="px-4 pt-4 rounded-lg h-full bg-rb-violet-100">
-            <ul class="flex -mt-8 overflow-hidden rounded-lg shadow-lg">
-                <li v-for="color in brand.node.colors"
-                    :key="`${brand.node.path.replace(/\//g, '_')}${color}`"
-                    :style="{backgroundColor: `#${color}`}"
-                    class="item-color flex-grow h-40 w-1 transition-all duration-300 ease-in-out hover:w-20 overflow-hidden">
-                    <code dir="ltr"
-                          :class="isLight(color) ? 'text-black' : 'text-white'"
-                          class="h-full justify-center items-center text-lg font-bold px-4 cursor-pointer select-none hidden opacity-0 text-opacity-80 uppercase hover:opacity-100 transition duration-500 ease-in-out"
-                          @click="copyToClipboard(color)">
-                        {{ color }}
-                    </code>
-                </li>
-            </ul>
-            <div class="px-3 py-3">
-                <!-- <g-link :to="brand.node.path"
+    <div class="brand__wrapper">
+        <ul class="brand__color__wrapper">
+            <li v-for="color in brand.node.colors"
+                :key="`${brand.node.path.replace(/\//g, '_')}${color}`"
+                :style="{backgroundColor: `#${color}`}"
+                class="brand__color smooth-transition">
+                <code dir="ltr"
+                      :class="isLight(color) ? 'text-black' : 'text-white'"
+                      class="brand__color__code smooth-transition"
+                      @click="copyToClipboard(color)">
+                    {{ color }}
+                </code>
+            </li>
+        </ul>
+        <div class="px-3 py-3">
+            <!-- <g-link :to="brand.node.path"
                         rel="bookmark"
                         class="text-rb-violet-900 hover:text-rb-carnelian-500">
                     <strong>
                         {{ brand.node.title }}
                     </strong>
                 </g-link> -->
-                <span class="text-black text-opacity-80">
-                    <strong>
-                        {{ brand.node.title }}
-                    </strong>
-                </span>
-            </div>
+            <span class="text-black text-opacity-80">
+                <strong>
+                    {{ brand.node.title }}
+                </strong>
+            </span>
         </div>
-    </li>
+    </div>
 </template>
 <script>
 import { isLight } from '~/scripts/luminance';
@@ -59,7 +53,20 @@ export default {
 };
 </script>
 <style scoped>
-.item-color:hover code {
+.brand__wrapper {
+    @apply px-4 pt-4 rounded-lg h-full bg-rb-violet-100;
+}
+.brand__color__wrapper {
+    @apply flex -mt-8 overflow-hidden rounded-lg shadow-lg;
+}
+.brand__color {
+    @apply flex-grow h-40 w-1 hover:w-20 overflow-hidden;
+}
+.brand__color__code {
+    @apply h-full justify-center items-center text-lg font-bold uppercase px-4 cursor-pointer select-none hidden opacity-0 text-opacity-80;
+    @apply hover:opacity-100;
+}
+.brand__color:hover .brand__color__code {
     display: flex;
 }
 </style>
