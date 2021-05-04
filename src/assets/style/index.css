@@ -16,6 +16,11 @@
     @apply hover:text-rb-carnelian-500;
 }
 
+.visible-link {
+    @apply link;
+    @apply text-red-500 font-semibold;
+}
+
 .button {
     @apply fast-transition;
     @apply rounded-full bg-rb-violet-500 text-white py-4 px-10;
