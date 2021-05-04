@@ -10,7 +10,7 @@
 </template>
 <page-query>
 query Brands ($page: Int) {
-  brands: allBrand (sortBy: "title", order: DESC, perPage: 100, page: $page) @paginate {
+  brands: allBrand (sortBy: "title", order: ASC, perPage: 100, page: $page) @paginate {
     totalCount
     pageInfo {
       totalPages
