@@ -51,4 +51,5 @@ module.exports = {
     templates: {
         Brand: '/brands/:path',
     },
+    siteUrl: 'https://rangebrand.ir',
 };
