@@ -2,9 +2,10 @@
     "title": "تخفیفان",
     "description": "",
     "path": "/takhfifan",
-    "updated_at": "2017-06-06",
+    "updated_at": "2021-05-04",
     "colors": [
-        "ff5a5f"
+        "e54e63",
+        "5a595c"
     ],
     "tags": []
 }
