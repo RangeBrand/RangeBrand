@@ -1,6 +1,6 @@
 <template>
     <div class="overflow-x-hidden h-screen -mt-20 relative z-50 bg-rb-violet-100">
-        <div class="text-rb-violet-900 container relative mx-auto flex h-full pb-16 px-4">
+        <div class="text-rb-violet-900 container relative mx-auto flex h-full pb-16 px-6">
             <g-image src="~/assets/images/aare.svg"
                      class="absolute bottom-20 max-w-none w-auto z-0 banner"/>
             <div class="w-1/3 flex flex-wrap content-end z-10">
@@ -35,16 +35,16 @@
                     </div>
                 </div>
             </div>
-            <div class="absolute right-0 top-20 z-10">
-                <g-image src="~/favicon.png" class="w-12 mx-4 block"/>
+            <div class="absolute right-0 top-20 z-10 mx-6">
+                <g-image src="~/favicon.png" class="w-12 block"/>
                 <ul class="no-list py-4">
                     <li class="block">
-                        <g-link to="/brands/" class=" link inline-block px-4 py-1">
+                        <g-link to="/brands/" class=" link inline-block p-1">
                             برندها
                         </g-link>
                     </li>
                     <li class="block">
-                        <g-link to="/about/" class=" link inline-block px-4 py-1">
+                        <g-link to="/about/" class=" link inline-block p-1">
                             درباره ما
                         </g-link>
                     </li>
