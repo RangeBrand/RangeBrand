@@ -9,21 +9,28 @@
                         رنگـ‌برند
                     </h1>
                     <p class="text-2xl leading-9 py-4">
-                        لورم اپیسوم متن از پیش تعریف شده که نمیدونم باهاش کجا میخوام برم. فقط میدونم که همینطوری ادامه داره و ایشالا میره
-                        <g-link to="/about/" class="text-rb-red-500 hover:text-rb-carnelian-500">
-                            تو خط بعدی
-                        </g-link>
+                        لیستی از رنگ‌هایی که دور و بر خودمون توی ایران میبینیم. شاید این رنگ‌ها بتونن کمکمون کنن تا برای برندمون
+                        <span>
+                            رنگ بهتری انتخاب کنیم
+                        </span>
+                        <!-- <g-link to="/create/" class="text-rb-red-500 hover:text-rb-carnelian-500">
+                            رنگ بهتری انتخاب کنیم
+                        </g-link> -->
                     </p>
                     <div class="flex items-center text-md py-4">
                         <g-link to="/brands/"
                                 class="block rounded-full bg-rb-violet-500 hover:bg-rb-violet-600 text-white py-4 px-10">
-                            مشاهده برندها
+                            <span class="hidden md:inline">دیدن</span>
+                            برندها
                         </g-link>
                         <a href="https://github.com/"
                            class="mx-4 block"
                            target="_blank"
                            rel="help">
-                            یا شاید بخوایید توی گیتهاب<br>بهمون کمک کنین
+                            <span class="hidden md:block">
+                                یا شاید دوست داشته باشید
+                            </span>
+                            توی گیتهاب بهمون کمک کنین
                         </a>
                     </div>
                 </div>
