@@ -1,7 +1,7 @@
 <template>
     <div class="mt-20 font-sans bg-white">
         <custom-header/>
-        <div class="relative z-10 mb-24 bg-white">
+        <div class="relative z-10 mb-24 bg-white border-b border-gray-200">
             <slot/>
         </div>
         <custom-footer/>

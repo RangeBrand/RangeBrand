@@ -23,7 +23,7 @@
                             <span class="hidden md:inline">دیدن</span>
                             برندها
                         </g-link>
-                        <a href="https://github.com/"
+                        <a href="https://github.com/RangeBrand"
                            class="link mx-4 block"
                            target="_blank"
                            rel="help">
