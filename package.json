@@ -34,6 +34,7 @@
     "postcss": "^7",
     "postcss-flexbugs-fixes": "^4",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^2.0.1-compat"
+    "tailwindcss": "^2.0.1-compat",
+    "vue-svg-loader": "^0.16.0"
   }
 }

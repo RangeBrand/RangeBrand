@@ -5,16 +5,17 @@
                    v-model="inputVal"
                    placeholder="جستجو"
                    class="block w-full white border border-rb-violet-200 focus:border-rb-violet-500 rounded-full pl-8 pr-14 py-2 outline-none">
-            <span class="inline-block text-3xl transform -rotate-45 absolute top-0 right-0">
-                <div class="px-5 py-1 text-rb-violet-500 select-none">
-                    &#9906;
-                </div>
-            </span>
+            <icon-search class="icon--search"/>
         </div>
     </div>
 </template>
 <script>
+import IconSearch from '~/assets/icons/search.svg';
+
 export default {
+    components: {
+        IconSearch,
+    },
     props: {
         value: {
             type: String,
@@ -33,3 +34,8 @@ export default {
     },
 };
 </script>
+<style scoped>
+.icon--search {
+    @apply absolute top-0 right-0 w-10 h-10 p-3 mr-2 fill-current text-rb-violet-500;
+}
+</style>
