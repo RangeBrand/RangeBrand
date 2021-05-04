@@ -46,10 +46,13 @@ export default {
         @apply fixed z-50 top-0 right-0 left-0 bg-rb-violet-100 border-b border-gray-200;
     }
     .link {
-        @apply p-4 block border-b-4 border-rb-violet-100 -mb-1;
-        @apply hover:text-rb-carnelian-500 hover:border-rb-carnelian-500;
+        @apply px-4 py-5 block relative;
     }
     .link--active {
-        @apply text-rb-violet-500 border-rb-violet-500;
+        @apply text-rb-violet-500;
+    }
+    .link--active:after {
+        content: '';
+        @apply absolute bottom-0 right-0 w-full h-1 bg-current rounded-full;
     }
 </style>

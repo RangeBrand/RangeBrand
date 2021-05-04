@@ -16,7 +16,7 @@
         <div class="px-3 py-3">
             <!-- <g-link :to="brand.node.path"
                         rel="bookmark"
-                        class="text-rb-violet-900 hover:text-rb-carnelian-500">
+                        class="link">
                     <strong>
                         {{ brand.node.title }}
                     </strong>

@@ -5,3 +5,19 @@
 .smooth-transition {
     @apply transition-all duration-300 ease-in-out
 }
+
+.fast-transition {
+    @apply transition-all duration-150 ease-in-out
+}
+
+.link {
+    @apply fast-transition;
+    @apply text-black text-opacity-80;
+    @apply hover:text-rb-carnelian-500;
+}
+
+.button {
+    @apply fast-transition;
+    @apply rounded-full bg-rb-violet-500 text-white py-4 px-10;
+    @apply hover:bg-rb-violet-600;
+}

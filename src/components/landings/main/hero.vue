@@ -19,12 +19,12 @@
                     </p>
                     <div class="flex items-center text-md py-4">
                         <g-link to="/brands/"
-                                class="block rounded-full bg-rb-violet-500 hover:bg-rb-violet-600 text-white py-4 px-10">
+                                class="block button">
                             <span class="hidden md:inline">دیدن</span>
                             برندها
                         </g-link>
                         <a href="https://github.com/"
-                           class="mx-4 block"
+                           class="link mx-4 block"
                            target="_blank"
                            rel="help">
                             <span class="hidden md:block">
@@ -39,12 +39,12 @@
                 <g-image src="~/favicon.png" class="w-12 mx-4 block"/>
                 <ul class="no-list py-4">
                     <li class="block">
-                        <g-link to="/brands/" class="inline-block px-4 py-1 hover:text-rb-carnelian-500">
+                        <g-link to="/brands/" class=" link inline-block px-4 py-1">
                             برندها
                         </g-link>
                     </li>
                     <li class="block">
-                        <g-link to="/about/" class="inline-block px-4 py-1 hover:text-rb-carnelian-500">
+                        <g-link to="/about/" class=" link inline-block px-4 py-1">
                             درباره ما
                         </g-link>
                     </li>
