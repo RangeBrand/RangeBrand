@@ -1,5 +1,5 @@
 <template>
-    <div class="overflow-x-hidden h-screen -mt-20 relative z-50 bg-rb-violet-100">
+    <div class="overflow-x-hidden h-screen relative z-50 bg-rb-violet-100">
         <div class="text-rb-violet-900 container relative mx-auto flex h-full pb-16 px-6">
             <g-image src="~/assets/images/aare.svg"
                      class="absolute bottom-20 max-w-none w-auto z-0 banner"/>
