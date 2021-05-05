@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="container mx-auto">
+        <div class="wrapper">
             <div class="flex-center">
                 <div>
                     <g-link to="/" class="p-2 block">

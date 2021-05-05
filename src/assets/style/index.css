@@ -2,6 +2,10 @@
     @apply flex flex-wrap items-center;
 }
 
+.wrapper {
+    @apply container mx-auto px-4;
+}
+
 .smooth-transition {
     @apply transition-all duration-300 ease-in-out
 }

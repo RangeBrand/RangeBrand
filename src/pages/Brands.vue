@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <div class="container mx-auto px-4">
+        <div class="wrapper">
             <Search v-model="searchTerm"/>
             <brands-list :brands="brands">
                 <pagination v-show="!hasSearch" :info="$page.brands.pageInfo"/>

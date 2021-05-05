@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <div class="container mx-auto px-4">
+        <div class="wrapper">
             <main class="py-4 text-black text-opacity-80">
                 <h1 class="font-bold text-3xl my-4 text-rb-violet-500">
                     درباره‌ی ما
