@@ -14,18 +14,13 @@
             </li>
         </ul>
         <div class="px-3 py-3">
-            <!-- <g-link :to="brand.node.path"
-                        rel="bookmark"
-                        class="link">
-                    <strong>
-                        {{ brand.node.title }}
-                    </strong>
-                </g-link> -->
-            <span class="text-black text-opacity-80">
+            <g-link :to="brand.node.path"
+                    rel="bookmark"
+                    class="link">
                 <strong>
                     {{ brand.node.title }}
                 </strong>
-            </span>
+            </g-link>
         </div>
     </div>
 </template>
