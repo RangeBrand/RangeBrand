@@ -28,6 +28,9 @@
                     <li>
                         آیکون‌ها ساخته شده توسط <strong>Kiranshastry</strong> از وبسایت <a href="http://flaticon.com" target="_blank" class="visible-link" rel="noopener noreferrer">flaticon.com</a>
                     </li>
+                    <li>
+                        طراحی‌ها ساخته شده توسط <strong>Katerina Limpitsouni</strong> از وبسایت <a href="https://undraw.co/" target="_blank" class="visible-link" rel="noopener noreferrer">undraw.co</a>
+                    </li>
                 </ul>
             </main>
         </div>
