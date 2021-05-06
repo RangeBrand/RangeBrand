@@ -3,6 +3,7 @@
         <div class="text-rb-violet-900 container relative mx-auto flex h-full pb-16 px-6">
             <g-image src="~/assets/images/aare.svg"
                      :immediate="true"
+                     alt="banner"
                      class="absolute bottom-20 max-w-none w-auto z-0 banner"/>
             <div class="w-1/3 flex flex-wrap content-end z-10">
                 <div>
@@ -37,7 +38,7 @@
                 </div>
             </div>
             <div class="absolute right-0 top-20 z-10 mx-6">
-                <g-image src="~/favicon.png" class="w-12 block rounded-full"/>
+                <g-image src="~/favicon.png" alt="RangerBrand" class="w-12 block rounded-full"/>
                 <ul class="no-list py-4">
                     <li class="block">
                         <g-link to="/brands/" class=" link inline-block p-1">

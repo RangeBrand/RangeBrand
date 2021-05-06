@@ -6,7 +6,7 @@
                 <pagination v-show="!hasSearch" :info="$page.brands.pageInfo"/>
             </brands-list>
             <div v-show="brands.length === 0" class="text-center py-4 text-black text-opacity-50">
-                <g-image src="~/assets/images/undraw_void_3ggu.svg" class="h-48 my-3 block mx-auto"/>
+                <g-image src="~/assets/images/undraw_void_3ggu.svg" alt="No Results" class="h-48 my-3 block mx-auto"/>
                 <span>نتیجه‌ای یافت نشد</span>
             </div>
         </div>

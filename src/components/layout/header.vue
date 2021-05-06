@@ -4,7 +4,7 @@
             <div class="flex-center">
                 <div>
                     <g-link to="/" class="p-2 block">
-                        <g-image src="~/favicon.png" class="w-12 block rounded-full"/>
+                        <g-image src="~/favicon.png" alt="RangerBrand" class="w-12 block rounded-full"/>
                     </g-link>
                 </div>
                 <nav>
