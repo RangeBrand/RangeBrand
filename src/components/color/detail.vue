@@ -20,7 +20,6 @@
                     <dl>
                         <dt>HEX</dt>
                         <dd>{{ color }}</dd>
-                        <br>
                         <dt>RGB</dt>
                         <dd>{{ color | toRGB | toString }}</dd>
                     </dl>
@@ -59,11 +58,11 @@ table {
 th, td {
     @apply py-2 px-4 uppercase;
 }
+dt {
+    @apply float-right ml-2;
+}
 dt::after {
     content: ':';
-}
-dt, dd {
-    @apply inline-block ml-2;
 }
 dd {
     direction: ltr;
