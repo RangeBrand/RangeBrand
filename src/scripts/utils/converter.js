@@ -17,6 +17,16 @@ export const RGBtoHEX = (rgb) => {
     }, '');
 };
 
+const hexMem = {};
+
 export const HEXtoRGB = (hex) => {
-    return hex.match(/.{1,2}/g).map(channel => parseInt(channel, 16));
+    try {
+        if (!hexMem[hex]) {
+            const rgb = hex.match(/.{1,2}/g).map(channel => parseInt(channel, 16));
+            hexMem[hex] = rgb;
+        }
+        return hexMem[hex];
+    } catch {
+        return '';
+    }
 };
