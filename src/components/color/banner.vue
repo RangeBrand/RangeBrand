@@ -1,40 +1,47 @@
 <template>
-    <ul class="flex h-full relative overflow-hidden"
-        @mousemove="move"
+    <ul class="flex justify-center h-full relative overflow-hidden"
+        @mousemove="translateColor"
         @mouseup="captureOff">
         <li v-for="(color, index) in localColors"
-            :key="color"
-            class="flex-grow smooth-transition">
+            :key="color.hex"
+            :class="[
+                'absolute h-full',
+                {
+                    'z-50': activeColor === color.hex,
+                    'smooth-transition': activeColor !== color.hex,
+                }
+            ]"
+            :style="{
+                transform: `translateX(${color.translate}px)`,
+                right: `${colorWidth * index}px`,
+                width: `${colorWidth}px`,
+            }">
             <div :class="[
                      'color',
-                     isLight(color) ? 'color--light' : 'color--dark',
-                     {
-                         'z-50': captureToggle === color
-                     }
+                     isLight(color.hex) ? 'color--light' : 'color--dark',
                  ]"
                  :style="{
-                     backgroundColor: `#${color}`,
-                     left: captureToggle === color ? `${x}px` : ''
+                     backgroundColor: `#${color.hex}`,
                  }">
                 <div class="color__actions flex-center smooth-transition">
                     <span class="p-2">
                         <icon-delete v-show="localColors.length > 2"
                                      class="color__actions__icon smooth-transition"
-                                     @click="deleteColor(color)"/>
+                                     @click="deleteColor(index)"/>
                     </span>
                     <span class="p-2">
                         <icon-move class="color__actions__icon smooth-transition"
-                                   @mousedown="captureOn($event, color)"/>
+                                   @mousedown="captureOn($event, color.hex)"/>
                     </span>
                     <span class="p-2">
                         <icon-copy class="color__actions__icon smooth-transition"
-                                   @click="copyToClipboard(color)"/>
+                                   @click="copyToClipboard(color.hex)"/>
                     </span>
                 </div>
                 <code
                     class="color__code smooth-transition"
                     dir="ltr">
-                    {{ color }}
+                    {{ color.hex }}
                 </code>
                 <div class="color__add smooth-transition">
                     <div class="flex-center h-full">
@@ -75,57 +82,87 @@ export default {
     },
     data() {
         return {
-            localColors: this.colors,
-            captureToggle: null,
-            x: 0,
+            localColors: this.colors.map(color => {
+                return {
+                    hex: color,
+                    translate: 0,
+                };
+            }),
+            activeColor: null,
         };
     },
     computed: {
         colorWidth() {
-            return window ? window.outerWidth / this.localColors.length : 0;
+            return this.windowWidth / this.localColors.length;
+        },
+        windowWidth() {
+            try {
+                return window.outerWidth;
+            } catch {
+                return 0;
+            };
         },
     },
     methods: {
         isLight,
-        deleteColor(color) {
-            this.localColors = this.localColors.filter(item => item !== color);
+        deleteColor(index) {
+            this.localColors.splice(index, 1);
         },
         addColor(index) {
-            const leftColor = HEXtoRGB(this.localColors[index - 1]);
-            const rightColor = HEXtoRGB(this.localColors[index]);
+            const leftColor = HEXtoRGB(this.localColors[index - 1].hex);
+            const rightColor = HEXtoRGB(this.localColors[index].hex);
             const newColor = leftColor.map((item, index) => {
                 return Math.round((item + rightColor[index]) / 2);
             });
-            this.localColors.splice(index, 0, RGBtoHEX(newColor));
+            this.localColors.splice(index, 0, {
+                hex: RGBtoHEX(newColor),
+                translate: 0,
+            });
         },
-        move(evt) {
-            if (this.captureToggle !== null) {
-                const color = this.localColors.indexOf(this.captureToggle);
-                const colorNo = this.localColors.length - color - 1;
-                // move color with mouse
-                this.x = evt.x - (colorNo * this.colorWidth) - (this.colorWidth / 2);
-
-                // replace positions of color
-                const distant = Math.round(this.x / this.colorWidth);
-                if (Math.abs(distant) !== 0) {
-                    [this.localColors[color], this.localColors[color - distant]] = [this.localColors[color - distant], this.localColors[color]];
+        translateColor(evt) {
+            if (this.activeColor !== null) {
+                const currentIndex = this.localColors.findIndex(color => color.hex === this.activeColor);
+                const distant = Math.round(this.localColors[currentIndex].translate / this.colorWidth);
+                this.localColors[currentIndex].translate = evt.x + (this.colorWidth / 2) - (this.colorWidth * (this.localColors.length - currentIndex));
+                if (distant !== 0 && this.localColors[currentIndex - distant]) {
+                    this.localColors[currentIndex - distant].translate = this.colorWidth * Math.sign(distant) * -1;
+                } else {
+                    this.localColors.forEach(color => {
+                        if (color.hex !== this.localColors[currentIndex].hex) {
+                            color.translate = 0;
+                        };
+                    });
                 }
             }
         },
+        moveColor(from, to) {
+            const el = { ...this.localColors[from] };
+            this.localColors.splice(from, 1);
+            this.localColors.splice(to, 0, el);
+        },
         captureOn(evt, color) {
-            this.captureToggle = color;
-            this.move(evt);
+            this.activeColor = color;
+            this.translateColor(evt);
         },
         captureOff() {
-            this.captureToggle = null;
-            this.x = 0;
+            if (this.activeColor) {
+                const currentIndex = this.localColors.findIndex(color => color.hex === this.activeColor);
+                const distant = Math.round(this.localColors[currentIndex].translate / this.colorWidth);
+                if (Math.abs(distant) !== 0) {
+                    this.moveColor(currentIndex, currentIndex - distant);
+                }
+                this.localColors.forEach(color => {
+                    color.translate = 0;
+                });
+                this.activeColor = null;
+            }
         },
     },
 };
 </script>
 <style scoped>
 .color {
-    @apply relative block w-full h-full;
+    @apply relative block h-full;
 }
 
 .color__actions {
