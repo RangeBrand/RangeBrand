@@ -27,6 +27,6 @@
 
 .button {
     @apply fast-transition;
-    @apply rounded-full bg-rb-violet-500 text-white py-4 px-10;
+    @apply rounded-full bg-rb-violet-500 text-white py-4 px-10 cursor-pointer;
     @apply hover:bg-rb-violet-600;
 }

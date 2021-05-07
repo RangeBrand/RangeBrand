@@ -1,4 +1,4 @@
-import { sRGBtoLin, HEXtoRGB, RGBtosRGB } from '~/scripts/converter';
+import { sRGBtoLin, HEXtoRGB, RGBtosRGB } from '~/scripts/utils/converter';
 
 // https://stackoverflow.com/a/56678483
 const getPerceivedLightness = (luminance) => {

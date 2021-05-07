@@ -32,7 +32,7 @@
 <script>
 import {
     HEXtoRGB,
-} from '~/scripts/converter';
+} from '~/scripts/utils/converter';
 
 export default {
     filters: {

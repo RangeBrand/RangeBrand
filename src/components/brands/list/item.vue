@@ -25,9 +25,13 @@
     </div>
 </template>
 <script>
-import { isLight } from '~/scripts/luminance';
+import { isLight } from '~/scripts/utils/luminance';
+import ClipboardMixin from '~/scripts/mixins/clipboard';
 
 export default {
+    mixins: [
+        ClipboardMixin,
+    ],
     props: {
         brand: {
             type: Object,
@@ -37,13 +41,6 @@ export default {
     },
     methods: {
         isLight,
-        copyToClipboard(color) {
-            navigator.clipboard.writeText(`#${color.toUpperCase()}`).then(() => {
-                this.$toasted.show('کپی شد!');
-            }, (err) => {
-                console.error('Could not copy text: ', err);
-            });
-        },
     },
 };
 </script>
