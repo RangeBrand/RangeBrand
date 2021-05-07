@@ -34,7 +34,7 @@
                 <code
                     class="color__code smooth-transition"
                     dir="ltr">
-                    {{ color }} {{ index }}
+                    {{ color }}
                 </code>
                 <div class="color__add smooth-transition">
                     <div class="flex-center h-full">
