@@ -9,10 +9,14 @@ const getPerceivedLightness = (luminance) => {
     }
 };
 
+const isLightMem = {};
 export const isLight = (color) => {
-    const [vR, vG, vB] = RGBtosRGB(HEXtoRGB(color));
-    const luminance = (sRGBtoLin(vR) * 0.2126) +
-                      (sRGBtoLin(vG) * 0.7152) +
-                      (sRGBtoLin(vB) * 0.0722);
-    return getPerceivedLightness(luminance) > 60;
+    if (!isLightMem[color]) {
+        const [vR, vG, vB] = RGBtosRGB(HEXtoRGB(color));
+        const luminance = (sRGBtoLin(vR) * 0.2126) +
+                        (sRGBtoLin(vG) * 0.7152) +
+                        (sRGBtoLin(vB) * 0.0722);
+        isLightMem[color] = getPerceivedLightness(luminance) > 60;
+    }
+    return isLightMem[color];
 };
