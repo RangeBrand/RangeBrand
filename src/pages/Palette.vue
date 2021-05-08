@@ -1,0 +1,42 @@
+<template>
+    <Layout>
+        <div class="h-screen -mt-20 pt-16">
+            <color-banner :colors="colors" @update="foo"/>
+        </div>
+    </Layout>
+</template>
+<script>
+import ColorBanner from '~/components/color/banner';
+
+import { validateHex } from '~/scripts/utils/validator';
+
+export default {
+    components: {
+        ColorBanner,
+    },
+    computed: {
+        colors() {
+            try {
+                return this.$route.query.colors.split('-').filter((item, index, array) => {
+                    return validateHex(item) && array.indexOf(item) === index;
+                });
+            } catch {
+                return [];
+            }
+        },
+    },
+    methods: {
+        foo(value) {
+            const newColors = value.join('-');
+            if (newColors !== this.$route.query.colors) {
+                this.$router.push({
+                    path: '/palette',
+                    query: {
+                        colors: value.join('-'),
+                    },
+                });
+            }
+        },
+    },
+};
+</script>

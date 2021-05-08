@@ -25,12 +25,13 @@
                          backgroundColor: `#${color.hex}`,
                      }">
                     <div class="color__actions flex-center smooth-transition">
-                        <span class="p-2">
-                            <icon-delete v-show="localColors.length > 2"
-                                         class="color__actions__icon smooth-transition"
+                        <span class="p-2"
+                              v-show="localColors.length > 2">
+                            <icon-delete class="color__actions__icon smooth-transition"
                                          @click="deleteColor(index)"/>
                         </span>
-                        <span class="p-2">
+                        <span class="p-2"
+                              v-show="localColors.length > 1">
                             <icon-move class="color__actions__icon smooth-transition"
                                        @mousedown="captureOn($event, color.hex)"/>
                         </span>
@@ -95,12 +96,7 @@ export default {
     },
     data() {
         return {
-            localColors: this.colors.map(color => {
-                return {
-                    hex: color,
-                    translate: 0,
-                };
-            }),
+            localColors: [],
             activeColor: null,
             gradIsVisible: false,
         };
@@ -118,6 +114,22 @@ export default {
             } catch {
                 return 0;
             };
+        },
+    },
+    watch: {
+        localColors(value) {
+            this.$emit('update', value.map(color => color.hex));
+        },
+        colors: {
+            handler(value) {
+                this.localColors = value.map(color => {
+                    return {
+                        hex: color,
+                        translate: 0,
+                    };
+                });
+            },
+            immediate: true,
         },
     },
     methods: {
