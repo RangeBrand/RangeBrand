@@ -1,58 +1,60 @@
 <template>
-    <ul class="flex justify-center h-full relative overflow-hidden"
-        @mousemove="translateColor"
-        @mouseup="captureOff">
-        <li v-for="(color, index) in localColors"
-            :key="color.hex"
-            :class="[
-                'absolute h-full',
-                {
-                    'z-50': activeColor === color.hex,
-                    'smooth-transition': activeColor !== color.hex,
-                }
-            ]"
-            :style="{
-                transform: `translateX(${color.translate}px)`,
-                right: `${colorWidth * index}px`,
-                width: `${colorWidth}px`,
-            }">
-            <div :class="[
-                     'color',
-                     isLight(color.hex) ? 'color--light' : 'color--dark',
-                 ]"
-                 :style="{
-                     backgroundColor: `#${color.hex}`,
-                 }">
-                <div class="color__actions flex-center smooth-transition">
-                    <span class="p-2">
-                        <icon-delete v-show="localColors.length > 2"
-                                     class="color__actions__icon smooth-transition"
-                                     @click="deleteColor(index)"/>
-                    </span>
-                    <span class="p-2">
-                        <icon-move class="color__actions__icon smooth-transition"
-                                   @mousedown="captureOn($event, color.hex)"/>
-                    </span>
-                    <span class="p-2">
-                        <icon-copy class="color__actions__icon smooth-transition"
-                                   @click="copyToClipboard(color.hex)"/>
-                    </span>
-                </div>
-                <code
-                    class="color__code smooth-transition"
-                    dir="ltr">
-                    {{ color.hex }}
-                </code>
-                <div class="color__add smooth-transition">
-                    <div class="flex-center h-full">
-                        <span class="button" @click="addColor(index)">
-                            <icon-add class="w-8 fill-current"/>
+    <div class="h-full">
+        <ul class="flex justify-center h-full relative overflow-hidden"
+            @mousemove="translateColor"
+            @mouseup="captureOff">
+            <li v-for="(color, index) in localColors"
+                :key="color.hex"
+                :class="[
+                    'absolute h-full',
+                    {
+                        'z-50': activeColor === color.hex,
+                        'smooth-transition': activeColor !== color.hex,
+                    }
+                ]"
+                :style="{
+                    transform: `translateX(${color.translate}px)`,
+                    right: `${colorWidthPercents * index}%`,
+                    width: `${colorWidthPercents}%`,
+                }">
+                <div :class="[
+                         'color',
+                         isLight(color.hex) ? 'color--light' : 'color--dark',
+                     ]"
+                     :style="{
+                         backgroundColor: `#${color.hex}`,
+                     }">
+                    <div class="color__actions flex-center smooth-transition">
+                        <span class="p-2">
+                            <icon-delete v-show="localColors.length > 2"
+                                         class="color__actions__icon smooth-transition"
+                                         @click="deleteColor(index)"/>
+                        </span>
+                        <span class="p-2">
+                            <icon-move class="color__actions__icon smooth-transition"
+                                       @mousedown="captureOn($event, color.hex)"/>
+                        </span>
+                        <span class="p-2">
+                            <icon-copy class="color__actions__icon smooth-transition"
+                                       @click="copyToClipboard(color.hex)"/>
                         </span>
                     </div>
+                    <code
+                        class="color__code smooth-transition"
+                        dir="ltr">
+                        {{ color.hex }}
+                    </code>
+                    <div class="color__add smooth-transition">
+                        <div class="flex-center h-full">
+                            <span class="button" @click="addColor(index)">
+                                <icon-add class="w-8 fill-current"/>
+                            </span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </li>
-    </ul>
+            </li>
+        </ul>
+    </div>
 </template>
 <script>
 import IconDelete from '~/assets/icons/delete.svg';
@@ -94,6 +96,9 @@ export default {
     computed: {
         colorWidth() {
             return this.windowWidth / this.localColors.length;
+        },
+        colorWidthPercents() {
+            return 100 / this.localColors.length;
         },
         windowWidth() {
             try {
