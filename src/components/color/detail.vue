@@ -22,6 +22,8 @@
                         <dd>{{ color }}</dd>
                         <dt>RGB</dt>
                         <dd>{{ color | toRGB | toString }}</dd>
+                        <dt>HSL</dt>
+                        <dd>{{ color | toHSL | toString }}</dd>
                     </dl>
                 </td>
             </tr>
@@ -32,12 +34,16 @@
 <script>
 import {
     HEXtoRGB,
+    HEXtoHSL,
 } from '~/scripts/utils/converter';
 
 export default {
     filters: {
         toRGB(value) {
             return HEXtoRGB(value);
+        },
+        toHSL(color) {
+            return HEXtoHSL(color);
         },
         toString(value) {
             return value.join(', ');
