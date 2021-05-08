@@ -7,16 +7,16 @@
 }
 
 .smooth-transition {
-    @apply transition-all duration-300 ease-in-out
+    @apply transition-all duration-300 ease-in-out;
 }
 
 .fast-transition {
-    @apply transition-all duration-150 ease-in-out
+    @apply transition-all duration-150 ease-in-out;
 }
 
 .link {
     @apply fast-transition;
-    @apply text-black text-opacity-80;
+    @apply cursor-pointer text-black text-opacity-80;
     @apply hover:text-rb-carnelian-500;
 }
 
@@ -29,4 +29,13 @@
     @apply fast-transition;
     @apply rounded-full bg-rb-violet-500 text-white py-4 px-10 cursor-pointer;
     @apply hover:bg-rb-violet-600;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    @apply transition-opacity duration-150 ease-linear;
+}
+.fade-enter,
+.fade-leave-to {
+    @apply opacity-0;
 }

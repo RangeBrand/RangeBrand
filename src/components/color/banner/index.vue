@@ -1,6 +1,6 @@
 <template>
-    <div class="h-full">
-        <ul class="flex justify-center h-full relative overflow-hidden"
+    <div class="h-full flex flex-col relative">
+        <ul class="flex flex-grow justify-center relative overflow-hidden"
             @mousemove="translateColor"
             @mouseup="captureOff">
             <li v-for="(color, index) in localColors"
@@ -54,6 +54,11 @@
                 </div>
             </li>
         </ul>
+        <transition name="fade">
+            <banner-gradient v-show="gradIsVisible"
+                             :colors="localColors"/>
+        </transition>
+        <banner-footer v-model="gradIsVisible"/>
     </div>
 </template>
 <script>
@@ -61,6 +66,9 @@ import IconDelete from '~/assets/icons/delete.svg';
 import IconCopy from '~/assets/icons/copy.svg';
 import IconMove from '~/assets/icons/move.svg';
 import IconAdd from '~/assets/icons/add.svg';
+
+import BannerGradient from '~/components/color/banner/gradient';
+import BannerFooter from '~/components/color/banner/footer';
 
 import { isLight } from '~/scripts/utils/luminance';
 import { HEXtoRGB, RGBtoHEX } from '~/scripts/utils/converter';
@@ -72,6 +80,8 @@ export default {
         IconCopy,
         IconMove,
         IconAdd,
+        BannerGradient,
+        BannerFooter,
     },
     mixins: [
         ClipboardMixin,
@@ -91,6 +101,7 @@ export default {
                 };
             }),
             activeColor: null,
+            gradIsVisible: false,
         };
     },
     computed: {
