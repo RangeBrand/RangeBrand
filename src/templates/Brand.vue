@@ -10,6 +10,7 @@
             <p v-if="brand.description" class="mb-2">
                 {{ brand.description }}
             </p>
+            <color-groups class="mb-2" :colors="brand.colors" :brand-name="brand.title"/>
             <p class="mb-2">
                 در جدول زیر رنگ‌های رسمی برند {{ brand.title }} را مشاهده می‌کنید. برای اطمینان از این که متریال تبلیغاتی شما با برند {{ brand.title }} هماهنگ باشد، در کارهای خود از این رنگ‌ها استفاده کنید:
             </p>
@@ -32,11 +33,13 @@ query Brand ($path: String!) {
 <script>
 import ColorBanner from '~/components/color/banner';
 import ColorDetail from '~/components/color/detail';
+import ColorGroups from '~/components/color/groups';
 
 export default {
     components: {
         ColorBanner,
         ColorDetail,
+        ColorGroups,
     },
     metaInfo() {
         return {
