@@ -17,7 +17,6 @@ export const RGBtoHEX = (rgb) => {
     }, '');
 };
 
-const hslMex = {};
 export const RGBtoHSL = (rgb) => {
     let h, s, l;
 
@@ -55,11 +54,10 @@ export const RGBtoHSL = (rgb) => {
 
         // clac Saturation
         s = delta === 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
-
-        // multiply l and s by 100
-        s = +(s * 100).toFixed(1);
-        l = +(l * 100).toFixed(1);
     }
+    // multiply l and s by 100
+    s = +(s * 100).toFixed(1);
+    l = +(l * 100).toFixed(1);
     return [h, s, l];
 };
 
