@@ -1,7 +1,10 @@
 export default {
     methods: {
-        copyToClipboard(color) {
-            navigator.clipboard.writeText(`#${color.toUpperCase()}`).then(() => {
+        copyColorToClipboard(color) {
+            this.copyToClipboard(`#${color.toUpperCase()}`);
+        },
+        copyToClipboard(content) {
+            navigator.clipboard.writeText(content).then(() => {
                 this.$toasted.show('کپی شد!');
             }, (err) => {
                 console.error('Could not copy text: ', err);

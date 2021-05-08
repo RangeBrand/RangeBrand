@@ -3,7 +3,7 @@
          :style="{
              background: gradient
          }">
-        <div dir="ltr" class="gradient__code smooth-transition" @click="copyToClipboard(`background: ${gradient};`)">
+        <div dir="ltr" class="gradient__code smooth-transition" @click="$emit('copy', `background: ${gradient};`)">
             <code>background: {{ gradient }};</code>
         </div>
         <ul class="gradient__dir flex-center smooth-transition">
@@ -75,7 +75,7 @@ export default {
     computed: {
         gradient() {
             const value = this.colors.reduce((acc, curr, index) => {
-                return `${acc}, #${curr.hex}`;
+                return `${acc}, #${curr.hex.toUpperCase()}`;
             }, this.gradDirection);
             return `linear-gradient(to ${value})`;
         },

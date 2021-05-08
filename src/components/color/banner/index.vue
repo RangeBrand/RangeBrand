@@ -36,7 +36,7 @@
                         </span>
                         <span class="p-2">
                             <icon-copy class="color__actions__icon smooth-transition"
-                                       @click="copyToClipboard(color.hex)"/>
+                                       @click="copyColorToClipboard(color.hex)"/>
                         </span>
                     </div>
                     <code
@@ -56,7 +56,8 @@
         </ul>
         <transition name="fade">
             <banner-gradient v-show="gradIsVisible"
-                             :colors="localColors"/>
+                             :colors="localColors"
+                             @copy="copyToClipboard"/>
         </transition>
         <banner-footer v-model="gradIsVisible"/>
     </div>

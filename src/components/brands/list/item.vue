@@ -8,7 +8,7 @@
                 <code dir="ltr"
                       :class="isLight(color) ? 'text-black' : 'text-white'"
                       class="brand__color__code smooth-transition"
-                      @click="copyToClipboard(color)">
+                      @click="copyColorToClipboard(color)">
                     {{ color }}
                 </code>
             </li>
