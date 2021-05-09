@@ -59,6 +59,7 @@ const COLOR_OPTIONS = [
     },
     ...Object.entries(mainColors).map(color => {
         return {
+            color: color[1].hex,
             label: color[1].name_fa,
             value: color[1].name,
         };

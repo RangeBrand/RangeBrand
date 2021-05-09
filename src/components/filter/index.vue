@@ -8,6 +8,9 @@
                      :key="option.value"
                      class="px-4 py-2 cursor-pointer bg-white hover:bg-rb-violet-100 smooth-transition"
                      @click="inputVal[filter].value = option.value">
+                    <span v-if="option.color"
+                          class="h-4 w-4 rounded-lg inline-block ml-1 mt-1 -mb-1 -mr-1 border border-black border-opacity-20"
+                          :style="{background: `#${option.color}`}"/>
                     {{ option.label }}
                 </div>
             </dropdown>
