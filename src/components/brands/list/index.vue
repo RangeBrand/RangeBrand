@@ -2,7 +2,7 @@
     <div>
         <ul>
             <li v-for="brand in brands"
-                :key="brand.node.id">
+                :key="brand.id">
                 <brand-item :brand="brand"/>
             </li>
         </ul>

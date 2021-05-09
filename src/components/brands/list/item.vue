@@ -1,8 +1,8 @@
 <template>
     <div class="brand__wrapper">
         <ul class="brand__color__wrapper">
-            <li v-for="color in brand.node.colors"
-                :key="`${brand.node.path.replace(/\//g, '_')}${color}`"
+            <li v-for="color in brand.colors"
+                :key="`${brand.path.replace(/\//g, '_')}${color}`"
                 :style="{backgroundColor: `#${color}`}"
                 class="brand__color smooth-transition">
                 <code dir="ltr"
@@ -14,11 +14,11 @@
             </li>
         </ul>
         <div class="px-3 py-3">
-            <g-link :to="brand.node.path"
+            <g-link :to="brand.path"
                     rel="bookmark"
                     class="link">
                 <strong>
-                    {{ brand.node.title }}
+                    {{ brand.title }}
                 </strong>
             </g-link>
         </div>

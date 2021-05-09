@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <div class="wrapper">
-            <Search v-model="searchTerm"/>
+            <search class="flex-grow" v-model="searchTerm"/>
             <brands-list :brands="brands">
                 <pagination v-show="!hasSearch" :info="$page.brands.pageInfo"/>
             </brands-list>
@@ -53,9 +53,9 @@ export default {
         },
         brands() {
             if (this.hasSearch) {
-                return this.searchResults;
+                return this.searchResults.map(e => e.node);
             } else {
-                return this.$page.brands.edges;
+                return this.$page.brands.edges.map(e => e.node);
             }
         },
     },
