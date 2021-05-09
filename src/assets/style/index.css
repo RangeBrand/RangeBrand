@@ -39,3 +39,20 @@
 .fade-leave-to {
     @apply opacity-0;
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #a3a6c2;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #A3A6C2;
+}
+::-webkit-scrollbar-track{
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: inset 7px 10px 12px #f0f0f0;
+}

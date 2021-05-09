@@ -44,6 +44,6 @@ export default {
 }
 
 .content {
-    @apply absolute border top-full mt-2 right-0 left-0 bg-white border-rb-violet-200 shadow rounded-3xl overflow-y-auto max-h-48 z-50;
+    @apply absolute border top-full mt-2 right-0 left-0 bg-white border-rb-violet-200 shadow rounded-lg overflow-y-auto max-h-48 z-50;
 }
 </style>
