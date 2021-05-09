@@ -3,7 +3,12 @@
         <ul>
             <li v-for="brand in brands"
                 :key="brand.id">
-                <brand-item :brand="brand"/>
+                <brand-item :brand="brand" :class="[
+                    'hover:opacity-100 smooth-transition',
+                    {
+                        'opacity-20': !brand.isActive,
+                    },
+                ]"/>
             </li>
         </ul>
         <slot/>

@@ -1,12 +1,10 @@
 <template>
-    <div class="mx-2 py-8">
-        <div class="relative">
-            <input type="text"
-                   v-model="inputVal"
-                   placeholder="جستجو"
-                   class="block w-full white border border-rb-violet-200 focus:border-rb-violet-500 rounded-full pl-8 pr-14 py-2 outline-none">
-            <icon-search class="icon--search"/>
-        </div>
+    <div class="relative">
+        <input type="text"
+               v-model="inputVal"
+               placeholder="جستجو"
+               class="smooth-transition">
+        <icon-search class="icon--search"/>
     </div>
 </template>
 <script>
@@ -35,7 +33,11 @@ export default {
 };
 </script>
 <style scoped>
+input {
+    @apply block w-full text-sm bg-white border border-rb-violet-200 rounded-full pl-8 pr-14 py-2 outline-none;
+    @apply hover:border-rb-violet-500 focus:border-rb-violet-500;
+}
 .icon--search {
-    @apply absolute top-0 right-0 w-10 h-10 p-3 mr-2 fill-current text-rb-violet-500;
+    @apply absolute top-0 right-0 w-9 h-9 p-2 mr-2 fill-current text-rb-violet-500;
 }
 </style>
