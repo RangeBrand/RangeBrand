@@ -31,7 +31,7 @@ query Brand ($path: String!) {
 }
 </page-query>
 <script>
-import ColorBanner from '~/components/color/banner';
+import ColorBanner from '~/components/colors/banner';
 import BrandDetail from '~/components/brands/profile/detail';
 import BrandGroups from '~/components/brands/profile/groups';
 

@@ -6,7 +6,7 @@
     </Layout>
 </template>
 <script>
-import ColorBanner from '~/components/color/banner';
+import ColorBanner from '~/components/colors/banner';
 
 import { validateHex } from '~/scripts/utils/validator';
 

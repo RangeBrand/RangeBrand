@@ -69,8 +69,8 @@ import IconCopy from '~/assets/icons/copy.svg';
 import IconMove from '~/assets/icons/move.svg';
 import IconAdd from '~/assets/icons/add.svg';
 
-import BannerGradient from '~/components/color/banner/gradient';
-import BannerFooter from '~/components/color/banner/footer';
+import BannerGradient from '~/components/colors/banner/gradient';
+import BannerFooter from '~/components/colors/banner/footer';
 
 import { isLight } from '~/scripts/utils/luminance';
 import { HEXtoRGB, RGBtoHEX } from '~/scripts/utils/converter';
