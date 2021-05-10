@@ -32,6 +32,11 @@ export default {
                 title: 'برندها',
             },
             {
+                name: 'colors',
+                to: '/colors/',
+                title: 'رنگ‌ها',
+            },
+            {
                 name: 'about',
                 to: '/about/',
                 title: 'درباره‌ ما',

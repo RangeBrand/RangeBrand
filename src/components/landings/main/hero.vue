@@ -12,12 +12,9 @@
                     </h1>
                     <p class="text-2xl leading-9 py-4">
                         لیستی از رنگ‌هایی که دور و بر خودمون توی ایران میبینیم. شاید این رنگ‌ها بتونن کمکمون کنن تا برای برندمون
-                        <span>
+                        <g-link to="/colors/" class="text-rb-red-500 hover:text-rb-carnelian-500">
                             رنگ بهتری انتخاب کنیم
-                        </span>
-                        <!-- <g-link to="/create/" class="text-rb-red-500 hover:text-rb-carnelian-500">
-                            رنگ بهتری انتخاب کنیم
-                        </g-link> -->
+                        </g-link>
                     </p>
                     <div class="flex items-center text-md py-4">
                         <g-link to="/brands/"
@@ -39,10 +36,15 @@
             </div>
             <div class="absolute right-0 top-20 z-10 mx-6">
                 <g-image src="~/favicon.png" alt="RangerBrand" class="w-12 block rounded-full"/>
-                <ul class="no-list py-4">
+                <ul class="no-list hidden md:block py-4">
                     <li class="block">
                         <g-link to="/brands/" class=" link inline-block p-1">
                             برندها
+                        </g-link>
+                    </li>
+                    <li class="block">
+                        <g-link to="/brands/" class=" link inline-block p-1">
+                            رنگ‌ها
                         </g-link>
                     </li>
                     <li class="block">
