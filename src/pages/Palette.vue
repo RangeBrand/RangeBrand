@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <div class="h-screen -mt-20 pt-16">
-            <color-banner :colors="colors" @update="foo"/>
+            <color-banner :colors="colors" @update="updateQuery"/>
         </div>
     </Layout>
 </template>
@@ -26,7 +26,7 @@ export default {
         },
     },
     methods: {
-        foo(value) {
+        updateQuery(value) {
             const newColors = value.join('-');
             if (newColors !== this.$route.query.colors) {
                 this.$router.push({
