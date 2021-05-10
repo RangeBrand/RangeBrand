@@ -1,5 +1,11 @@
 <template>
-    <div class="pagination" dir="ltr">
+    <div dir="ltr"
+         :class="[
+             'pagination',
+             {
+                 'border-t': info.totalPages > 1
+             }
+         ]">
         <Pager :info="info"
                next-label="‹"
                first-label="»"
@@ -26,7 +32,7 @@ export default {
 </script>
 <style scoped>
     .pagination {
-        @apply py-4 -mx-2 mt-4 border-t border-gray-200
+        @apply py-4 -mx-2 mt-4 border-gray-200
     }
     .link {
         @apply w-12 h-12 mx-2 rounded-full text-black text-opacity-80 border border-transparent;
