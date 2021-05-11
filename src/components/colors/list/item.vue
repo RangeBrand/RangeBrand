@@ -41,7 +41,7 @@ export default {
     },
     computed: {
         palettePath() {
-            return `/palette/?colors=${this.color.colors.join('-')}`;
+            return `/colors/${this.color.colors.join('-')}`;
         },
     },
     methods: {

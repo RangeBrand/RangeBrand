@@ -17,7 +17,7 @@ export default {
     computed: {
         colors() {
             try {
-                return this.$route.query.colors.split('-').filter((item, index, array) => {
+                return this.$route.params.id.split('-').filter((item, index, array) => {
                     return validateHex(item) && array.indexOf(item) === index;
                 });
             } catch {
@@ -25,22 +25,14 @@ export default {
             }
         },
     },
-    beforeMount() {
-        console.log(this.colors);
-        if (!this.colors.length) {
-            this.$router.replace({
-                path: '/colors/',
-            });
-        }
-    },
     methods: {
         updateQuery(value) {
             const newColors = value.join('-');
-            if (newColors !== this.$route.query.colors) {
-                this.$router.push({
-                    path: '/palette',
-                    query: {
-                        colors: value.join('-'),
+            if (newColors !== this.$route.params.id) {
+                this.$router.replace({
+                    name: '__colors_id',
+                    params: {
+                        id: value.join('-'),
                     },
                 });
             }
