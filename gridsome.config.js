@@ -22,6 +22,13 @@ module.exports = {
             },
         },
         {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Colors',
+                path: 'data/colors/*.json',
+            },
+        },
+        {
             use: 'gridsome-plugin-tailwindcss',
         },
         {
