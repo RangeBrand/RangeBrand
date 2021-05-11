@@ -26,7 +26,6 @@ export default {
         },
     },
     beforeMount() {
-        console.log(this.colors);
         if (!this.colors.length) {
             this.$router.replace({
                 path: '/colors/',

@@ -42,9 +42,9 @@ export default {
     computed: {
         palettePath() {
             return {
-                name: '__colors_id',
-                params: {
-                    id: this.color.colors.join('-'),
+                path: '/palette/',
+                query: {
+                    colors: this.color.colors.join('-'),
                 },
             };
         },
