@@ -41,7 +41,12 @@ export default {
     },
     computed: {
         palettePath() {
-            return `/colors/${this.color.colors.join('-')}`;
+            return {
+                name: '__colors_id',
+                params: {
+                    id: this.color.colors.join('-'),
+                },
+            };
         },
     },
     methods: {
