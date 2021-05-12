@@ -26,13 +26,12 @@
                      }">
                     <div class="color__actions flex-center smooth-transition">
                         <span class="p-2"
-                              v-if="$device.isDesktop"
                               v-show="localColors.length > 2">
                             <icon-delete class="color__actions__icon smooth-transition"
                                          @click="deleteColor(index)"/>
                         </span>
                         <span class="p-2"
-                              v-if="$device.isDesktop"
+                              v-if="device.isDesktop"
                               v-show="localColors.length > 1">
                             <icon-move class="color__actions__icon smooth-transition"
                                        @mousedown="captureOn($event, color.hex)"/>
@@ -74,6 +73,8 @@ import IconAdd from '~/assets/icons/add.svg';
 import BannerGradient from '~/components/colors/banner/gradient';
 import BannerFooter from '~/components/colors/banner/footer';
 
+import { mapState } from 'vuex';
+
 import { isLight } from '~/scripts/utils/luminance';
 import { HEXtoRGB, RGBtoHEX } from '~/scripts/utils/converter';
 import ClipboardMixin from '~/scripts/mixins/clipboard';
@@ -104,6 +105,7 @@ export default {
         };
     },
     computed: {
+        ...mapState(['device']),
         colorWidth() {
             return this.windowWidth / this.localColors.length;
         },

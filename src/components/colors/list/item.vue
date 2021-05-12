@@ -25,6 +25,7 @@
     </div>
 </template>
 <script>
+import { mapState } from 'vuex';
 import { isLight } from '~/scripts/utils/luminance';
 import ClipboardMixin from '~/scripts/mixins/clipboard';
 
@@ -40,6 +41,7 @@ export default {
         },
     },
     computed: {
+        ...mapState(['device']),
         palettePath() {
             return {
                 path: '/palette/',
@@ -52,7 +54,7 @@ export default {
     methods: {
         isLight,
         onColorClick(color) {
-            if (this.$device.isDesktop) {
+            if (this.device.isDesktop) {
                 this.copyColorToClipboard(color);
             }
         },

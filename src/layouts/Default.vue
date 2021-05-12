@@ -16,5 +16,8 @@ export default {
         CustomHeader,
         CustomFooter,
     },
+    mounted() {
+        this.$store.dispatch('checkDevice');
+    },
 };
 </script>

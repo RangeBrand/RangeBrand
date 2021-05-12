@@ -61,9 +61,6 @@ module.exports = {
                 duration: 2000,
             },
         },
-        {
-            use: 'gridsome-plugin-device-detector-js',
-        },
     ],
     templates: {
         Brand: '/brands/:path',

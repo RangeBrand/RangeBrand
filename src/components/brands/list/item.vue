@@ -28,6 +28,8 @@
 import { isLight } from '~/scripts/utils/luminance';
 import ClipboardMixin from '~/scripts/mixins/clipboard';
 
+import { mapState } from 'vuex';
+
 export default {
     mixins: [
         ClipboardMixin,
@@ -39,10 +41,13 @@ export default {
             require: true,
         },
     },
+    computed: {
+        ...mapState(['device']),
+    },
     methods: {
         isLight,
         onColorClick(color) {
-            if (this.$device.isDesktop) {
+            if (this.device.isDesktop) {
                 this.copyColorToClipboard(color);
             }
         },
