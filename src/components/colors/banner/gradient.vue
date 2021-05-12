@@ -10,10 +10,10 @@
             <li v-for="(dir, index) in directions"
                 :key="index"
                 @click="gradDirection = dir.name"
-                class="p-1">
+                class="p-1"
+                :style="`transform: rotate(${dir.degree}deg)`">
                 <icon-chevron :class="[
-                    'gradient__icon smooth-transition transform',
-                    `rotate-${dir.degree}`,
+                    'gradient__icon smooth-transition',
                     {
                         'border border-white': dir.name === gradDirection
                     }
