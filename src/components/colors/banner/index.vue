@@ -26,11 +26,13 @@
                      }">
                     <div class="color__actions flex-center smooth-transition">
                         <span class="p-2"
+                              v-if="$device.isDesktop"
                               v-show="localColors.length > 2">
                             <icon-delete class="color__actions__icon smooth-transition"
                                          @click="deleteColor(index)"/>
                         </span>
                         <span class="p-2"
+                              v-if="$device.isDesktop"
                               v-show="localColors.length > 1">
                             <icon-move class="color__actions__icon smooth-transition"
                                        @mousedown="captureOn($event, color.hex)"/>
@@ -220,7 +222,9 @@ export default {
     @apply hover:bg-opacity-50
 }
 .color__code {
-    @apply absolute bottom-0 right-0 left-0 text-center text-xl p-3 font-semibold uppercase select-none;
+    @apply absolute bottom-0 right-0 left-0 text-center font-semibold uppercase select-none;
+    @apply transform -rotate-90 -translate-y-8;
+    @apply md:text-xl md:p-3 md:rotate-0 md:translate-y-0;
 }
 
 li:first-of-type .color__add {

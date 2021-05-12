@@ -14,6 +14,7 @@
     "@gridsome/transformer-json": "^0.2.1",
     "gh-pages": "^3.1.0",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-device-detector-js": "^1.0.3",
     "gridsome-plugin-flexsearch": "^1.0.5",
     "gridsome-plugin-vue-toasted": "^1.0.3"
   },

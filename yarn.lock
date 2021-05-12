@@ -3357,6 +3357,11 @@ detective@^5.2.0:
     defined "^1.0.0"
     minimist "^1.1.1"
 
+device-detector-js@2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/device-detector-js/-/device-detector-js-2.2.7.tgz#ce1c72dfc67bb13af3cafbf0bfae33f5e52a4a0e"
+  integrity sha512-I8kyGYv5c92bqO8oJehCOPubebBMwkSMnAr3IJDkpRLyXmIHasGqfA5MCwud17B4vn8FP4pgV3BJFZuQv8s4zQ==
+
 didyoumean@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/didyoumean/-/didyoumean-1.2.1.tgz#e92edfdada6537d484d73c0172fd1eba0c4976ff"
@@ -4927,6 +4932,13 @@ graphql@^14.4.2:
   integrity sha512-l0xWZpoPKpppFzMfvVyFmp9vLN7w/ZZJPefUicMCepfJeQ8sMcztloGYY9DfjVPo6tIUDzU5Hw3MUbIjj9AVVA==
   dependencies:
     iterall "^1.2.2"
+
+gridsome-plugin-device-detector-js@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-device-detector-js/-/gridsome-plugin-device-detector-js-1.0.3.tgz#56183c066f3cccb869d60094d5781384f9407ebe"
+  integrity sha512-o7KLkce3ZNp3BQRgiQm79avxRDztDVKMupYp7UUuR8HB2Rnnp5XfFVHBV4WbEIAEO6sPcyy8IfQfXUNAkzfahA==
+  dependencies:
+    vue-device-detector-js "^1.0.2"
 
 gridsome-plugin-flexsearch@^1.0.5:
   version "1.0.5"
@@ -10140,6 +10152,13 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
+
+vue-device-detector-js@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vue-device-detector-js/-/vue-device-detector-js-1.0.2.tgz#0d1cc45a0bcf0724bf13b8fbd056e1e52b4b4444"
+  integrity sha512-mRELSbKOGK9umhLpkk4zch5AvT0YVwY9pUg9XPn1oB2PqOW0d/VcZdXPGdVGsGVeWKn7StEiAmxj9RM/+outEg==
+  dependencies:
+    device-detector-js "2.2.7"
 
 vue-eslint-parser@^7.4.1:
   version "7.4.1"

@@ -8,7 +8,7 @@
                 <code dir="ltr"
                       :class="isLight(color) ? 'text-black' : 'text-white'"
                       class="brand__color__code smooth-transition"
-                      @click="copyColorToClipboard(color)">
+                      @click="onColorClick(color)">
                     {{ color }}
                 </code>
             </li>
@@ -41,6 +41,11 @@ export default {
     },
     methods: {
         isLight,
+        onColorClick(color) {
+            if (this.$device.isDesktop) {
+                this.copyColorToClipboard(color);
+            }
+        },
     },
 };
 </script>

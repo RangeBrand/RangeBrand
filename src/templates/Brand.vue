@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <div class="color-banner hidden md:block">
+        <div class="color-banner">
             <color-banner :colors="brand.colors"/>
         </div>
         <main class="wrapper text-black text-opacity-80 py-8">

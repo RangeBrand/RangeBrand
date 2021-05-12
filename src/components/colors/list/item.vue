@@ -8,7 +8,7 @@
                 <code dir="ltr"
                       :class="isLight(hex) ? 'text-black' : 'text-white'"
                       class="item__color__code smooth-transition"
-                      @click="copyColorToClipboard(hex)">
+                      @click="onColorClick(hex)">
                     {{ hex }}
                 </code>
             </li>
@@ -51,6 +51,11 @@ export default {
     },
     methods: {
         isLight,
+        onColorClick(color) {
+            if (this.$device.isDesktop) {
+                this.copyColorToClipboard(color);
+            }
+        },
     },
 };
 </script>
