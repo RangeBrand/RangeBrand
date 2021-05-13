@@ -25,20 +25,25 @@
                          backgroundColor: `#${color.hex}`,
                      }">
                     <div class="color__actions flex-center smooth-transition">
-                        <span class="p-2"
+                        <span class="color__actions__icon smooth-transition"
                               v-show="localColors.length > 2">
-                            <icon-delete class="color__actions__icon smooth-transition"
+                            <icon-delete class="p-3 fill-current w-12 block"
                                          @click="deleteColor(index)"/>
                         </span>
-                        <span class="p-2"
+                        <span class="color__actions__icon smooth-transition"
                               v-if="device.isDesktop"
                               v-show="localColors.length > 1">
-                            <icon-move class="color__actions__icon smooth-transition"
+                            <icon-move class="p-3 fill-current w-12 block"
                                        @mousedown="captureOn($event, color.hex)"/>
                         </span>
-                        <span class="p-2">
-                            <icon-copy class="color__actions__icon smooth-transition"
+                        <span class="color__actions__icon smooth-transition">
+                            <icon-copy class="p-3 fill-current w-12 block"
                                        @click="copyColorToClipboard(color.hex)"/>
+                        </span>
+                        <span class="color__actions__icon smooth-transition">
+                            <component :is="favoriteColors.indexOf(color.hex) === -1 ? 'IconHeartEmpty' : 'IconHeartFilled'"
+                                       class="p-3 fill-current w-12 block"
+                                       @click="toggleFavoriteColor(color.hex)"/>
                         </span>
                     </div>
                     <code
@@ -69,11 +74,13 @@ import IconDelete from '~/assets/icons/delete.svg';
 import IconCopy from '~/assets/icons/copy.svg';
 import IconMove from '~/assets/icons/move.svg';
 import IconAdd from '~/assets/icons/add.svg';
+import IconHeartEmpty from '~/assets/icons/heart-empty.svg';
+import IconHeartFilled from '~/assets/icons/heart-filled.svg';
 
 import BannerGradient from '~/components/colors/banner/gradient';
 import BannerFooter from '~/components/colors/banner/footer';
 
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 import { isLight } from '~/scripts/utils/luminance';
 import { HEXtoRGB, RGBtoHEX } from '~/scripts/utils/converter';
@@ -85,6 +92,8 @@ export default {
         IconCopy,
         IconMove,
         IconAdd,
+        IconHeartEmpty,
+        IconHeartFilled,
         BannerGradient,
         BannerFooter,
     },
@@ -105,7 +114,7 @@ export default {
         };
     },
     computed: {
-        ...mapState(['device']),
+        ...mapState(['device', 'favoriteColors']),
         colorWidth() {
             return this.windowWidth / this.localColors.length;
         },
@@ -137,6 +146,7 @@ export default {
         },
     },
     methods: {
+        ...mapActions(['toggleFavoriteColor']),
         isLight,
         deleteColor(index) {
             this.localColors.splice(index, 1);
@@ -199,14 +209,14 @@ export default {
 }
 
 .color__actions {
-    @apply h-full pb-12 flex-col justify-center opacity-0;
+    @apply h-full pb-12 flex-col justify-center opacity-100;
 }
 .color:hover .color__actions {
     @apply opacity-100;
 }
 
 .color__actions__icon {
-    @apply w-12 p-3 rounded-full fill-current cursor-pointer;
+    @apply inline-block my-1 rounded-full cursor-pointer;
 }
 
 .color--dark .color__code {

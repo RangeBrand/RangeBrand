@@ -11,10 +11,8 @@ const mutations = {
     setDevice (state, device) {
         state.device = device;
     },
-    setFavoriteColor (state, hex) {
-        if (state.favoriteColors.indexOf(hex) === -1) {
-            state.favoriteColors.push(hex);
-        }
+    setFavoriteColors (state, colors) {
+        state.favoriteColors = colors;
     },
     setSidebar(state, isOpen) {
         state.sidebarIsOpen = isOpen;
@@ -41,6 +39,16 @@ const actions = {
             }, 300);
             window.addEventListener('resize', checkDevice);
             checkDevice();
+        }
+    },
+    toggleFavoriteColor({ state, commit }, value) {
+        if (state.favoriteColors.indexOf(value) === -1) {
+            commit('setFavoriteColors', [
+                ...state.favoriteColors,
+                value,
+            ]);
+        } else {
+            commit('setFavoriteColors', state.favoriteColors.filter(color => color !== value));
         }
     },
     toggleSidebar({ state, commit }) {

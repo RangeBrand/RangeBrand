@@ -8,7 +8,7 @@
                 رنگ‌های مورد علاقه من
             </span>
         </div>
-        <div>
+        <div class="h-full pb-12">
             <favorite-colors/>
         </div>
     </div>
