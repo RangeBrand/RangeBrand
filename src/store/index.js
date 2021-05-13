@@ -3,11 +3,21 @@ import mapValues from 'lodash.mapvalues';
 
 const state = {
     device: {},
+    favoriteColors: [],
+    sidebarIsOpen: false,
 };
 
 const mutations = {
     setDevice (state, device) {
         state.device = device;
+    },
+    setFavoriteColor (state, hex) {
+        if (state.favoriteColors.indexOf(hex) === -1) {
+            state.favoriteColors.push(hex);
+        }
+    },
+    setSidebar(state, isOpen) {
+        state.sidebarIsOpen = isOpen;
     },
 };
 
@@ -32,6 +42,15 @@ const actions = {
             window.addEventListener('resize', checkDevice);
             checkDevice();
         }
+    },
+    toggleSidebar({ state, commit }) {
+        commit('setSidebar', !state.sidebarIsOpen);
+    },
+    openSidebar({ commit }) {
+        commit('setSidebar', true);
+    },
+    closeSidebar({ commit }) {
+        commit('setSidebar', false);
     },
 };
 
