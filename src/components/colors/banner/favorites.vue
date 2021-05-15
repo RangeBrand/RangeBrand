@@ -1,6 +1,9 @@
 <template>
     <div class="list">
         <ul class="h-full overflow-y-scroll p-4">
+            <li v-show="!favoriteColors.length">
+                <span class="text-black text-opacity-50 block text-center p-4">خالیه که!</span>
+            </li>
             <li v-for="color in favoriteColors"
                 :key="color"
                 :class="[
@@ -23,15 +26,12 @@
                            borderColor: 'transparent'
                        }: ''"
                        type="text"
-                       placeholder="اضافه کردن"
+                       placeholder="اضافه کن"
                        class="list__item__input smooth-transition">
                 <icon-check class="list__item__icon fast-transition"
                             @click="addColor"/>
             </li>
         </ul>
-        <div v-if="!favoriteColors.length">
-            <span class="text-black text-opacity-50 block text-center p-4">خالیه که!</span>
-        </div>
         <div class="absolute h-18 bottom-0 right-0 left-0 text-center pb-4">
             <span class="button inline-block"
                   @click.prevent="goToPalette">
