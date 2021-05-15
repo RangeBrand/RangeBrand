@@ -18,7 +18,7 @@
     </div>
 </template>
 <script>
-import Dropdown from '~/components/search/dropdown';
+import Dropdown from '~/components/general/dropdown';
 
 export default {
     components: {
