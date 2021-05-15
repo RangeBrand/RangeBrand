@@ -1,4 +1,5 @@
 import { sRGBtoLin, HEXtoRGB, RGBtosRGB } from '~/scripts/utils/converter';
+import { validateHex } from '~/scripts/utils/validator';
 
 // https://stackoverflow.com/a/56678483
 const getPerceivedLightness = (luminance) => {
@@ -11,12 +12,15 @@ const getPerceivedLightness = (luminance) => {
 
 const isLightMem = {};
 export const isLight = (color) => {
-    if (!isLightMem[color]) {
-        const [vR, vG, vB] = RGBtosRGB(HEXtoRGB(color));
-        const luminance = (sRGBtoLin(vR) * 0.2126) +
-                        (sRGBtoLin(vG) * 0.7152) +
-                        (sRGBtoLin(vB) * 0.0722);
-        isLightMem[color] = getPerceivedLightness(luminance) > 60;
+    if (validateHex(color)) {
+        if (!isLightMem[color]) {
+            const [vR, vG, vB] = RGBtosRGB(HEXtoRGB(color));
+            const luminance = (sRGBtoLin(vR) * 0.2126) +
+                            (sRGBtoLin(vG) * 0.7152) +
+                            (sRGBtoLin(vB) * 0.0722);
+            isLightMem[color] = getPerceivedLightness(luminance) > 60;
+        }
+        return isLightMem[color];
     }
-    return isLightMem[color];
+    return true;
 };

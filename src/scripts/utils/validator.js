@@ -1,4 +1,8 @@
 export const validateHex = (color) => {
     const regex = /^[0-9A-F]{6}$/i;
-    return regex.test(color.toUpperCase());
+    try {
+        return regex.test(color.toUpperCase());
+    } catch {
+        return false;
+    }
 };

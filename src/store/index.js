@@ -12,7 +12,7 @@ const mutations = {
         state.device = device;
     },
     setFavoriteColors (state, colors) {
-        state.favoriteColors = colors;
+        state.favoriteColors = [...new Set(colors)];
     },
     setSidebar(state, isOpen) {
         state.sidebarIsOpen = isOpen;
@@ -41,14 +41,21 @@ const actions = {
             checkDevice();
         }
     },
-    toggleFavoriteColor({ state, commit }, value) {
+    removeFavoriteColor({ state, commit }, value) {
+        commit('setFavoriteColors', state.favoriteColors.filter(color => color !== value));
+    },
+    addFavoriteColor({ commit }, value) {
+        console.log('he', value);
+        commit('setFavoriteColors', [
+            ...state.favoriteColors,
+            value,
+        ]);
+    },
+    toggleFavoriteColor({ state, dispatch }, value) {
         if (state.favoriteColors.indexOf(value) === -1) {
-            commit('setFavoriteColors', [
-                ...state.favoriteColors,
-                value,
-            ]);
+            dispatch('addFavoriteColor', value);
         } else {
-            commit('setFavoriteColors', state.favoriteColors.filter(color => color !== value));
+            dispatch('removeFavoriteColor', value);
         }
     },
     toggleSidebar({ state, commit }) {
