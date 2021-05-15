@@ -34,6 +34,10 @@
     @apply rounded-full bg-rb-violet-500 text-white py-4 px-10 cursor-pointer;
     @apply hover:bg-rb-violet-600;
 }
+.button:disabled {
+    @apply opacity-60 cursor-not-allowed;
+    @apply hover:bg-rb-violet-500;
+}
 
 .fade-enter-active,
 .fade-leave-active {

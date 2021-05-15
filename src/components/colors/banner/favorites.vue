@@ -33,10 +33,11 @@
             </li>
         </ul>
         <div class="absolute h-18 bottom-0 right-0 left-0 text-center pb-4">
-            <span class="button inline-block"
-                  @click.prevent="goToPalette">
+            <button class="button inline-block"
+                    :disabled="!favoriteColors.length"
+                    @click="goToPalette">
                 مشاهده در پالت
-            </span>
+            </button>
         </div>
     </div>
 </template>
