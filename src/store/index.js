@@ -5,6 +5,7 @@ const state = {
     device: {},
     favoriteColors: [],
     sidebarIsOpen: false,
+    isSeparatedMode: false,
 };
 
 const mutations = {
@@ -16,6 +17,9 @@ const mutations = {
     },
     setSidebar(state, isOpen) {
         state.sidebarIsOpen = isOpen;
+    },
+    setSeparatedMode(state, isSeparated) {
+        state.isSeparatedMode = isSeparated;
     },
 };
 
@@ -66,6 +70,9 @@ const actions = {
     },
     closeSidebar({ commit }) {
         commit('setSidebar', false);
+    },
+    toggleSeparatedMode({ state, commit }) {
+        commit('setSeparatedMode', !state.isSeparatedMode);
     },
 };
 

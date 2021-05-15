@@ -5,13 +5,43 @@
             'ml-72': sidebarIsOpen && !device.isMobile,
         },
     ]">
-        <banner-list v-model="localColors" @copy="copyColorToClipboard"/>
+        <banner-list v-model="localColors"
+                     @copy="copyColorToClipboard"/>
         <transition name="fade">
             <banner-gradient v-show="gradIsVisible"
                              :colors="localColors"
                              @copy="copyToClipboard"/>
         </transition>
-        <banner-footer v-model="gradIsVisible"/>
+        <banner-footer>
+            <template slot="right">
+                <div class="flex-center">
+                    <dropdown type="simple"
+                              position="top">
+                        <template slot="title">
+                            تنظیمات
+                        </template>
+                        <div class="dropdown__item smooth-transition w-48"
+                             @click="toggleSeparatedMode">
+                            <div v-show="!isSeparatedMode">
+                                جدا کردن رنگ‌ها
+                            </div>
+                            <div v-show="isSeparatedMode">
+                                پیوسته کردن رنگ‌ها
+                            </div>
+                        </div>
+                        <div class="dropdown__item smooth-transition w-48"
+                             @click="gradIsVisible = !gradIsVisible">
+                            <div v-show="!gradIsVisible">
+                                نمایش گرادیانت
+                            </div>
+                            <div v-show="gradIsVisible">
+                                مخفی کردن گرادیانت
+                            </div>
+                        </div>
+                    </dropdown>
+                </div>
+            </template>
+        </banner-footer>
     </div>
 </template>
 <script>
@@ -19,16 +49,18 @@
 import BannerList from '~/components/colors/banner/list';
 import BannerGradient from '~/components/colors/banner/gradient';
 import BannerFooter from '~/components/colors/banner/footer';
+import Dropdown from '~/components/general/dropdown';
 
 import ClipboardMixin from '~/scripts/mixins/clipboard';
 
-import { mapState } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 export default {
     components: {
         BannerList,
         BannerGradient,
         BannerFooter,
+        Dropdown,
     },
     mixins: [
         ClipboardMixin,
@@ -42,9 +74,10 @@ export default {
     data: () => ({
         localColors: [],
         gradIsVisible: false,
+        colorsAreSeparated: false,
     }),
     computed: {
-        ...mapState(['device', 'sidebarIsOpen']),
+        ...mapState(['device', 'sidebarIsOpen', 'isSeparatedMode']),
     },
     watch: {
         localColors(value) {
@@ -62,5 +95,13 @@ export default {
             immediate: true,
         },
     },
+    methods: {
+        ...mapActions(['toggleSeparatedMode']),
+    },
 };
 </script>
+<style scoped>
+.dropdown__item {
+    @apply px-4 py-2 cursor-pointer bg-white hover:bg-rb-violet-100;
+}
+</style>

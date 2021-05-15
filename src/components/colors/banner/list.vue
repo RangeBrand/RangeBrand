@@ -1,11 +1,16 @@
 <template>
-    <ul class="flex flex-grow justify-center relative overflow-hidden"
+    <ul :class="[
+            'flex flex-grow justify-center relative overflow-hidden',
+            {
+                'separat': isSeparatedMode
+            },
+        ]"
         @mousemove="translateColor"
         @mouseup="captureOff">
         <li v-for="(color, index) in inputVal"
             :key="color.hex"
             :class="[
-                'absolute h-full',
+                'color__wrapper',
                 {
                     'z-50': activeColor === color.hex,
                     'smooth-transition': activeColor !== color.hex,
@@ -93,7 +98,7 @@ export default {
         activeColor: null,
     }),
     computed: {
-        ...mapState(['device', 'favoriteColors', 'sidebarIsOpen']),
+        ...mapState(['device', 'favoriteColors', 'sidebarIsOpen', 'isSeparatedMode']),
         inputVal: {
             get() {
                 return this.value;
@@ -175,6 +180,10 @@ export default {
 };
 </script>
 <style scoped>
+.color__wrapper {
+    @apply absolute h-full;
+}
+
 .color {
     @apply relative block h-full;
 }
@@ -220,5 +229,15 @@ li:first-of-type .color__add {
 }
 .color__add .button {
     @apply p-2;
+}
+
+.separat {
+    @apply mx-1;
+}
+.separat .color__wrapper {
+    @apply px-1 py-2;
+}
+.separat .color {
+    @apply rounded-lg;
 }
 </style>
