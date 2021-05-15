@@ -33,10 +33,10 @@
             <span class="text-black text-opacity-50 block text-center p-4">خالیه که!</span>
         </div>
         <div class="absolute h-18 bottom-0 right-0 left-0 text-center pb-4">
-            <g-link class="button inline-block"
-                    :to="paletteLink">
+            <span class="button inline-block"
+                  @click.prevent="goToPalette">
                 مشاهده در پالت
-            </g-link>
+            </span>
         </div>
     </div>
 </template>
@@ -59,14 +59,6 @@ export default {
     }),
     computed: {
         ...mapState(['favoriteColors']),
-        paletteLink() {
-            return {
-                path: '/palette',
-                query: {
-                    colors: this.favoriteColors.join('-'),
-                },
-            };
-        },
     },
     watch: {
         newFav(value) {
@@ -74,7 +66,7 @@ export default {
         },
     },
     methods: {
-        ...mapActions(['addFavoriteColor', 'removeFavoriteColor']),
+        ...mapActions(['addFavoriteColor', 'removeFavoriteColor', 'closeSidebar']),
         isLight,
         validateHex,
         addColor() {
@@ -88,6 +80,15 @@ export default {
             } else {
                 this.$toasted.error('این که نشد رنگ!');
             }
+        },
+        goToPalette() {
+            this.closeSidebar();
+            this.$router.push({
+                path: '/palette',
+                query: {
+                    colors: this.favoriteColors.join('-'),
+                },
+            });
         },
     },
 };

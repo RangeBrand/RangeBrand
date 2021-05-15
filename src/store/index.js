@@ -45,11 +45,11 @@ const actions = {
         commit('setFavoriteColors', state.favoriteColors.filter(color => color !== value));
     },
     addFavoriteColor({ commit }, value) {
-        console.log('he', value);
         commit('setFavoriteColors', [
             ...state.favoriteColors,
             value,
         ]);
+        commit('setSidebar', true);
     },
     toggleFavoriteColor({ state, dispatch }, value) {
         if (state.favoriteColors.indexOf(value) === -1) {
