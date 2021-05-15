@@ -1,5 +1,10 @@
 <template>
-    <div class="h-full flex flex-col relative">
+    <div :class="[
+        'h-full flex flex-col relative smooth-transition',
+        {
+            'ml-72': sidebarIsOpen,
+        },
+    ]">
         <ul class="flex flex-grow justify-center relative overflow-hidden"
             @mousemove="translateColor"
             @mouseup="captureOff">
@@ -32,7 +37,7 @@
                         </span>
                         <span class="color__actions__icon smooth-transition"
                               v-if="device.isDesktop"
-                              v-show="localColors.length > 1">
+                              v-show="localColors.length && !sidebarIsOpen">
                             <icon-move class="p-3 fill-current w-12 block"
                                        @mousedown="captureOn($event, color.hex)"/>
                         </span>
@@ -114,7 +119,7 @@ export default {
         };
     },
     computed: {
-        ...mapState(['device', 'favoriteColors']),
+        ...mapState(['device', 'favoriteColors', 'sidebarIsOpen']),
         colorWidth() {
             return this.windowWidth / this.localColors.length;
         },
@@ -209,7 +214,7 @@ export default {
 }
 
 .color__actions {
-    @apply h-full pb-12 flex-col justify-center opacity-100;
+    @apply h-full pb-12 flex-col justify-center opacity-0;
 }
 .color:hover .color__actions {
     @apply opacity-100;
