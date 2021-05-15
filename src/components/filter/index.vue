@@ -31,6 +31,9 @@ export default {
             require: true,
         },
     },
+    data: () => ({
+        activeColor: null,
+    }),
     computed: {
         filters() {
             return Object.keys(this.value);
