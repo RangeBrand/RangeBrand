@@ -18,7 +18,10 @@
                     <dropdown type="simple"
                               position="top">
                         <template slot="title">
-                            تنظیمات
+                            <icon-setting class="w-4 inline-block"/>
+                            <span class="mr-2 inline-block fill-current">
+                                تنظیمات
+                            </span>
                         </template>
                         <div class="dropdown__item smooth-transition w-48"
                              @click="toggleSeparatedMode">
@@ -50,6 +53,7 @@ import BannerList from '~/components/colors/banner/list';
 import BannerGradient from '~/components/colors/banner/gradient';
 import BannerFooter from '~/components/colors/banner/footer';
 import Dropdown from '~/components/general/dropdown';
+import IconSetting from '~/assets/icons/setting.svg';
 
 import ClipboardMixin from '~/scripts/mixins/clipboard';
 
@@ -61,6 +65,7 @@ export default {
         BannerGradient,
         BannerFooter,
         Dropdown,
+        IconSetting,
     },
     mixins: [
         ClipboardMixin,
