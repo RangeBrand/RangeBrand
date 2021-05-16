@@ -55,8 +55,8 @@ export default {
 </script>
 <style scoped>
 .color-banner {
-    height: 55vh;
-    @apply -mt-4;
+    @apply -mt-4 h-screen-1/2;
+    @apply md:h-screen-3/4;
 }
 .color-detail {
     @apply my-8 mx-auto;

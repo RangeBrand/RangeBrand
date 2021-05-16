@@ -39,6 +39,10 @@ module.exports = {
                 270: '270deg',
                 315: '315deg',
             },
+            height: {
+                'screen-1/2': '50vh',
+                'screen-3/4': '75vh',
+            },
         },
     },
     variants: {
