@@ -61,6 +61,9 @@ module.exports = {
                 duration: 2000,
             },
         },
+        {
+            use: 'gridsome-plugin-modal',
+        },
     ],
     templates: {
         Brand: '/brands/:path',

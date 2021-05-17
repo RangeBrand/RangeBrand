@@ -39,6 +39,12 @@
     @apply hover:bg-rb-violet-500;
 }
 
+.button--simple {
+    @apply smooth-transition;
+    @apply rounded-full text-black text-opacity-80 text-sm px-4 py-2 shadow-none cursor-pointer;
+    @apply hover:bg-white hover:shadow;
+}
+
 .fade-enter-active,
 .fade-leave-active {
     @apply transition-opacity duration-150 ease-linear;

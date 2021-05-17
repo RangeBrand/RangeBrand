@@ -18,7 +18,7 @@
                     <dropdown type="simple"
                               position="top">
                         <template slot="title">
-                            <icon-setting class="w-4 inline-block"/>
+                            <icon-setting class="w-5 inline-block"/>
                             <span class="mr-2 inline-block fill-current">
                                 تنظیمات
                             </span>
@@ -42,9 +42,21 @@
                             </div>
                         </div>
                     </dropdown>
+                    <button class="button--simple"
+                            @click="$modal.show('exportModal')">
+                        <icon-share class="w-5 inline-block"/>
+                        <span class="mr-2 inline-block fill-current">
+                            خروجی
+                        </span>
+                    </button>
                 </div>
             </template>
         </banner-footer>
+        <modal name="exportModal"
+               dir="ltr"
+               :adaptive="true">
+            <banner-export :colors="localColors"/>
+        </modal>
     </div>
 </template>
 <script>
@@ -52,8 +64,10 @@
 import BannerList from '~/components/colors/banner/list';
 import BannerGradient from '~/components/colors/banner/gradient';
 import BannerFooter from '~/components/colors/banner/footer';
+import BannerExport from '~/components/colors/banner/export';
 import Dropdown from '~/components/general/dropdown';
 import IconSetting from '~/assets/icons/setting.svg';
+import IconShare from '~/assets/icons/share.svg';
 
 import ClipboardMixin from '~/scripts/mixins/clipboard';
 
@@ -64,8 +78,10 @@ export default {
         BannerList,
         BannerGradient,
         BannerFooter,
+        BannerExport,
         Dropdown,
         IconSetting,
+        IconShare,
     },
     mixins: [
         ClipboardMixin,

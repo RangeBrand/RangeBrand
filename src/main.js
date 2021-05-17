@@ -7,6 +7,9 @@ import store from '~/store';
 import DefaultLayout from '~/layouts/Default.vue';
 import '~/assets/style/index.css';
 
+import VuePrism from 'vue-prism';
+import '~/assets/style/prism-vs.css';
+
 const META_TAGS = [
     {
         name: 'charset',
@@ -50,4 +53,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     // Create Store
     Vue.use(Vuex);
     appOptions.store = new Vuex.Store(store);
+
+    Vue.use(VuePrism);
 };
