@@ -55,7 +55,9 @@
         <modal name="exportModal"
                dir="ltr"
                :adaptive="true">
-            <banner-export :colors="localColors"/>
+            <banner-export :colors="localColors"
+                           :original-colors="colors"
+                           @close="$modal.hide('exportModal')"/>
         </modal>
     </div>
 </template>

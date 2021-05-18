@@ -4,9 +4,6 @@
             <span v-show="step === 'main'">
                 خروجی از این پالت رنگی
             </span>
-            <span v-show="step === 'css'">
-                این پالت رنگی به فرمت CSS
-            </span>
             <span v-show="step === 'code'">
                 Codeهای این پالت رنگی
             </span>
@@ -19,7 +16,7 @@
         <ul v-show="step === 'main'" class="export__body flex-center">
             <li class="export__body_item">
                 <div class="item smooth-transition"
-                     @click="copyUrlToClipboard">
+                     @click="copyUrl">
                     <div class="item__icon_wrapper">
                         <icon-link class="item__icon"/>
                     </div>
@@ -28,17 +25,17 @@
                     </span>
                 </div>
             </li>
-            <!-- <li class="export__body_item">
+            <li class="export__body_item">
                 <div class="item smooth-transition"
-                     @click="step = 'css'">
+                     @click="downloadPng">
                     <div class="item__icon_wrapper">
-                        <icon-link class="item__icon"/>
+                        <icon-png class="item__icon"/>
                     </div>
                     <span class="block">
-                        نمایش CSS
+                        دانلود PNG
                     </span>
                 </div>
-            </li> -->
+            </li>
             <li class="export__body_item">
                 <div class="item smooth-transition"
                      @click="step = 'code'">
@@ -62,19 +59,23 @@
 import IconArrow from '~/assets/icons/arrow.svg';
 import IconLink from '~/assets/icons/link.svg';
 import IconCode from '~/assets/icons/code.svg';
+import IconPng from '~/assets/icons/png.svg';
 
 import ClipboardMixin from '~/scripts/mixins/clipboard';
 
+import isEqual from 'lodash.isequal';
 import {
     HEXtoRGB,
     HEXtoHSL,
 } from '~/scripts/utils/converter';
+import { generatePalette } from '~/scripts/utils/palette';
 
 export default {
     components: {
         IconArrow,
         IconLink,
         IconCode,
+        IconPng,
     },
     mixins: [
         ClipboardMixin,
@@ -84,21 +85,46 @@ export default {
             type: Array,
             default: () => ([]),
         },
+        originalColors: {
+            type: Array,
+            default: () => ([]),
+        },
     },
     data: () => ({
         step: 'main',
     }),
     computed: {
+        simpleColors() {
+            return this.colors.map(color => color.hex);
+        },
         code() {
-            const csv = `// CSV\n${this.colors.map(color => `#${color.hex}`).join(', ')}`;
-            const array = `// Array\n[${this.colors.map(color => `"#${color.hex}"`).join(', ')}]`;
-            const extArray = `// Extended Array\n[\n${this.colors.map(color => {
-                const hex = `\t"hex": "#${color.hex}",`;
-                const rgb = `\t"rgb": "rgb(${HEXtoRGB(color.hex)})",`;
-                const hsl = `\t"hsl": "hsl(${HEXtoHSL(color.hex)})"`;
+            const csv = `// CSV\n${this.simpleColors.map(color => `#${color}`).join(', ')}`;
+            const array = `// Array\n[${this.simpleColors.map(color => `"#${color}"`).join(', ')}]`;
+            const extArray = `// Extended Array\n[\n${this.simpleColors.map(color => {
+                const hex = `\t"hex": "#${color}",`;
+                const rgb = `\t"rgb": "rgb(${HEXtoRGB(color)})",`;
+                const hsl = `\t"hsl": "hsl(${HEXtoHSL(color)})"`;
                 return `\t{\n\t${hex}\n\t${rgb}\n\t${hsl}\n\t}`;
             }).join(',\n')}\n]`;
             return `${csv}\n\n${array}\n\n${extArray}`;
+        },
+    },
+    methods: {
+        downloadPng() {
+            const isOriginalBrandPage = (this.$route.path.toLowerCase() !== '/palette/') && isEqual(this.simpleColors.sort(), [...this.originalColors].sort());
+            const download = document.createElement('a');
+            download.href = generatePalette(this.simpleColors, isOriginalBrandPage
+                ? this.$route.fullPath
+                : `/palette/?colors=${this.simpleColors.join('-')}`);
+            download.download = isOriginalBrandPage
+                ? `RangeBrand-${this.$route.params.path}.png`
+                : `RangeBrand-${this.simpleColors.join('_')}.png`;
+            download.click();
+            this.$emit('close');
+        },
+        copyUrl() {
+            this.copyUrlToClipboard();
+            this.$emit('close');
         },
     },
 };
