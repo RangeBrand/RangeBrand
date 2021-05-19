@@ -111,15 +111,16 @@ export default {
     },
     methods: {
         downloadPng() {
-            const isOriginalBrandPage = (this.$route.path.toLowerCase() !== '/palette/') && isEqual(this.simpleColors.sort(), [...this.originalColors].sort());
+            const isOriginalBrandPage = (this.$route.path.toLowerCase() !== '/palette/') && isEqual([...this.simpleColors].sort(), [...this.originalColors].sort());
             const download = document.createElement('a');
             download.href = generatePalette(this.simpleColors, isOriginalBrandPage
                 ? this.$route.fullPath
                 : `/palette/?colors=${this.simpleColors.join('-')}`);
             download.download = isOriginalBrandPage
                 ? `RangeBrand-${this.$route.params.path}.png`
-                : `RangeBrand-${this.simpleColors.join('_')}.png`;
+                : `RangeBrand-${this.simpleColors.map(color => color.toUpperCase()).join('_')}.png`;
             download.click();
+            download.remove();
             this.$emit('close');
         },
         copyUrl() {
