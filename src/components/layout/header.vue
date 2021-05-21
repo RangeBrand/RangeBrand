@@ -19,22 +19,22 @@
                     </ul>
                 </nav>
             </div>
-            <div class="absolute top-0 left-0 bottom-0">
+            <!-- <div class="absolute top-0 left-0 bottom-0">
                 <icon-burger class="h-16 w-16 p-5 block link fill-current"
                              @click="toggleSidebar"/>
-            </div>
+            </div> -->
         </div>
     </header>
 </template>
 <script>
 import { mapActions } from 'vuex';
 
-import IconBurger from '~/assets/icons/burger.svg';
+// import IconBurger from '~/assets/icons/burger.svg';
 
 export default {
-    components: {
-        IconBurger,
-    },
+    // components: {
+    //     IconBurger,
+    // },
     data: () => ({
         links: [
             {

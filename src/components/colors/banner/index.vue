@@ -2,7 +2,7 @@
     <div :class="[
         'h-full flex flex-col relative smooth-transition',
         {
-            'ml-72': sidebarIsOpen && !device.isMobile,
+            'ml-72': colorSidebarIsOpen && !device.isMobile,
         },
     ]">
         <banner-list v-model="localColors"
@@ -18,8 +18,8 @@
                     <dropdown type="simple"
                               position="top">
                         <template slot="title">
-                            <icon-setting class="w-5 inline-block"/>
-                            <span class="mr-2 inline-block fill-current">
+                            <icon-setting class="w-5 inline-block fill-current"/>
+                            <span class="mr-2 inline-block">
                                 تنظیمات
                             </span>
                         </template>
@@ -41,17 +41,27 @@
                                 مخفی کردن گرادیانت
                             </div>
                         </div>
+                        <div class="dropdown__item smooth-transition w-48"
+                             @click="toggleColorSidebar('favorites')">
+                            <div v-show="(colorSidebarContent !== 'favorites') || !colorSidebarIsOpen">
+                                نمایش رنگ‌های مورد علاقه
+                            </div>
+                            <div v-show="(colorSidebarContent === 'favorites') && colorSidebarIsOpen">
+                                مخفی کردن رنگ‌های مورد علاقه
+                            </div>
+                        </div>
                     </dropdown>
                     <button class="button--simple"
                             @click="$modal.show('exportModal')">
-                        <icon-share class="w-5 inline-block"/>
-                        <span class="mr-2 inline-block fill-current">
+                        <icon-share class="w-5 inline-block fill-current"/>
+                        <span class="mr-2 inline-block">
                             خروجی
                         </span>
                     </button>
                 </div>
             </template>
         </banner-footer>
+        <banner-sidebar/>
         <modal name="exportModal"
                dir="ltr"
                :adaptive="true">
@@ -62,7 +72,7 @@
     </div>
 </template>
 <script>
-
+import BannerSidebar from '~/components/colors/banner/sidebar';
 import BannerList from '~/components/colors/banner/list';
 import BannerGradient from '~/components/colors/banner/gradient';
 import BannerFooter from '~/components/colors/banner/footer';
@@ -77,6 +87,7 @@ import { mapActions, mapState } from 'vuex';
 
 export default {
     components: {
+        BannerSidebar,
         BannerList,
         BannerGradient,
         BannerFooter,
@@ -100,7 +111,7 @@ export default {
         colorsAreSeparated: false,
     }),
     computed: {
-        ...mapState(['device', 'sidebarIsOpen', 'isSeparatedMode']),
+        ...mapState(['device', 'colorSidebarIsOpen', 'colorSidebarContent', 'isSeparatedMode']),
     },
     watch: {
         localColors(value) {
@@ -119,7 +130,7 @@ export default {
         },
     },
     methods: {
-        ...mapActions(['toggleSeparatedMode']),
+        ...mapActions(['toggleSeparatedMode', 'toggleColorSidebar']),
     },
 };
 </script>

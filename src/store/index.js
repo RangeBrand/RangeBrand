@@ -4,7 +4,8 @@ import mapValues from 'lodash.mapvalues';
 const state = {
     device: {},
     favoriteColors: [],
-    sidebarIsOpen: false,
+    colorSidebarIsOpen: false,
+    colorSidebarContent: 'favorites',
     isSeparatedMode: false,
 };
 
@@ -16,7 +17,10 @@ const mutations = {
         state.favoriteColors = [...new Set(colors)];
     },
     setSidebar(state, isOpen) {
-        state.sidebarIsOpen = isOpen;
+        state.colorSidebarIsOpen = isOpen;
+    },
+    setcolorSidebarContent(state, content) {
+        state.colorSidebarContent = content;
     },
     setSeparatedMode(state, isSeparated) {
         state.isSeparatedMode = isSeparated;
@@ -48,12 +52,12 @@ const actions = {
     removeFavoriteColor({ state, commit }, value) {
         commit('setFavoriteColors', state.favoriteColors.filter(color => color !== value));
     },
-    addFavoriteColor({ commit }, value) {
+    addFavoriteColor({ state, commit, dispatch }, value) {
         commit('setFavoriteColors', [
             ...state.favoriteColors,
             value,
         ]);
-        commit('setSidebar', true);
+        dispatch('openColorSidebar');
     },
     toggleFavoriteColor({ state, dispatch }, value) {
         if (state.favoriteColors.indexOf(value) === -1) {
@@ -62,13 +66,18 @@ const actions = {
             dispatch('removeFavoriteColor', value);
         }
     },
-    toggleSidebar({ state, commit }) {
-        commit('setSidebar', !state.sidebarIsOpen);
+    toggleColorSidebar({ state, dispatch }, colorSidebarContent = 'favorites') {
+        if (state.colorSidebarIsOpen && state.colorSidebarContent === colorSidebarContent) {
+            dispatch('closeColorSidebar', colorSidebarContent);
+        } else {
+            dispatch('openColorSidebar', colorSidebarContent);
+        }
     },
-    openSidebar({ commit }) {
+    openColorSidebar({ commit }, colorSidebarContent = 'favorites') {
         commit('setSidebar', true);
+        commit('setcolorSidebarContent', colorSidebarContent);
     },
-    closeSidebar({ commit }) {
+    closeColorSidebar({ commit }) {
         commit('setSidebar', false);
     },
     toggleSeparatedMode({ state, commit }) {

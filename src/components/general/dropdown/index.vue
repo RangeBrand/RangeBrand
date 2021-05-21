@@ -66,7 +66,7 @@ export default {
     @apply hover:border-rb-violet-500;
 }
 .title--simple {
-    @apply hover:bg-white hover:shadow;
+    @apply hover:bg-white hover:text-rb-carnelian-500 hover:shadow;
 }
 
 .content {
