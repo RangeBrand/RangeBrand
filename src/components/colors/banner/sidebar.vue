@@ -13,18 +13,33 @@
                 <favorite-colors/>
             </div>
         </div>
+        <div v-show="colorSidebarContent === 'colorBlindnessSim'" class="h-full">
+            <div class="text-center">
+                <span class="text-bold text-rb-violet-500 border-b-2 border-current p-3 inline-block">
+                    شبیه‌ساز کوررنگی
+                </span>
+            </div>
+            <div class="h-full pb-12">
+                <color-blindness @change="$emit('change', 'blindness')"/>
+            </div>
+        </div>
     </div>
 </template>
 <script>
 import { mapState } from 'vuex';
 import FavoriteColors from '~/components/colors/banner/favorites';
+import ColorBlindness from '~/components/colors/banner/blindness';
 
 export default {
     components: {
         FavoriteColors,
+        ColorBlindness,
     },
     computed: {
-        ...mapState(['colorSidebarIsOpen', 'colorSidebarContent']),
+        ...mapState([
+            'colorSidebarIsOpen',
+            'colorSidebarContent',
+        ]),
     },
 };
 </script>

@@ -7,6 +7,7 @@ const state = {
     colorSidebarIsOpen: false,
     colorSidebarContent: 'favorites',
     isSeparatedMode: false,
+    colorBlindnessType: 'normal',
 };
 
 const mutations = {
@@ -19,11 +20,14 @@ const mutations = {
     setSidebar(state, isOpen) {
         state.colorSidebarIsOpen = isOpen;
     },
-    setcolorSidebarContent(state, content) {
+    setColorSidebarContent(state, content) {
         state.colorSidebarContent = content;
     },
     setSeparatedMode(state, isSeparated) {
         state.isSeparatedMode = isSeparated;
+    },
+    setColorBlindnessType(state, type) {
+        state.colorBlindnessType = type;
     },
 };
 
@@ -75,7 +79,7 @@ const actions = {
     },
     openColorSidebar({ commit }, colorSidebarContent = 'favorites') {
         commit('setSidebar', true);
-        commit('setcolorSidebarContent', colorSidebarContent);
+        commit('setColorSidebarContent', colorSidebarContent);
     },
     closeColorSidebar({ commit }) {
         commit('setSidebar', false);

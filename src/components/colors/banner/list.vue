@@ -28,7 +28,8 @@
                  :style="{
                      backgroundColor: `#${color.hex}`,
                  }">
-                <div class="color__actions flex-center smooth-transition">
+                <div v-show="!showSecondaryColors"
+                     class="color__actions flex-center smooth-transition">
                     <span class="color__actions__icon smooth-transition"
                           v-show="inputVal.length > 2">
                         <icon-delete class="p-3 fill-current w-12 block"
@@ -36,7 +37,7 @@
                     </span>
                     <span class="color__actions__icon smooth-transition"
                           v-if="device.isDesktop"
-                          v-show="inputVal.length && !sidebarIsOpen">
+                          v-show="inputVal.length && !colorSidebarIsOpen">
                         <icon-move class="p-3 fill-current w-12 block"
                                    @mousedown="captureOn($event, color.hex)"/>
                     </span>
@@ -55,7 +56,7 @@
                     dir="ltr">
                     {{ color.hex }}
                 </code>
-                <div class="color__add smooth-transition">
+                <div v-if="pageMode === 'palette'" class="color__add smooth-transition">
                     <div class="flex-center h-full">
                         <span class="button" @click="addColor(index)">
                             <icon-add class="w-8 fill-current"/>
@@ -63,6 +64,21 @@
                     </div>
                 </div>
             </div>
+            <transition name="fade">
+                <div v-show="showSecondaryColors" :class="[
+                         'color--secondary smooth-transition',
+                         isLight(secondaryColors[index]) ? 'color--light' : 'color--dark',
+                     ]"
+                     :style="{
+                         backgroundColor: `#${secondaryColors[index]}`,
+                     }">
+                    <code
+                        class="color__code smooth-transition"
+                        dir="ltr">
+                        {{ secondaryColors[index] }}
+                    </code>
+                </div>
+            </transition>
         </li>
     </ul>
 </template>
@@ -78,6 +94,8 @@ import { isLight } from '~/scripts/utils/luminance';
 import { HEXtoRGB, RGBtoHEX } from '~/scripts/utils/converter';
 
 import { mapState, mapActions } from 'vuex';
+
+import blinder from 'color-blind';
 
 export default {
     components: {
@@ -98,7 +116,14 @@ export default {
         activeColor: null,
     }),
     computed: {
-        ...mapState(['device', 'favoriteColors', 'sidebarIsOpen', 'isSeparatedMode']),
+        ...mapState([
+            'device',
+            'favoriteColors',
+            'colorSidebarIsOpen',
+            'colorSidebarContent',
+            'isSeparatedMode',
+            'colorBlindnessType',
+        ]),
         inputVal: {
             get() {
                 return this.value;
@@ -119,6 +144,22 @@ export default {
             } catch {
                 return 0;
             };
+        },
+        pageMode() {
+            if (this.$route.path.includes('/palette')) {
+                return 'palette';
+            }
+            return 'brand';
+        },
+        showSecondaryColors() {
+            return this.colorSidebarIsOpen && (this.colorSidebarContent === 'colorBlindnessSim');
+        },
+        secondaryColors() {
+            if (this.colorBlindnessType !== 'normal') {
+                return this.inputVal.map(color => blinder[this.colorBlindnessType](`#${color.hex}`).replace('#', ''));
+            } else {
+                return this.inputVal.map(color => color.hex);
+            }
         },
     },
     methods: {
@@ -187,6 +228,9 @@ export default {
 .color {
     @apply relative block h-full;
 }
+.color--secondary {
+    @apply absolute top-0 right-0 left-0 h-1/2;
+}
 
 .color__actions {
     @apply h-full pb-12 flex-col justify-center opacity-0;
@@ -237,7 +281,11 @@ li:first-of-type .color__add {
 .separat .color__wrapper {
     @apply px-1 py-2;
 }
-.separat .color {
+.separat .color,
+.separat .color--secondary {
     @apply rounded-lg;
+}
+.separat .color--secondary {
+    @apply top-2 right-1 left-1;
 }
 </style>

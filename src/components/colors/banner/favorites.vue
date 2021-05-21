@@ -33,10 +33,14 @@
             </li>
         </ul>
         <div class="absolute h-18 bottom-0 right-0 left-0 text-center pb-4">
-            <button class="button inline-block"
+            <button class="button inline-block mx-1"
                     :disabled="!favoriteColors.length"
                     @click="goToPalette">
                 مشاهده در پالت
+            </button>
+            <button class="link inline- p-2 mx-1"
+                    @click="closeColorSidebar">
+                بیخیال
             </button>
         </div>
     </div>
@@ -67,7 +71,7 @@ export default {
         },
     },
     methods: {
-        ...mapActions(['addFavoriteColor', 'removeFavoriteColor', 'closeSidebar']),
+        ...mapActions(['addFavoriteColor', 'removeFavoriteColor', 'closeColorSidebar']),
         isLight,
         validateHex,
         addColor() {
@@ -83,7 +87,7 @@ export default {
             }
         },
         goToPalette() {
-            this.closeSidebar();
+            this.closeColorSidebar();
             this.$router.push({
                 path: '/palette',
                 query: {

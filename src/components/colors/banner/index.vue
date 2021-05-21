@@ -60,8 +60,17 @@
                     </button>
                 </div>
             </template>
+            <template slot="left">
+                <div class="flex-center justify-end">
+                    <button class="button--simple button--round"
+                            @click="toggleColorSidebar('colorBlindnessSim')"
+                            title="شبیه‌ساز کوررنگی">
+                        <icon-glasses class="w-5 inline-block fill-current"/>
+                    </button>
+                </div>
+            </template>
         </banner-footer>
-        <banner-sidebar/>
+        <banner-sidebar @change="updateColors"/>
         <modal name="exportModal"
                dir="ltr"
                :adaptive="true">
@@ -80,10 +89,13 @@ import BannerExport from '~/components/colors/banner/export';
 import Dropdown from '~/components/general/dropdown';
 import IconSetting from '~/assets/icons/setting.svg';
 import IconShare from '~/assets/icons/share.svg';
+import IconGlasses from '~/assets/icons/glasses.svg';
 
 import ClipboardMixin from '~/scripts/mixins/clipboard';
 
 import { mapActions, mapState } from 'vuex';
+
+import blinder from 'color-blind';
 
 export default {
     components: {
@@ -95,6 +107,7 @@ export default {
         Dropdown,
         IconSetting,
         IconShare,
+        IconGlasses,
     },
     mixins: [
         ClipboardMixin,
@@ -111,7 +124,13 @@ export default {
         colorsAreSeparated: false,
     }),
     computed: {
-        ...mapState(['device', 'colorSidebarIsOpen', 'colorSidebarContent', 'isSeparatedMode']),
+        ...mapState([
+            'device',
+            'colorSidebarIsOpen',
+            'colorSidebarContent',
+            'isSeparatedMode',
+            'colorBlindnessType',
+        ]),
     },
     watch: {
         localColors(value) {
@@ -130,7 +149,18 @@ export default {
         },
     },
     methods: {
-        ...mapActions(['toggleSeparatedMode', 'toggleColorSidebar']),
+        ...mapActions(['toggleSeparatedMode', 'toggleColorSidebar', 'closeColorSidebar']),
+        updateColors(change) {
+            if (change === 'blindness') {
+                this.$router.push({
+                    path: '/palette',
+                    query: {
+                        colors: this.localColors.map(color => blinder[this.colorBlindnessType](`#${color.hex}`).replace('#', '')).join('-'),
+                    },
+                });
+                this.closeColorSidebar();
+            }
+        },
     },
 };
 </script>
