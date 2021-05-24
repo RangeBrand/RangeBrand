@@ -23,17 +23,29 @@
                 <color-blindness @change="$emit('change', 'blindness')"/>
             </div>
         </div>
+        <div v-show="colorSidebarContent === 'adjustColor'" class="h-full">
+            <div class="text-center">
+                <span class="text-bold text-rb-violet-500 border-b-2 border-current p-3 inline-block">
+                    تنظیم رنگ‌ها
+                </span>
+            </div>
+            <div class="h-full pb-12">
+                <adjustments @change="$emit('change', 'adjustment')"/>
+            </div>
+        </div>
     </div>
 </template>
 <script>
 import { mapState } from 'vuex';
 import FavoriteColors from '~/components/colors/banner/favorites';
 import ColorBlindness from '~/components/colors/banner/blindness';
+import Adjustments from '~/components/colors/banner/adjust';
 
 export default {
     components: {
         FavoriteColors,
         ColorBlindness,
+        Adjustments,
     },
     computed: {
         ...mapState([

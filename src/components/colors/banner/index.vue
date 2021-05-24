@@ -62,10 +62,21 @@
             </template>
             <template slot="left">
                 <div class="flex-center justify-end">
-                    <button class="button--simple button--round"
+                    <button class="button--simple"
                             @click="toggleColorSidebar('colorBlindnessSim')"
                             title="شبیه‌ساز کوررنگی">
+                        <span class="ml-2 inline-block">
+                            شبیه‌ساز کوررنگی
+                        </span>
                         <icon-glasses class="w-5 inline-block fill-current"/>
+                    </button>
+                    <button class="button--simple"
+                            @click="toggleColorSidebar('adjustColor')"
+                            title="تنظیم رنگ‌ها">
+                        <span class="ml-2 inline-block">
+                            تنظیم رنگ‌ها
+                        </span>
+                        <icon-brightness class="w-5 inline-block fill-current"/>
                     </button>
                 </div>
             </template>
@@ -90,10 +101,12 @@ import Dropdown from '~/components/general/dropdown';
 import IconSetting from '~/assets/icons/setting.svg';
 import IconShare from '~/assets/icons/share.svg';
 import IconGlasses from '~/assets/icons/glasses.svg';
+import IconBrightness from '~/assets/icons/brightness.svg';
 
 import ClipboardMixin from '~/scripts/mixins/clipboard';
 
 import { mapActions, mapState } from 'vuex';
+import { manipulateHEX } from '~/scripts/utils/manipulator';
 
 import blinder from 'color-blind';
 
@@ -108,6 +121,7 @@ export default {
         IconSetting,
         IconShare,
         IconGlasses,
+        IconBrightness,
     },
     mixins: [
         ClipboardMixin,
@@ -130,6 +144,7 @@ export default {
             'colorSidebarContent',
             'isSeparatedMode',
             'colorBlindnessType',
+            'colorAdjustment',
         ]),
     },
     watch: {
@@ -156,6 +171,13 @@ export default {
                     path: '/palette',
                     query: {
                         colors: this.localColors.map(color => blinder[this.colorBlindnessType](`#${color.hex}`).replace('#', '')).join('-'),
+                    },
+                });
+            } else if (change === 'adjustment') {
+                this.$router.push({
+                    path: '/palette',
+                    query: {
+                        colors: this.localColors.map(color => manipulateHEX(color.hex, this.colorAdjustment)).join('-'),
                     },
                 });
                 this.closeColorSidebar();

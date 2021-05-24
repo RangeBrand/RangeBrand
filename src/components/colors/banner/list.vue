@@ -92,6 +92,7 @@ import IconHeartFilled from '~/assets/icons/heart-filled.svg';
 
 import { isLight } from '~/scripts/utils/luminance';
 import { HEXtoRGB, RGBtoHEX } from '~/scripts/utils/converter';
+import { manipulateHEX } from '~/scripts/utils/manipulator';
 
 import { mapState, mapActions } from 'vuex';
 
@@ -123,6 +124,7 @@ export default {
             'colorSidebarContent',
             'isSeparatedMode',
             'colorBlindnessType',
+            'colorAdjustment',
         ]),
         inputVal: {
             get() {
@@ -152,11 +154,14 @@ export default {
             return 'brand';
         },
         showSecondaryColors() {
-            return this.colorSidebarIsOpen && (this.colorSidebarContent === 'colorBlindnessSim');
+            const contentsWithSecondaryColor = ['colorBlindnessSim', 'adjustColor'];
+            return this.colorSidebarIsOpen && contentsWithSecondaryColor.includes(this.colorSidebarContent);
         },
         secondaryColors() {
-            if (this.colorBlindnessType !== 'normal') {
+            if (this.colorSidebarContent === 'colorBlindnessSim' && this.colorBlindnessType !== 'normal') {
                 return this.inputVal.map(color => blinder[this.colorBlindnessType](`#${color.hex}`).replace('#', ''));
+            } else if (this.colorSidebarContent === 'adjustColor') {
+                return this.inputVal.map(color => manipulateHEX(color.hex, this.colorAdjustment));
             } else {
                 return this.inputVal.map(color => color.hex);
             }

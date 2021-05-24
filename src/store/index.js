@@ -8,6 +8,11 @@ const state = {
     colorSidebarContent: 'favorites',
     isSeparatedMode: false,
     colorBlindnessType: 'normal',
+    colorAdjustment: {
+        hue: 0,
+        sat: 0,
+        lum: 0,
+    },
 };
 
 const mutations = {
@@ -28,6 +33,9 @@ const mutations = {
     },
     setColorBlindnessType(state, type) {
         state.colorBlindnessType = type;
+    },
+    setColorAdjustment(state, value) {
+        state.colorAdjustment = value;
     },
 };
 

@@ -60,6 +60,46 @@ export const RGBtoHSL = (rgb) => {
     l = +(l * 100).toFixed(1);
     return [h, s, l];
 };
+export const HSLtoRGB = (hsl) => {
+    const h = hsl[0];
+    let s = hsl[1];
+    let l = hsl[2];
+    s /= 100;
+    l /= 100;
+    const C = (1 - Math.abs(2 * l - 1)) * s;
+    const hue = h / 60;
+    const X = C * (1 - Math.abs(hue % 2 - 1));
+    let r = 0;
+    let g = 0;
+    let b = 0;
+    if (hue >= 0 && hue < 1) {
+        r = C;
+        g = X;
+    } else if (hue >= 1 && hue < 2) {
+        r = X;
+        g = C;
+    } else if (hue >= 2 && hue < 3) {
+        g = C;
+        b = X;
+    } else if (hue >= 3 && hue < 4) {
+        g = X;
+        b = C;
+    } else if (hue >= 4 && hue < 5) {
+        r = X;
+        b = C;
+    } else {
+        r = C;
+        b = X;
+    }
+    const m = l - C / 2;
+    r += m;
+    g += m;
+    b += m;
+    r *= 255.0;
+    g *= 255.0;
+    b *= 255.0;
+    return [Math.round(r), Math.round(g), Math.round(b)];
+};
 
 const hexHslMem = {};
 export const HEXtoHSL = (hex) => {
@@ -68,6 +108,11 @@ export const HEXtoHSL = (hex) => {
         hexHslMem[hex] = RGBtoHSL(rgb);
     }
     return hexHslMem[hex];
+};
+
+export const HSLtoHEX = (hsl) => {
+    const rgb = HSLtoRGB(hsl);
+    return RGBtoHEX(rgb);
 };
 
 const hexRgbMem = {};
