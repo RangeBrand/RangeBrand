@@ -180,8 +180,8 @@ export default {
                         colors: this.localColors.map(color => manipulateHEX(color.hex, this.colorAdjustment)).join('-'),
                     },
                 });
-                this.closeColorSidebar();
             }
+            this.closeColorSidebar();
         },
     },
 };
