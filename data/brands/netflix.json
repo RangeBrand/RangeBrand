@@ -1,0 +1,15 @@
+{
+    "title": "نتفلیکس",
+    "description": "سرویس نمایش درخواستی ویدئو",
+    "path": "/netflix",
+    "updated_at": "2021-31-05",
+    "colors": [
+        "e50914"
+    ],
+    "tags": [
+        "usa",
+        "online",
+        "stream",
+        "vod"
+    ]
+}
