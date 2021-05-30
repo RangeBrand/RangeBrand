@@ -1,11 +1,14 @@
 {
     "title": "بانک آینده",
-    "description": "",
+    "description": "بانک",
     "path": "/bank-ayandeh",
     "updated_at": "2017-06-06",
     "colors": [
         "572600",
         "b38807"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "bank"
+    ]
 }

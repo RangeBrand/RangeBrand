@@ -1,10 +1,14 @@
 {
     "title": "واتس‌اپ",
-    "description": "",
+    "description": "پیامرسان",
     "path": "/whatsapp",
     "updated_at": "2017-06-06",
     "colors": [
         "189D0E"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "messaging",
+        "closed"
+    ]
 }

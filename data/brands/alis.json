@@ -1,6 +1,6 @@
 {
     "title": "عالیس",
-    "description": "",
+    "description": "تولید کننده‌ی نوشیدنی",
     "path": "/alis",
     "updated_at": "2017-06-06",
     "colors": [
@@ -9,5 +9,8 @@
         "53bb96",
         "0e71b8"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

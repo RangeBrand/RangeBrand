@@ -1,11 +1,14 @@
 {
     "title": "رولان",
-    "description": "",
+    "description": "تولید کننده‌ی پوشاک",
     "path": "/rolan",
     "updated_at": "2017-06-06",
     "colors": [
         "e3000f",
         "ffec01"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "clothing"
+    ]
 }

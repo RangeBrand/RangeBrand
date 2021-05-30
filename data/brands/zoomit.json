@@ -1,11 +1,15 @@
 {
     "title": "زومیت",
-    "description": "",
+    "description": "خبرنامه فناوری اطلاعات و ارتباطات",
     "path": "/zoomit",
     "updated_at": "2017-06-06",
     "colors": [
         "eb1f28",
         "000000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "publishing"
+    ]
 }

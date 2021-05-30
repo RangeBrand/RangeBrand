@@ -1,11 +1,14 @@
 {
     "title": "گلستان",
-    "description": "",
+    "description": "تولید کننده‌ی خواروبار",
     "path": "/golestan",
     "updated_at": "2017-06-06",
     "colors": [
         "ffe200",
         "e71a2d"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

@@ -1,10 +1,14 @@
 {
     "title": "عطاویچ",
-    "description": "",
+    "description": "فست‌فود زنجیره‌ای",
     "path": "/atawich",
     "updated_at": "2017-06-06",
     "colors": [
         "c52f33"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food",
+        "resturant_chain "
+    ]
 }

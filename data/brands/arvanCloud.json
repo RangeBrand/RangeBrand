@@ -1,6 +1,6 @@
 {
     "title": "ابر آروان",
-    "description": "",
+    "description": "عرضه‌کننده‌ی زیرساخت یکپارچه ابری",
     "path": "/arvan-cloud",
     "updated_at": "2021-05-05",
     "colors": [
@@ -8,5 +8,9 @@
         "0b3a42",
         "f9b91b"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "cloud",
+        "online"
+    ]
 }

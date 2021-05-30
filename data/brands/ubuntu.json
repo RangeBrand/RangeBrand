@@ -1,6 +1,6 @@
 {
     "title": "اوبونتو",
-    "description": "",
+    "description": "سیستم عامل رایانه",
     "path": "/ubuntu",
     "updated_at": "2017-06-06",
     "colors": [
@@ -11,5 +11,9 @@
         "aea79f",
         "333333"
     ],
-    "tags": []
+    "tags": [
+        "software",
+        "operating_system",
+        "open_source"
+    ]
 }

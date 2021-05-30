@@ -1,6 +1,6 @@
 {
     "title": "اسنپ!",
-    "description": "",
+    "description": "پلتفرم درخواست خودرو",
     "path": "/snapp",
     "updated_at": "2021-04-05",
     "colors": [
@@ -14,5 +14,10 @@
         "ff4340",
         "ffbb00"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "ride_hailing",
+        "logistics"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "آی‌او‌اس",
-    "description": "",
+    "description": "سیستم عامل موبایل",
     "path": "/ios",
     "updated_at": "2017-06-06",
     "colors": [
@@ -13,5 +13,8 @@
         "fc3d39",
         "8e8e93"
     ],
-    "tags": []
+    "tags": [
+        "software",
+        "operating_system"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "اینستاگرام",
-    "description": "",
+    "description": "شبکه اجتماعی",
     "path": "/instagram",
     "updated_at": "2017-06-06",
     "colors": [
@@ -15,5 +15,9 @@
         "fcaf45",
         "ffdc80"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "social_network"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "تحفه",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات غذایی فرآوری شده دریایی",
     "path": "/tohfe",
     "updated_at": "2017-06-06",
     "colors": [
@@ -9,5 +9,8 @@
         "353894",
         "2ca751"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

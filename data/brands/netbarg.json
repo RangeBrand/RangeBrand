@@ -1,11 +1,15 @@
 {
     "title": "نت‌برگ",
-    "description": "",
+    "description": "سرویس تخفیف و خرید گروهی",
     "path": "/netbarg",
     "updated_at": "2017-06-06",
     "colors": [
         "f06305",
         "262626"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "discount"
+    ]
 }

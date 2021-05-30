@@ -1,6 +1,6 @@
 {
     "title": "سفرهای علی‌بابا",
-    "description": "",
+    "description": "سایت خرید اینترنتی بلیط هواپیما، قطار و اتوبوس و رزرو تور و هتل",
     "path": "/alibaba-aero",
     "updated_at": "2021-05-05",
     "colors": [
@@ -8,5 +8,9 @@
         "ffffff",
         "000000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "travel"
+    ]
 }

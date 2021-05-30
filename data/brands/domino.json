@@ -1,6 +1,6 @@
 {
     "title": "دومینو",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات لبنی",
     "path": "/domino",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,8 @@
         "01509f",
         "dd0010"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

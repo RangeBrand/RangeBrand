@@ -1,10 +1,13 @@
 {
     "title": "محک",
-    "description": "",
+    "description": "موسسه خیریه حمایت از کودکان مبتلا به سرطان",
     "path": "/mahak",
     "updated_at": "2017-06-06",
     "colors": [
         "9F1936"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "ngo"
+    ]
 }

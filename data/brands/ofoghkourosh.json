@@ -1,10 +1,14 @@
 {
     "title": "افق کوروش",
-    "description": "",
+    "description": "فروشگاه خرده‌فروشی زنجیره‌ای",
     "path": "/ofoghkourosh",
     "updated_at": "2017-06-06",
     "colors": [
         "d71921"
     ],
-    "tags": []
+    "tags": [
+        "turkey",
+        "shop",
+        "supermarket_chain"
+    ]
 }

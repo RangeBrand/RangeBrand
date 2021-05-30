@@ -1,10 +1,13 @@
 {
     "title": "ویندوز فون",
-    "description": "",
+    "description": "سیستم عامل موبایل",
     "path": "/windows-phone",
     "updated_at": "2017-06-06",
     "colors": [
         "68217a"
     ],
-    "tags": []
+    "tags": [
+        "software",
+        "operating_system"
+    ]
 }

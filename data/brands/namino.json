@@ -1,6 +1,6 @@
 {
     "title": "نامی‌نو",
-    "description": "",
+    "description": "تولید کننده‌ی غذای آماده",
     "path": "/namino",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,8 @@
         "ed1c24",
         "004b88"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

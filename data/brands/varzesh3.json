@@ -1,6 +1,6 @@
 {
     "title": "ورزش سه",
-    "description": "",
+    "description": "خبرنامه ورزشی",
     "path": "/varzesh3",
     "updated_at": "2017-06-06",
     "colors": [
@@ -11,5 +11,9 @@
         "ea4336",
         "2e353c"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "publishing"
+    ]
 }

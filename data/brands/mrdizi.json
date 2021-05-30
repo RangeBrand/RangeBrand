@@ -1,10 +1,14 @@
 {
     "title": "مستر دیزی",
-    "description": "",
+    "description": "رستوران زنجیره‌ای",
     "path": "/mrdizi",
     "updated_at": "2017-06-06",
     "colors": [
         "da251d"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food",
+        "resturant_chain "
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "پدرخوب",
-    "description": "",
+    "description": "فست‌فود زنجیره‌ای",
     "path": "/pedarekhoob",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,9 @@
         "f20000",
         "be0000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food",
+        "resturant_chain "
+    ]
 }

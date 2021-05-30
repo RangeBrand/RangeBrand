@@ -1,6 +1,6 @@
 {
     "title": "آندره",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات پروتئنی",
     "path": "/andre",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,8 @@
         "00448e",
         "ffef11"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "بانک سامان",
-    "description": "",
+    "description": "بانک",
     "path": "/bank-saman",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,8 @@
         "00a8e7",
         "0070b9"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "bank"
+    ]
 }

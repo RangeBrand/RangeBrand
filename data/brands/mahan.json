@@ -1,11 +1,15 @@
 {
     "title": "هواپیمایی ماهان",
-    "description": "",
+    "description": "هواپیمایی",
     "path": "/mahan",
     "updated_at": "2017-06-06",
     "colors": [
         "038b48",
         "fe6603"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "airline",
+        "travel"
+    ]
 }

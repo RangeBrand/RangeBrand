@@ -1,11 +1,14 @@
 {
     "title": "گاج",
-    "description": "",
+    "description": "انتشارات کتاب‌های کمک‌درسی و موسسه‌ی آموزشی",
     "path": "/gaj",
     "updated_at": "2017-06-06",
     "colors": [
         "c4c436",
         "55c5cf"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "publishing"
+    ]
 }

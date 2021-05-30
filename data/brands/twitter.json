@@ -1,10 +1,14 @@
 {
     "title": "توئیتر",
-    "description": "",
+    "description": "شبکه اجتماعی",
     "path": "/twitter",
     "updated_at": "2017-06-06",
     "colors": [
         "55acee"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "social_network"
+    ]
 }

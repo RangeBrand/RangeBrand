@@ -1,10 +1,14 @@
 {
     "title": "بیهنس",
-    "description": "",
+    "description": "پلتفرم اشتراک‌گذاری و نمایش مجموعه آثار هنری طراحان و استودیوها",
     "path": "/behance",
     "updated_at": "2017-06-06",
     "colors": [
         "1769ff"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "platform"
+    ]
 }

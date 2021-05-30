@@ -1,11 +1,14 @@
 {
     "title": "چای شهرزاد",
-    "description": "",
+    "description": "تولید کننده‌ی چای",
     "path": "/chai-shahrzad",
     "updated_at": "2017-06-06",
     "colors": [
         "b8292f",
         "e6d198"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

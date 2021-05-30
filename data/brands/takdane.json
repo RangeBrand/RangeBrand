@@ -1,11 +1,14 @@
 {
     "title": "تکدانه",
-    "description": "",
+    "description": "تولید کننده‌ی نوشیدنی",
     "path": "/takdane",
     "updated_at": "2017-06-06",
     "colors": [
         "f31828",
         "ffc927"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

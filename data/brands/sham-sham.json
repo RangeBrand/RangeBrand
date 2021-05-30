@@ -1,11 +1,14 @@
 {
     "title": "شام شام",
-    "description": "",
+    "description": "تولید کننده‌ی مواد غذایی و صنایع تبدیلی کشاورزی",
     "path": "/sham-sham",
     "updated_at": "2017-06-06",
     "colors": [
         "e10e18",
         "f4a411"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

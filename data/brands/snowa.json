@@ -1,6 +1,6 @@
 {
     "title": "اسنوا",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات الکترونیکی",
     "path": "/snowa",
     "updated_at": "2017-06-06",
     "colors": [
@@ -9,5 +9,9 @@
         "039f44",
         "7ab935"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "hardware",
+        "home_appliances"
+    ]
 }

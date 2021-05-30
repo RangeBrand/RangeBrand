@@ -1,10 +1,13 @@
 {
     "title": "ایسوس",
-    "description": "",
+    "description": "تولید کننده‌ی سخت‌افزار کامپیوتر، موبایل و دیگر وسایل الکترونیکی",
     "path": "/asus",
     "updated_at": "2017-06-06",
     "colors": [
         "22448f"
     ],
-    "tags": []
+    "tags": [
+        "taiwan",
+        "hardware"
+    ]
 }

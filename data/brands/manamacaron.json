@@ -1,11 +1,14 @@
 {
     "title": "ماکارونی مانا",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات غذایی بخصوص ماکارون",
     "path": "/manamacaron",
     "updated_at": "2017-06-06",
     "colors": [
         "0b3177",
         "ec1c24"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

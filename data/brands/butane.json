@@ -1,11 +1,14 @@
 {
     "title": "بوتان",
-    "description": "",
+    "description": "تولید کننده‌ی لوازم گرمایشی",
     "path": "/butane",
     "updated_at": "2017-06-06",
     "colors": [
         "ce000c",
         "000000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "home_appliances"
+    ]
 }

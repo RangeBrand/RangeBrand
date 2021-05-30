@@ -1,11 +1,14 @@
 {
     "title": "کانن",
-    "description": "",
+    "description": "تولید کننده‌ی دوربین و تجهزیات تصویربرداری",
     "path": "/canon",
     "updated_at": "2017-06-06",
     "colors": [
         "bc0024",
         "000000"
     ],
-    "tags": []
+    "tags": [
+        "japan",
+        "hardware"
+    ]
 }

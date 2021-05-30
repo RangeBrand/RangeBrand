@@ -1,6 +1,6 @@
 {
     "title": "آسیاتک",
-    "description": "",
+    "description": "ارائه دهنده خدمات اینترنتی",
     "path": "/asiatech",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,8 @@
         "009fe3",
         "e30613"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "isp"
+    ]
 }

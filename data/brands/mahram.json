@@ -1,11 +1,14 @@
 {
     "title": "مهرام",
-    "description": "",
+    "description": "تولید کننده‌ی مواد غذایی و صنایع تبدیلی کشاورزی",
     "path": "/mahram",
     "updated_at": "2017-06-06",
     "colors": [
         "EE1A30",
         "93BC46"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

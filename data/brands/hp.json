@@ -1,11 +1,13 @@
 {
     "title": "اچ‌پی",
-    "description": "",
+    "description": "تولید کننده‌ی رایانه و محصولات مرتبط",
     "path": "/hp",
     "updated_at": "2017-06-06",
     "colors": [
         "0096d6",
         "d7410b"
     ],
-    "tags": []
+    "tags": [
+        "hardware"
+    ]
 }

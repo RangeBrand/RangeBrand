@@ -1,10 +1,13 @@
 {
     "title": "میداس",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات غذایی بخصوص شکلات",
     "path": "/midas",
     "updated_at": "2017-06-06",
     "colors": [
         "e1cd76"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

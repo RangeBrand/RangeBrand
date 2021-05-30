@@ -1,10 +1,13 @@
 {
     "title": "سروش",
-    "description": "",
+    "description": "پیامرسان",
     "path": "/soroush",
     "updated_at": "2017-06-06",
     "colors": [
         "aa3063"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "messaging"
+    ]
 }

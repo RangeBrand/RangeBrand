@@ -1,10 +1,14 @@
 {
     "title": "جانبو",
-    "description": "",
+    "description": "فروشگاه خرده‌فروشی زنجیره‌ای",
     "path": "/Canbo",
     "updated_at": "2017-06-06",
     "colors": [
         "e31418"
     ],
-    "tags": []
+    "tags": [
+        "turkey",
+        "shop",
+        "supermarket_chain"
+    ]
 }

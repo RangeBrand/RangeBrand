@@ -1,11 +1,15 @@
 {
     "title": "ال‌جی",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات الکترونیکی",
     "path": "/lg",
     "updated_at": "2017-06-06",
     "colors": [
         "72797f",
         "aa0146"
     ],
-    "tags": []
+    "tags": [
+        "korea",
+        "hardware",
+        "home_appliances"
+    ]
 }

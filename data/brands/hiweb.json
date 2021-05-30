@@ -1,11 +1,14 @@
 {
     "title": "های‌وب",
-    "description": "",
+    "description": "ارائه دهنده خدمات اینترنتی",
     "path": "/hiweb",
     "updated_at": "2017-06-06",
     "colors": [
         "e9002c",
         "939393"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "isp"
+    ]
 }

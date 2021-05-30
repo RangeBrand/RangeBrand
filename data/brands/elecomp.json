@@ -1,10 +1,13 @@
 {
     "title": "الکامپ",
-    "description": "",
+    "description": "نمایشگاه محصولات، خدمات و محتوای صنایع الکترونیک، کامپیوتر و دیجیتال",
     "path": "/elecomp",
     "updated_at": "2017-06-06",
     "colors": [
         "9b1c53"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "exposition"
+    ]
 }

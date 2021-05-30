@@ -1,11 +1,14 @@
 {
     "title": "ایستک",
-    "description": "",
+    "description": "تولید کننده‌ی نوشیدنی",
     "path": "/istak",
     "updated_at": "2017-06-06",
     "colors": [
         "095112",
         "d0ab5b"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "دل",
-    "description": "",
+    "description": "تولید کننده‌ی رایانه و محصولات مرتبط",
     "path": "/dell",
     "updated_at": "2017-06-06",
     "colors": [
@@ -17,5 +17,7 @@
         "444444",
         "eeeeee"
     ],
-    "tags": []
+    "tags": [
+        "hardware"
+    ]
 }

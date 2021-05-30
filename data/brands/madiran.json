@@ -1,11 +1,15 @@
 {
     "title": "مادیران",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات الکترونیکی",
     "path": "/madiran",
     "updated_at": "2017-06-06",
     "colors": [
         "0c4da2",
         "ed1a3b"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "hardware",
+        "home_appliances"
+    ]
 }

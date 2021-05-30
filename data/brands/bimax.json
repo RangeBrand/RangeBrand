@@ -1,11 +1,14 @@
 {
     "title": "بیمکث",
-    "description": "",
+    "description": "تولید کننده‌ی لوازم آشپزخانه",
     "path": "/bimax",
     "updated_at": "2017-06-06",
     "colors": [
         "21252b",
         "ff4208"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "home_appliances"
+    ]
 }

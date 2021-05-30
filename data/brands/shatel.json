@@ -1,11 +1,14 @@
 {
     "title": "شاتل",
-    "description": "",
+    "description": "ارائه دهنده خدمات مخابراتی و اینترنتی",
     "path": "/shatel",
     "updated_at": "2017-06-06",
     "colors": [
         "002a63",
         "f26322"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "isp"
+    ]
 }

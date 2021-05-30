@@ -1,11 +1,14 @@
 {
     "title": "گرجی",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات غذایی بخصوص بیسکویت",
     "path": "/gorji",
     "updated_at": "2017-06-06",
     "colors": [
         "f8eb00",
         "1f2879"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

@@ -1,11 +1,15 @@
 {
     "title": "دیوار",
-    "description": "",
+    "description": "پلتفرم نیازمندی و فروشگاه اینترنتی",
     "path": "/divar",
     "updated_at": "2017-06-06",
     "colors": [
         "c42127",
         "595a5c"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "platform"
+    ]
 }

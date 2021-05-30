@@ -1,6 +1,6 @@
 {
     "title": "لنزور",
-    "description": "",
+    "description": "پلتفرم اشتراک‌گذاری و نمایش تصویر",
     "path": "/lenzor",
     "updated_at": "2017-06-06",
     "colors": [
@@ -12,5 +12,9 @@
         "0e76bc",
         "9f1f63"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "platform"
+    ]
 }

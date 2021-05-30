@@ -1,13 +1,14 @@
 <template>
     <div>
-        {{ brandName }} به طور کلی از
+        {{ brandName }} از
         <template v-if="uniqueNames.length > 1">
             رنگ‌های
         </template>
         <template v-else>
             رنگ
         </template>
-        {{ colorNames }} در هویت سازمانی خود استفاده می‌کند.
+        {{ colorNames }} در هویت سازمانی خود استفاده
+        {{ isClosed ? 'می‌کرد' : 'می‌کند' }}.
     </div>
 </template>
 <script>
@@ -24,6 +25,10 @@ export default {
         brandName: {
             type: String,
             default: 'این برند',
+        },
+        isClosed: {
+            type: Boolean,
+            default: false,
         },
     },
     computed: {

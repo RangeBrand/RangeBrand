@@ -1,6 +1,6 @@
 {
     "title": "بینگ",
-    "description": "",
+    "description": "موتور جستجوی وب",
     "path": "/bing",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,9 @@
         "505050",
         "a3a3a3"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "search_engine"
+    ]
 }

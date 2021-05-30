@@ -1,6 +1,6 @@
 {
     "title": "موزیلا",
-    "description": "",
+    "description": "بنیاد غیرانتفاعی مروج آزادی، نوآوری و مشارکت در اینترنت",
     "path": "/mozilla",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,7 @@
         "d7d3c8",
         "4d4e53"
     ],
-    "tags": []
+    "tags": [
+        "online"
+    ]
 }

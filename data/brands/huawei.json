@@ -1,6 +1,6 @@
 {
     "title": "هوآوی",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات الکترونیکی و ارتباطاتی",
     "path": "/huawei",
     "updated_at": "2021-05-05",
     "colors": [
@@ -10,5 +10,8 @@
         "7f7f7f",
         "000000"
     ],
-    "tags": []
+    "tags": [
+        "china",
+        "hardware"
+    ]
 }

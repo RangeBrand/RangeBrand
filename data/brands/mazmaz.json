@@ -1,11 +1,14 @@
 {
     "title": "مزمز",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات غذایی و تنقلات",
     "path": "/mazmaz",
     "updated_at": "2017-06-06",
     "colors": [
         "ffff2f",
         "ff000a"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

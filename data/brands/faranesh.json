@@ -1,11 +1,15 @@
 {
     "title": "فرانش",
-    "description": "",
+    "description": "پلتفرم آموزش آنلاین ویدئویی",
     "path": "/faranesh",
     "updated_at": "2017-06-06",
     "colors": [
         "004667",
         "239ED8"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "platform"
+    ]
 }

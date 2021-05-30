@@ -1,11 +1,15 @@
 {
     "title": "فرش فرهی",
-    "description": "",
+    "description": "تولید کننده‌ی فرش",
     "path": "/farsh-farrahi",
     "updated_at": "2017-06-06",
     "colors": [
         "ffcb05",
         "01a99c"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "shop",
+        "home_appliances"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "کافه بازار",
-    "description": "",
+    "description": "پلتفرم و فروشگاه نرم‌افزار اندروید",
     "path": "/cafebazaar",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,11 @@
         "27b681",
         "535353"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "platform",
+        "shop",
+        "app_store"
+    ]
 }

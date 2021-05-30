@@ -1,11 +1,15 @@
 {
     "title": "بیسفون",
-    "description": "",
+    "description": "پیامرسان",
     "path": "/bisphone",
     "updated_at": "2017-06-06",
     "colors": [
         "e72a37",
         "ffdd52"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "messaging",
+        "closed"
+    ]
 }

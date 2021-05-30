@@ -1,11 +1,15 @@
 {
     "title": "هایدا",
-    "description": "",
+    "description": "فست‌فود زنجیره‌ای",
     "path": "/haida",
     "updated_at": "2017-06-06",
     "colors": [
         "fec70a",
         "d91a22"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food",
+        "resturant_chain "
+    ]
 }

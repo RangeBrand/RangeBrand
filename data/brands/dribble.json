@@ -1,6 +1,6 @@
 {
     "title": "دریبل",
-    "description": "",
+    "description": "پلتفرم اشتراک‌گذاری و نمایش مجموعه آثار هنری طراحان و استودیوها",
     "path": "/dribble",
     "updated_at": "2017-06-06",
     "colors": [
@@ -11,5 +11,9 @@
         "00b6e3",
         "9ba5a8"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "platform"
+    ]
 }

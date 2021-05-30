@@ -1,11 +1,14 @@
 {
     "title": "سن‌ایچ",
-    "description": "",
+    "description": "تولید کننده‌ی نوشیدنی",
     "path": "/sunich",
     "updated_at": "2017-06-06",
     "colors": [
         "f15922",
         "ffc82d"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

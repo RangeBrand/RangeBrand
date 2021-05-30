@@ -1,11 +1,15 @@
 {
     "title": "ایکس ویژن",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات الکترونیکی",
     "path": "/xvision",
     "updated_at": "2017-06-06",
     "colors": [
         "00358c",
         "e50000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "hardware",
+        "home_appliances"
+    ]
 }

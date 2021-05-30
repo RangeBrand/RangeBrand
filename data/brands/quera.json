@@ -1,10 +1,13 @@
 {
     "title": "کوئرا",
-    "description": "",
+    "description": "سرویس کمک آموزشی برای دروس برنامه‌نویسی",
     "path": "/quera",
     "updated_at": "2017-06-06",
     "colors": [
         "ed1c16"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online"
+    ]
 }

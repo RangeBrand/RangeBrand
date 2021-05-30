@@ -1,6 +1,6 @@
 {
     "title": "آلبورا",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات آرایشی و بهداشت فردی",
     "path": "/albura",
     "updated_at": "2017-06-06",
     "colors": [
@@ -11,5 +11,9 @@
         "00c47a",
         "fe8836"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "hygiene",
+        "cosmetics"
+    ]
 }

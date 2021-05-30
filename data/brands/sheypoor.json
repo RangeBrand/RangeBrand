@@ -1,6 +1,6 @@
 {
     "title": "شیپور",
-    "description": "",
+    "description": "پلتفرم نیازمندی‌ها",
     "path": "/sheypoor",
     "updated_at": "2017-06-06",
     "colors": [
@@ -9,5 +9,8 @@
         "8dc641",
         "fa9416"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "home_appliances"
+    ]
 }

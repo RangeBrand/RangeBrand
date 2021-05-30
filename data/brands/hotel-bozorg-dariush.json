@@ -1,6 +1,6 @@
 {
     "title": "هتل بزرگ داریوش",
-    "description": "",
+    "description": "هتل",
     "path": "/hotel-bozorg-dariush",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,9 @@
         "ffc14d",
         "2a0001"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "travel",
+        "hotel"
+    ]
 }

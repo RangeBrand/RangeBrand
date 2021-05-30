@@ -8,9 +8,19 @@
                 پالت رنگ‌های رسمی {{ brand.title }} به همراه کدهای RGB و HEX
             </h1>
             <p v-if="brand.description" class="mb-2">
+                {{ brand.title }}
+                یک
                 {{ brand.description }}
+                {{ brandCountry }}
+                <template v-if="isClosed">
+                    بود که همکنون به فعالیت خود پایان داده
+                </template>
+                است.
             </p>
-            <brand-groups class="mb-2" :colors="brand.colors" :brand-name="brand.title"/>
+            <brand-groups class="mb-2"
+                          :colors="brand.colors"
+                          :brand-name="brand.title"
+                          :is-closed="isClosed"/>
             <p class="mb-2">
                 در جدول زیر رنگ‌های رسمی برند {{ brand.title }} را مشاهده می‌کنید. برای اطمینان از این که متریال تبلیغاتی شما با برند {{ brand.title }} هماهنگ باشد، در کارهای خود از این رنگ‌ها استفاده کنید:
             </p>
@@ -27,6 +37,7 @@ query Brand ($path: String!) {
     title
     colors
     description
+    tags
   }
 }
 </page-query>
@@ -49,6 +60,22 @@ export default {
     computed: {
         brand() {
             return this.$page.brand || {};
+        },
+        isClosed() {
+            return this.brand.tags.some(tag => tag.toLowerCase() === 'closed');
+        },
+        brandCountry() {
+            const supportedCountries = {
+                iran: 'ایرانی',
+                usa: 'آمریکایی',
+                germany: 'آلمانی',
+                japan: 'ژاپنی',
+                turkey: 'ترکیه‌ای',
+                italy: 'ایتالیایی',
+                china: 'چینی',
+            };
+            const countryTag = this.brand.tags.find(tag => supportedCountries[tag]) || {};
+            return supportedCountries[countryTag];
         },
     },
 };

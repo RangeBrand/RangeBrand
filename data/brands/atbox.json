@@ -1,6 +1,6 @@
 {
     "title": "اتباکس",
-    "description": "",
+    "description": "وبسایت رزومه‌ی آنلاین",
     "path": "/atbox",
     "updated_at": "2017-06-06",
     "colors": [
@@ -10,5 +10,8 @@
         "a2489a",
         "cb5e7c"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online"
+    ]
 }

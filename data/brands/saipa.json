@@ -1,10 +1,13 @@
 {
     "title": "سایپا",
-    "description": "",
+    "description": "تولید کننده‌ی خودرو",
     "path": "/saipa",
     "updated_at": "2017-06-06",
     "colors": [
         "FF5B00"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "car"
+    ]
 }

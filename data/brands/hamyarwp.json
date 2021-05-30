@@ -1,10 +1,15 @@
 {
     "title": "همیار وردپرس",
-    "description": "",
+    "description": "پلتفرم و فروشگاه اینترنتی قالب وردپرس",
     "path": "/hamyarwp",
     "updated_at": "2017-06-06",
     "colors": [
         "f44336"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "platform",
+        "shop"
+    ]
 }

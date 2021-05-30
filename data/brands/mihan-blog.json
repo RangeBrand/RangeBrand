@@ -1,6 +1,6 @@
 {
     "title": "میهن بلاگ",
-    "description": "",
+    "description": "پلتفرم ارائه‌دهنده‌ی خدمات وب‌نوشت",
     "path": "/mihan-blog",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,9 @@
         "000000",
         "ff0000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "platform"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "طرفداری",
-    "description": "",
+    "description": "خبرنامه ورزشی",
     "path": "/tarafdari",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,9 @@
         "ff9b00",
         "27bcc9"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "publishing"
+    ]
 }

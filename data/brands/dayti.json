@@ -1,6 +1,6 @@
 {
     "title": "دایتی",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات لبنی",
     "path": "/dayti",
     "updated_at": "2017-06-06",
     "colors": [
@@ -9,5 +9,8 @@
         "0077ba",
         "0e3d8a"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

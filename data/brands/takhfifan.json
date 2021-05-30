@@ -1,11 +1,15 @@
 {
     "title": "تخفیفان",
-    "description": "",
+    "description": "سرویس تخفیف و خرید گروهی",
     "path": "/takhfifan",
     "updated_at": "2021-05-04",
     "colors": [
         "e54e63",
         "5a595c"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "discount"
+    ]
 }

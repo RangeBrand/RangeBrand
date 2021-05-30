@@ -1,11 +1,14 @@
 {
     "title": "فیس‌نما",
-    "description": "",
+    "description": "شبکه اجتماعی",
     "path": "/facenama",
     "updated_at": "2017-06-06",
     "colors": [
         "287eb7",
         "3e9ede"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "social_network"
+    ]
 }

@@ -1,11 +1,14 @@
 {
     "title": "آیدین",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات غذایی بخصوص شکلات",
     "path": "/aidin",
     "updated_at": "2017-06-06",
     "colors": [
         "ff0028",
         "d0ab50"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "آواتک",
-    "description": "",
+    "description": "مرکز شتابدهی",
     "path": "/avatech",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,8 @@
         "ffa800",
         "45b2cb"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "accelerator"
+    ]
 }

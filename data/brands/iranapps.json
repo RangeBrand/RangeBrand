@@ -1,6 +1,6 @@
 {
     "title": "ایران‌اپس",
-    "description": "",
+    "description": "پلتفرم و فروشگاه نرم‌افزار اندروید",
     "path": "/iranapps",
     "updated_at": "2017-06-06",
     "colors": [
@@ -9,5 +9,11 @@
         "ffb600",
         "3b6df8"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "platform",
+        "shop",
+        "app_store"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "شهروند",
-    "description": "",
+    "description": "فروشگاه خرده‌فروشی زنجیره‌ای",
     "path": "/shahrvand",
     "updated_at": "2017-06-06",
     "colors": [
@@ -9,5 +9,9 @@
         "39c0c3",
         "036a3f"
     ],
-    "tags": []
+    "tags": [
+        "turkey",
+        "shop",
+        "supermarket_chain"
+    ]
 }

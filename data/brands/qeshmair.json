@@ -1,10 +1,14 @@
 {
     "title": "هواپیمایی قشم‌ایر",
-    "description": "",
+    "description": "هواپیمایی",
     "path": "/qeshmair",
     "updated_at": "2017-06-06",
     "colors": [
         "800000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "airline",
+        "travel"
+    ]
 }

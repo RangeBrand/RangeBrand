@@ -1,11 +1,14 @@
 {
     "title": "پپسی",
-    "description": "",
+    "description": "تولید کننده‌ی نوشیدنی",
     "path": "/pepsi",
     "updated_at": "2017-06-06",
     "colors": [
         "005992",
         "ed1a38"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "food"
+    ]
 }

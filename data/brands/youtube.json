@@ -1,10 +1,14 @@
 {
     "title": "یوتیوب",
-    "description": "",
+    "description": "سرویس اشتراک ویدئو",
     "path": "/youtube",
     "updated_at": "2017-06-06",
     "colors": [
         "cd201f"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "stream"
+    ]
 }

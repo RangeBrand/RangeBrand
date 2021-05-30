@@ -1,6 +1,6 @@
 {
     "title": "لینوکس مینت",
-    "description": "",
+    "description": "سیستم عامل رایانه",
     "path": "/linux-mint",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,9 @@
         "87cf3e",
         "bfff80"
     ],
-    "tags": []
+    "tags": [
+        "software",
+        "operating_system",
+        "open_source"
+    ]
 }

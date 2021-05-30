@@ -1,11 +1,16 @@
 {
     "title": "تکنامه",
-    "description": "",
+    "description": "خبرنامه فناوری اطلاعات و ارتباطات",
     "path": "/technameh",
     "updated_at": "2017-06-06",
     "colors": [
         "80197e",
         "ff5400"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "publishing",
+        "closed"
+    ]
 }

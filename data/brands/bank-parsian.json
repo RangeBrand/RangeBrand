@@ -1,11 +1,14 @@
 {
     "title": "بانک پارسیان",
-    "description": "",
+    "description": "بانک",
     "path": "/bank-parsian",
     "updated_at": "2017-06-06",
     "colors": [
         "B17D57",
         "000000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "bank"
+    ]
 }

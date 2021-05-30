@@ -1,11 +1,14 @@
 {
     "title": "دانشگاه آزاد اسلامی",
-    "description": "",
+    "description": "دانشگاه",
     "path": "/islamic-azad-uni",
     "updated_at": "2017-06-06",
     "colors": [
         "7f9cec",
         "3f69e1"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "university"
+    ]
 }

@@ -1,11 +1,15 @@
 {
     "title": "رفاه",
-    "description": "",
+    "description": "فروشگاه خرده‌فروشی زنجیره‌ای",
     "path": "/refah",
     "updated_at": "2017-06-06",
     "colors": [
         "009238",
         "ec6608"
     ],
-    "tags": []
+    "tags": [
+        "turkey",
+        "shop",
+        "supermarket_chain"
+    ]
 }

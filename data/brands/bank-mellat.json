@@ -1,11 +1,14 @@
 {
     "title": "بانک ملت",
-    "description": "",
+    "description": "بانک",
     "path": "/bank-mellat",
     "updated_at": "2017-06-06",
     "colors": [
         "FDBD51",
         "D81736"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "bank"
+    ]
 }

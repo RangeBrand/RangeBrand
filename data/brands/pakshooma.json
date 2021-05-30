@@ -1,11 +1,14 @@
 {
     "title": "پاکشوما",
-    "description": "",
+    "description": "تولید کننده‌ی لوازم آشپزخانه",
     "path": "/pakshooma",
     "updated_at": "2017-06-06",
     "colors": [
         "3e4095",
         "ed3237"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "home_appliances"
+    ]
 }

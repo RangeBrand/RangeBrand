@@ -1,11 +1,14 @@
 {
     "title": "پریل",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات بهداشتی",
     "path": "/pril",
     "updated_at": "2017-06-06",
     "colors": [
         "e4000f",
         "ffee00"
     ],
-    "tags": []
+    "tags": [
+        "germany",
+        "hygiene"
+    ]
 }

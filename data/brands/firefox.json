@@ -1,6 +1,6 @@
 {
     "title": "فایرفاکس",
-    "description": "",
+    "description": "مرورگر وب",
     "path": "/firefox",
     "updated_at": "2017-06-06",
     "colors": [
@@ -12,5 +12,9 @@
         "331e54",
         "002147"
     ],
-    "tags": []
+    "tags": [
+        "online",
+        "software",
+        "open_source"
+    ]
 }

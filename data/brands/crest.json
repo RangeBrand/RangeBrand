@@ -1,11 +1,14 @@
 {
     "title": "کرست",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات بهداشت دهان",
     "path": "/crest",
     "updated_at": "2017-06-06",
     "colors": [
         "007ecc",
         "d90709"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "hygiene"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "گوگل پلی",
-    "description": "",
+    "description": "پلتفرم و فروشگاه نرم‌افزار اندروید",
     "path": "/google-play",
     "updated_at": "2017-06-06",
     "colors": [
@@ -12,5 +12,11 @@
         "536dfe",
         "658092"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "platform",
+        "shop",
+        "app_store"
+    ]
 }

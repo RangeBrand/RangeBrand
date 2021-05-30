@@ -1,11 +1,14 @@
 {
     "title": "هاکوپیان",
-    "description": "",
+    "description": "تولید کننده‌ی پوشاک مردانه",
     "path": "/hacoupian",
     "updated_at": "2017-06-06",
     "colors": [
         "b99a4a",
         "000000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "clothing"
+    ]
 }

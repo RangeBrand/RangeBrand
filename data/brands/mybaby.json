@@ -1,6 +1,6 @@
 {
     "title": "مای بی‌بی",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات بهداشتی نوزاد",
     "path": "/mybaby",
     "updated_at": "2017-06-06",
     "colors": [
@@ -10,5 +10,7 @@
         "e30074",
         "f8f400"
     ],
-    "tags": []
+    "tags": [
+        "hygiene"
+    ]
 }

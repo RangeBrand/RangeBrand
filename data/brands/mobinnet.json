@@ -1,11 +1,14 @@
 {
     "title": "مبین نت",
-    "description": "",
+    "description": "ارائه دهنده خدمات اینترنتی",
     "path": "/mobinnet",
     "updated_at": "2017-06-06",
     "colors": [
         "81c01a",
         "333333"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "isp"
+    ]
 }

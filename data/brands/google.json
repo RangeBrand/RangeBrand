@@ -1,6 +1,6 @@
 {
     "title": "گوگل",
-    "description": "هر اطلاعاتی که فکرشو کنی از ما داره",
+    "description": "موتور جستجوی وب",
     "path": "/google",
     "updated_at": "2021-02-03",
     "colors": [
@@ -10,8 +10,8 @@
         "34A853"
     ],
     "tags": [
-        "tech",
+        "usa",
         "online",
-        "us"
+        "search_engine"
     ]
 }

@@ -1,10 +1,13 @@
 {
     "title": "فارسی‌۱",
-    "description": "",
+    "description": "شبکه‌ی تلویزیونی",
     "path": "/farsi1",
     "updated_at": "2017-06-06",
     "colors": [
         "00aeb0"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "tv"
+    ]
 }

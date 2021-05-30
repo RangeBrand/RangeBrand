@@ -1,11 +1,14 @@
 {
     "title": "تک ماکارون",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات غذایی بخصوص ماکارون",
     "path": "/takmakaron",
     "updated_at": "2017-06-06",
     "colors": [
         "0d5122",
         "ded81c"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

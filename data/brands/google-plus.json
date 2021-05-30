@@ -1,10 +1,14 @@
 {
     "title": "گوگل+",
-    "description": "",
+    "description": "شبکه اجتماعی",
     "path": "/google-plus",
     "updated_at": "2017-06-06",
     "colors": [
         "dc4e41"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "social_network",
+        "closed"
+    ]
 }

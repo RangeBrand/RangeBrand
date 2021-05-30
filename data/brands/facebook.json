@@ -1,10 +1,14 @@
 {
     "title": "فیسبوک‌",
-    "description": "",
+    "description": "شبکه اجتماعی",
     "path": "/facebook",
     "updated_at": "2017-06-06",
     "colors": [
         "3b5998"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "social_network"
+    ]
 }

@@ -1,10 +1,14 @@
 {
     "title": "هواپیمایی ایران‌ایر",
-    "description": "",
+    "description": "هواپیمایی",
     "path": "/iranair",
     "updated_at": "2017-06-06",
     "colors": [
         "352a82"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "airline",
+        "travel"
+    ]
 }

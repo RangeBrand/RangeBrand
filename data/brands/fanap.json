@@ -1,10 +1,12 @@
 {
     "title": "فناپ",
-    "description": "",
+    "description": "هلدینگ فعال در فناوری اطلاعات و ارتباطات",
     "path": "/fanap",
     "updated_at": "2017-06-06",
     "colors": [
         "ee7f06"
     ],
-    "tags": []
+    "tags": [
+        "iran"
+    ]
 }

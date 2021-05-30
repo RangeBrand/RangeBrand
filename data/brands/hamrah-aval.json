@@ -1,11 +1,14 @@
 {
     "title": "همراه اول",
-    "description": "",
+    "description": "ارائه دهنده خدمات مخابراتی و اینترنتی",
     "path": "/hamrah-aval",
     "updated_at": "2017-06-06",
     "colors": [
         "54c5d0",
         "eb7400"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "isp"
+    ]
 }

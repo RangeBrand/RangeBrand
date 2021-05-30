@@ -1,6 +1,6 @@
 {
     "title": "بلک‌بری",
-    "description": "",
+    "description": "تولید کننده‌ی تلفن هوشمند و تبلت",
     "path": "/blackberry",
     "updated_at": "2017-06-06",
     "colors": [
@@ -13,5 +13,8 @@
         "a1a1a4",
         "8f8f8c"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "hardware"
+    ]
 }

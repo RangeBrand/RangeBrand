@@ -1,6 +1,6 @@
 {
     "title": "سازیتو",
-    "description": "",
+    "description": "سرویس ایجاد فروشگاه اینترنتی",
     "path": "/sazito",
     "updated_at": "2021-05-05",
     "colors": [
@@ -9,5 +9,8 @@
         "606cec",
         "32335e"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online"
+    ]
 }

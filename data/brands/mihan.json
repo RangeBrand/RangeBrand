@@ -1,6 +1,6 @@
 {
     "title": "میهن",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات لبنی",
     "path": "/mihan",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,8 @@
         "ec1127",
         "a4c4ea"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

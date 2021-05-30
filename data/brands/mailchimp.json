@@ -1,6 +1,6 @@
 {
     "title": "میل‌چیمپ",
-    "description": "",
+    "description": "سرویس ایمیل مارکتینگ",
     "path": "/mailchimp",
     "updated_at": "2017-06-06",
     "colors": [
@@ -10,5 +10,9 @@
         "db3a1b",
         "373737"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "software"
+    ]
 }

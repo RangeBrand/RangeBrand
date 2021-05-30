@@ -1,6 +1,6 @@
 {
     "title": "دراپ‌باکس",
-    "description": "",
+    "description": "سرویس اشتراک‌گذاری و پشتیبانی‌گیری فایل",
     "path": "/dropbox",
     "updated_at": "2017-06-06",
     "colors": [
@@ -9,5 +9,9 @@
         "47525d",
         "3d464d"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "software"
+    ]
 }

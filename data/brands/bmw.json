@@ -1,6 +1,6 @@
 {
     "title": "ب ام و",
-    "description": "",
+    "description": "تولید کننده‌ی خودرو",
     "path": "/bmw",
     "updated_at": "2017-06-06",
     "colors": [
@@ -10,5 +10,8 @@
         "8ca3b1",
         "111010"
     ],
-    "tags": []
+    "tags": [
+        "germany",
+        "car"
+    ]
 }

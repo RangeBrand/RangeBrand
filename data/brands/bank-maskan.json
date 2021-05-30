@@ -1,10 +1,13 @@
 {
     "title": "بانک مسکن",
-    "description": "",
+    "description": "بانک",
     "path": "/bank-maskan",
     "updated_at": "2017-06-06",
     "colors": [
         "B17D57"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "bank"
+    ]
 }

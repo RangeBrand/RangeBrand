@@ -1,11 +1,14 @@
 {
     "title": "دلپذیر",
-    "description": "",
+    "description": "تولید کننده‌ی مواد غذایی و صنایع تبدیلی کشاورزی",
     "path": "/delpazir",
     "updated_at": "2017-06-06",
     "colors": [
         "dd282e",
         "178d4d"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

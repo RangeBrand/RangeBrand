@@ -1,6 +1,6 @@
 {
     "title": "گیت‌هاب",
-    "description": "",
+    "description": "پلتفرم میزبانی پروژه‌های نرم‌افزاری",
     "path": "/github",
     "updated_at": "2017-06-06",
     "colors": [
@@ -12,5 +12,9 @@
         "bd2c00",
         "ff9933"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "software"
+    ]
 }

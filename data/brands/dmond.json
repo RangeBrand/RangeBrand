@@ -1,6 +1,6 @@
 {
     "title": "دیموند",
-    "description": "",
+    "description": "مرکز شتابدهی",
     "path": "/dmond",
     "updated_at": "2017-06-06",
     "colors": [
@@ -13,5 +13,8 @@
         "f50000",
         "a20000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "accelerator"
+    ]
 }

@@ -1,11 +1,14 @@
 {
     "title": "بانک کارآفرین",
-    "description": "",
+    "description": "بانک",
     "path": "/bank-karafarin",
     "updated_at": "2017-06-06",
     "colors": [
         "d4af64",
         "2f7747"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "bank"
+    ]
 }

@@ -1,11 +1,15 @@
 {
     "title": "آپارات",
-    "description": "",
+    "description": "سرویس اشتراک ویدئو",
     "path": "/aparat",
     "updated_at": "2017-06-06",
     "colors": [
         "ed145b",
         "231f20"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "stream"
+    ]
 }

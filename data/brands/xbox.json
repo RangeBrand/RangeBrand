@@ -1,10 +1,14 @@
 {
     "title": "ایکس‌‌باکس",
-    "description": "",
+    "description": "کنسول بازی",
     "path": "/xbox",
     "updated_at": "2017-06-06",
     "colors": [
         "52b043"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "gaming_console",
+        "hardware"
+    ]
 }

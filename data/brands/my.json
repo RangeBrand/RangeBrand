@@ -1,10 +1,14 @@
 {
     "title": "مای",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات آرایشی و بهداشت فردی",
     "path": "/my",
     "updated_at": "2017-06-06",
     "colors": [
         "cd5c5c"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "hygiene",
+        "cosmetics"
+    ]
 }

@@ -1,10 +1,14 @@
 {
     "title": "سونی",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات الکترونیکی",
     "path": "/sony",
     "updated_at": "2017-06-06",
     "colors": [
         "000000"
     ],
-    "tags": []
+    "tags": [
+        "japan",
+        "hardware",
+        "home_appliances"
+    ]
 }

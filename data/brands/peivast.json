@@ -1,10 +1,14 @@
 {
     "title": "پیوست",
-    "description": "",
+    "description": "ماهنامه فناوری اطلاعات و ارتباطات",
     "path": "/peivast",
     "updated_at": "2017-06-06",
     "colors": [
         "0aaddb"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "publishing"
+    ]
 }

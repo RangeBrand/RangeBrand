@@ -1,10 +1,12 @@
 {
     "title": "مجید آنلاین",
-    "description": "",
+    "description": "وبلاگ و انجمن آنلاین",
     "path": "/majid-online",
     "updated_at": "2017-06-06",
     "colors": [
         "ff5951"
     ],
-    "tags": []
+    "tags": [
+        "iran"
+    ]
 }

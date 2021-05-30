@@ -1,11 +1,15 @@
 {
     "title": "اوپن سوزه",
-    "description": "",
+    "description": "سیستم عامل رایانه",
     "path": "/opensuse",
     "updated_at": "2017-06-06",
     "colors": [
         "2b2e2c",
         "00662b"
     ],
-    "tags": []
+    "tags": [
+        "software",
+        "operating_system",
+        "open_source"
+    ]
 }

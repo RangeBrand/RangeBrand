@@ -1,10 +1,13 @@
 {
     "title": "صبانت",
-    "description": "",
+    "description": "ارائه دهنده خدمات اینترنتی",
     "path": "/sabanet",
     "updated_at": "2017-06-06",
     "colors": [
         "da1f26"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "isp"
+    ]
 }

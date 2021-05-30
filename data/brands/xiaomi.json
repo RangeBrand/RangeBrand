@@ -1,10 +1,14 @@
 {
     "title": "شیاومی",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات الکترونیکی و ارتباطاتی",
     "path": "/xiaomi",
     "updated_at": "2017-06-06",
     "colors": [
         "ff4a00"
     ],
-    "tags": []
+    "tags": [
+        "china",
+        "hardware",
+        "home_appliances"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "ام‌تی‌ان ایرانسل",
-    "description": "",
+    "description": "ارائه دهنده خدمات مخابراتی و اینترنتی",
     "path": "/mtn-irancell",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,8 @@
         "00688f",
         "e21826"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "isp"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "سامسونگ",
-    "description": "",
+    "description": "تولید کننده‌ی سیستم عامل، نرم‌افزار و سخت‌افزار",
     "path": "/samsung",
     "updated_at": "2017-06-06",
     "colors": [
@@ -17,5 +17,9 @@
         "009ca6",
         "00b140"
     ],
-    "tags": []
+    "tags": [
+        "korea",
+        "software",
+        "hardware"
+    ]
 }

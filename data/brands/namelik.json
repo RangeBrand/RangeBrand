@@ -1,6 +1,6 @@
 {
     "title": "ناملیک",
-    "description": "",
+    "description": "پادکست‌خوان",
     "path": "/namelik",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,9 @@
         "5538af",
         "ff7300"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "stream",
+        "podcast"
+    ]
 }

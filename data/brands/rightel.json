@@ -1,11 +1,14 @@
 {
     "title": "رایتل",
-    "description": "",
+    "description": "ارائه دهنده خدمات مخابراتی و اینترنتی",
     "path": "/rightel",
     "updated_at": "2017-06-06",
     "colors": [
         "941063",
         "c4d94b"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "isp"
+    ]
 }

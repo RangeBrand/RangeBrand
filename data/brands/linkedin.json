@@ -1,6 +1,6 @@
 {
     "title": "لینکداین",
-    "description": "",
+    "description": "شبکه اجتماعی",
     "path": "/linkedin",
     "updated_at": "2017-06-06",
     "colors": [
@@ -14,5 +14,9 @@
         "dd5143",
         "e68523"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "platform"
+    ]
 }

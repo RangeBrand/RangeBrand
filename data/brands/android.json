@@ -1,10 +1,14 @@
 {
     "title": "اندروید",
-    "description": "",
+    "description": "سیستم عامل موبایل",
     "path": "/android",
     "updated_at": "2017-06-06",
     "colors": [
         "a4c639"
     ],
-    "tags": []
+    "tags": [
+        "software",
+        "operating_system",
+        "open_source"
+    ]
 }

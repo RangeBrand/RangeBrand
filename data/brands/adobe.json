@@ -1,6 +1,6 @@
 {
     "title": "ادوبی",
-    "description": "",
+    "description": "سازنده‌ی محصولات نرم‌افزاری در حوزه‌ی طراحی و گرافیک",
     "path": "/adobe",
     "updated_at": "2017-06-06",
     "colors": [
@@ -12,5 +12,8 @@
         "8a7967",
         "6a737b"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "software"
+    ]
 }

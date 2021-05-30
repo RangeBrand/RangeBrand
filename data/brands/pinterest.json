@@ -1,10 +1,14 @@
 {
     "title": "پینترست",
-    "description": "",
+    "description": "پلتفرم اشتراک‌گذاری و نمایش تصویر",
     "path": "/pinterest",
     "updated_at": "2017-06-06",
     "colors": [
         "bd081c"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "online",
+        "platform"
+    ]
 }

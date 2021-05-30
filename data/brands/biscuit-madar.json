@@ -1,11 +1,14 @@
 {
     "title": "بیسکویت مادر",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات غذایی بخصوص بیسکویت",
     "path": "/biscuit-madar",
     "updated_at": "2017-06-06",
     "colors": [
         "d3d67b",
         "e21f25"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

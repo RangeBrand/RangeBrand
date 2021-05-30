@@ -1,11 +1,14 @@
 {
     "title": "اوپرا",
-    "description": "",
+    "description": "مرورگر وب",
     "path": "/opera",
     "updated_at": "2017-06-06",
     "colors": [
         "cc0f16",
         "9c9e9f"
     ],
-    "tags": []
+    "tags": [
+        "online",
+        "software"
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "title": "منوتو",
-    "description": "",
+    "description": "شبکه‌ی تلویزیونی",
     "path": "/manoto",
     "updated_at": "2017-06-06",
     "colors": [
@@ -12,5 +12,8 @@
         "df1cb7",
         "ce0b33"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "tv"
+    ]
 }

@@ -1,10 +1,13 @@
 {
     "title": "پی‌پینگ",
-    "description": "",
+    "description": "پرداخت‌یار",
     "path": "/payping",
     "updated_at": "2017-06-06",
     "colors": [
         "009cde"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online"
+    ]
 }

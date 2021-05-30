@@ -1,11 +1,15 @@
 {
     "title": "دیجیکالا",
-    "description": "",
+    "description": "پلتفرم و فروشگاه اینترنتی",
     "path": "/digikala",
     "updated_at": "2017-06-06",
     "colors": [
         "ef3f3e",
         "818285"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "shop",
+        "online"
+    ]
 }

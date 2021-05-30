@@ -1,10 +1,13 @@
 {
     "title": "صحت",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات بهداشتی",
     "path": "/sehat",
     "updated_at": "2017-06-06",
     "colors": [
         "006509"
     ],
-    "tags": []
+    "tags": [
+        "usa",
+        "hygiene"
+    ]
 }

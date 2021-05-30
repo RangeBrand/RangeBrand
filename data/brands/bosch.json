@@ -1,10 +1,13 @@
 {
     "title": "بوش",
-    "description": "",
+    "description": "تولید کننده‌ی لوازم آشپزخانه",
     "path": "/bosch",
     "updated_at": "2017-06-06",
     "colors": [
         "ec1b24"
     ],
-    "tags": []
+    "tags": [
+        "germany",
+        "home_appliances"
+    ]
 }

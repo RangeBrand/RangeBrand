@@ -1,6 +1,6 @@
 {
     "title": "آپادانا",
-    "description": "",
+    "description": "فروشگاه اینترنتی لوازم اتاق خواب",
     "path": "/apadana",
     "updated_at": "2017-06-06",
     "colors": [
@@ -10,5 +10,9 @@
         "007cc2",
         "dd127b"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "shop",
+        "home_appliances"
+    ]
 }

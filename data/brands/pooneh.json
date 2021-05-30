@@ -1,6 +1,6 @@
 {
     "title": "پونه",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات بهداشت دهان",
     "path": "/pooneh",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,8 @@
         "8dc73f",
         "037e3b"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "hygiene"
+    ]
 }

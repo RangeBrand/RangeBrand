@@ -1,6 +1,6 @@
 {
     "title": "اکتیو",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات در حوزه‌ی بهداشت فردی، خانه و البسه",
     "path": "/active",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,8 @@
         "e50619",
         "ffe600"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "hygiene"
+    ]
 }

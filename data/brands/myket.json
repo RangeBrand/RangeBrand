@@ -1,11 +1,17 @@
 {
     "title": "مایکت",
-    "description": "",
+    "description": "پلتفرم و فروشگاه نرم‌افزار اندروید",
     "path": "/myket",
     "updated_at": "2017-06-06",
     "colors": [
         "00b0ff",
         "ff0083"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "platform",
+        "shop",
+        "app_store"
+    ]
 }

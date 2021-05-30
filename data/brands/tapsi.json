@@ -1,6 +1,6 @@
 {
     "title": "تپسی",
-    "description": "",
+    "description": "پلتفرم درخواست خودرو",
     "path": "/tapsi",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,9 @@
         "0065dc",
         "000000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "online",
+        "ride_hailing"
+    ]
 }

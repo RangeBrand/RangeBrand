@@ -1,6 +1,6 @@
 {
     "title": "دماوند",
-    "description": "",
+    "description": "تولید کننده‌ی نوشیدنی",
     "path": "/damavand",
     "updated_at": "2017-06-06",
     "colors": [
@@ -9,5 +9,8 @@
         "d80228",
         "1aa000"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

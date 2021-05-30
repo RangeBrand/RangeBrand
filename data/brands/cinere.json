@@ -1,10 +1,14 @@
 {
     "title": "سینره",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات آرایشی و بهداشت فردی",
     "path": "/cinere",
     "updated_at": "2017-06-06",
     "colors": [
         "dca515"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "hygiene",
+        "cosmetics"
+    ]
 }

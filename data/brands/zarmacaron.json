@@ -1,6 +1,6 @@
 {
     "title": "زر ماکارون",
-    "description": "",
+    "description": "تولید کننده‌ی محصولات غذایی بخصوص ماکارون",
     "path": "/zarmacaron",
     "updated_at": "2017-06-06",
     "colors": [
@@ -8,5 +8,8 @@
         "e2c271",
         "ed1c24"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "food"
+    ]
 }

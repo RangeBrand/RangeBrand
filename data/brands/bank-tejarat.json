@@ -1,10 +1,13 @@
 {
     "title": "بانک تجارت‌",
-    "description": "",
+    "description": "بانک",
     "path": "/bank-tejarat",
     "updated_at": "2017-06-06",
     "colors": [
         "2F4A98"
     ],
-    "tags": []
+    "tags": [
+        "iran",
+        "bank"
+    ]
 }
