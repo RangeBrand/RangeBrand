@@ -19,7 +19,7 @@
                               position="top">
                         <template slot="title">
                             <icon-setting class="w-5 inline-block fill-current"/>
-                            <span class="mr-2 inline-block">
+                            <span class="mr-2 hidden md:inline-block">
                                 تنظیمات
                             </span>
                         </template>
@@ -54,7 +54,7 @@
                     <button class="button--simple"
                             @click="$modal.show('exportModal')">
                         <icon-share class="w-5 inline-block fill-current"/>
-                        <span class="mr-2 inline-block">
+                        <span class="mr-2 hidden md:inline-block">
                             خروجی
                         </span>
                     </button>
@@ -65,7 +65,7 @@
                     <button class="button--simple"
                             @click="toggleColorSidebar('colorBlindnessSim')"
                             title="شبیه‌ساز کوررنگی">
-                        <span class="ml-2 inline-block">
+                        <span class="ml-2 hidden md:inline-block">
                             شبیه‌ساز کوررنگی
                         </span>
                         <icon-glasses class="w-5 inline-block fill-current"/>
@@ -73,7 +73,7 @@
                     <button class="button--simple"
                             @click="toggleColorSidebar('adjustColor')"
                             title="تنظیم رنگ‌ها">
-                        <span class="ml-2 inline-block">
+                        <span class="ml-2 hidden md:inline-block">
                             تنظیم رنگ‌ها
                         </span>
                         <icon-brightness class="w-5 inline-block fill-current"/>
