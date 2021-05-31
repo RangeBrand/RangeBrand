@@ -4,6 +4,7 @@ import mapValues from 'lodash.mapvalues';
 const state = {
     device: {},
     favoriteColors: [],
+    menuSidebarIsOpen: false,
     colorSidebarIsOpen: false,
     colorSidebarContent: 'favorites',
     isSeparatedMode: false,
@@ -22,8 +23,11 @@ const mutations = {
     setFavoriteColors (state, colors) {
         state.favoriteColors = [...new Set(colors)];
     },
-    setSidebar(state, isOpen) {
+    setColorSidebar(state, isOpen) {
         state.colorSidebarIsOpen = isOpen;
+    },
+    setMenuSidebar(state, isOpen) {
+        state.menuSidebarIsOpen = isOpen;
     },
     setColorSidebarContent(state, content) {
         state.colorSidebarContent = content;
@@ -85,12 +89,27 @@ const actions = {
             dispatch('openColorSidebar', colorSidebarContent);
         }
     },
-    openColorSidebar({ commit }, colorSidebarContent = 'favorites') {
-        commit('setSidebar', true);
+    openColorSidebar({ commit, dispatch }, colorSidebarContent = 'favorites') {
+        commit('setColorSidebar', true);
         commit('setColorSidebarContent', colorSidebarContent);
+        dispatch('closeMenuSidebar');
     },
     closeColorSidebar({ commit }) {
-        commit('setSidebar', false);
+        commit('setColorSidebar', false);
+    },
+    toggleMenuSidebar({ state, dispatch }) {
+        if (state.menuSidebarIsOpen) {
+            dispatch('closeMenuSidebar');
+        } else {
+            dispatch('openMenuSidebar');
+        }
+    },
+    openMenuSidebar({ commit, dispatch }) {
+        commit('setMenuSidebar', true);
+        dispatch('closeColorSidebar');
+    },
+    closeMenuSidebar({ commit }) {
+        commit('setMenuSidebar', false);
     },
     toggleSeparatedMode({ state, commit }) {
         commit('setSeparatedMode', !state.isSeparatedMode);
