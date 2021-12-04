@@ -43,7 +43,7 @@
                         </g-link>
                     </li>
                     <li class="block">
-                        <g-link to="/brands/" class=" link inline-block p-1">
+                        <g-link to="/colors/" class=" link inline-block p-1">
                             رنگ‌ها
                         </g-link>
                     </li>
