@@ -1,22 +1,29 @@
 <template>
-    <table>
-        <thead class="bg-rb-violet-100">
-            <tr>
-                <th>
-                    رنگ
-                </th>
-                <th>
-                    اطلاعات
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="color in colors"
-                :key="color">
-                <td>
-                    <div class="w-20 h-20 rounded-lg shadow inline-block" :style="{backgroundColor: `#${color}`}"/>
-                </td>
-                <td>
+    <div class="detail" dir="ltr">
+        <div class="detail_header">
+            <div class="w-1/3">
+                رنگ
+            </div>
+            <div class="w-2/3">
+                مقادیر
+            </div>
+        </div>
+        <ul class="m-0 px-0 py-2">
+            <li v-for="color in colors"
+                :key="color"
+                class="detail_row flex-center">
+                <div class="w-1/3">
+                    <g-link class="w-20 h-20 rounded-lg shadow block"
+                            target="_blank"
+                            :style="{backgroundColor: `#${color}`}"
+                            :to="{
+                                path: '/palette',
+                                query: {
+                                    colors: color
+                                }
+                            }"/>
+                </div>
+                <div class="w-2/3">
                     <dl>
                         <dt>HEX</dt>
                         <dd>{{ color }}</dd>
@@ -25,10 +32,10 @@
                         <dt>HSL</dt>
                         <dd>{{ color | toHSL | toString }}</dd>
                     </dl>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </div>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
@@ -58,19 +65,27 @@ export default {
 };
 </script>
 <style scoped>
-table {
-    @apply text-right table-auto border-collapse w-full text-black text-opacity-80;
+.detail_header {
+    @apply bg-rb-violet-100 flex rounded-lg font-bold
 }
-th, td {
-    @apply py-2 px-4 uppercase;
+.detail_header > * {
+    @apply py-2 px-3;
 }
+
+.detail_row {
+    @apply flex rounded-lg
+}
+.detail_row > * {
+    @apply py-2;
+}
+
 dt {
-    @apply float-right ml-2;
+    @apply float-left mr-2;
 }
 dt::after {
     content: ':';
 }
 dd {
-    direction: ltr;
+    @apply uppercase
 }
 </style>
