@@ -2,9 +2,11 @@
     "title": "پونیشا",
     "description": "پلتفرم درخواست متخصص برای پروژه‌های فریلنسینگ",
     "path": "/ponisha",
-    "updated_at": "2017-06-06",
+    "updated_at": "2024-07-02",
     "colors": [
-        "6c9b40"
+        "007f48",
+        "ffffff",
+        "101828"
     ],
     "tags": [
         "iran",
