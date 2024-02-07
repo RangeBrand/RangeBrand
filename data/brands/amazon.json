@@ -2,10 +2,11 @@
     "title": "آمازون",
     "description": "فروشگاه اینترنتی",
     "path": "/amazon",
-    "updated_at": "2017-06-06",
+    "updated_at": "2024-07-02",
     "colors": [
         "ff9900",
-        "146eb4"
+        "ffffff",
+        "000000"
     ],
     "tags": [
         "usa",
