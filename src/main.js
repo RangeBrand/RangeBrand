@@ -22,6 +22,22 @@ const LINKS = [
         href: 'https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v27.2.0/dist/font-face.css',
     },
 ];
+const SCRIPTS = [
+    {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-xxx',
+        body: true,
+        async: true,
+    },
+    {
+        innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-xxxx');
+        `,
+        body: true,
+    },
+];
 
 const HEAD = [
     {
@@ -31,6 +47,10 @@ const HEAD = [
     {
         key: 'link',
         items: LINKS,
+    },
+    {
+        key: 'script',
+        items: SCRIPTS,
     },
 ];
 
