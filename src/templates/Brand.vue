@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <div class="color-banner">
-            <color-banner :colors="brand.colors"/>
+            <color-banner :colors="brand.colors" :show-shades-btn="false"/>
         </div>
         <main class="wrapper text-black text-opacity-80 py-8">
             <h1 class="text-3xl font-bold mt-8 mb-4">

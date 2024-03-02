@@ -24,7 +24,7 @@ const LINKS = [
 ];
 const SCRIPTS = [
     {
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-xxx',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-19G4QQ6K4Z',
         body: true,
         async: true,
     },
@@ -33,7 +33,7 @@ const SCRIPTS = [
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-xxxx');
+            gtag('config', 'G-19G4QQ6K4Z');
         `,
         body: true,
     },

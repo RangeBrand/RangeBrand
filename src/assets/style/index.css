@@ -42,7 +42,10 @@
 .button--simple {
     @apply smooth-transition;
     @apply rounded-full text-black text-opacity-80 text-sm px-4 py-2 shadow-none cursor-pointer;
-    @apply hover:bg-white hover:text-rb-carnelian-500 hover:shadow;
+    &:hover,
+    &.active {
+        @apply bg-white text-rb-carnelian-500 shadow
+    }
 }
 
 .button--round {

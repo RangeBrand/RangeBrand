@@ -6,7 +6,8 @@
         },
     ]">
         <banner-list v-model="localColors"
-                     @copy="copyColorToClipboard"/>
+                     @copy="copyColorToClipboard"
+                     :no-shades="!showShadesBtn"/>
         <transition name="fade">
             <banner-gradient v-show="gradIsVisible"
                              :colors="localColors"
@@ -62,6 +63,15 @@
             </template>
             <template slot="left">
                 <div class="flex-center justify-end">
+                    <button v-if="showShadesBtn"
+                            :class="['button--simple', {'active': isShadesVisible}]"
+                            title="پرده‌ها"
+                            @click="toggleShades">
+                        <span class="ml-2 hidden md:inline-block">
+                            پرده‌ها
+                        </span>
+                        <icon-pantone class="w-5 inline-block fill-current"/>
+                    </button>
                     <button class="button--simple"
                             @click="toggleColorSidebar('colorBlindnessSim')"
                             title="شبیه‌ساز کوررنگی">
@@ -102,6 +112,7 @@ import IconSetting from '~/assets/icons/setting.svg';
 import IconShare from '~/assets/icons/share.svg';
 import IconGlasses from '~/assets/icons/glasses.svg';
 import IconBrightness from '~/assets/icons/brightness.svg';
+import IconPantone from '~/assets/icons/pantone.svg';
 
 import ClipboardMixin from '~/scripts/mixins/clipboard';
 
@@ -122,6 +133,7 @@ export default {
         IconShare,
         IconGlasses,
         IconBrightness,
+        IconPantone,
     },
     mixins: [
         ClipboardMixin,
@@ -130,6 +142,10 @@ export default {
         colors: {
             type: Array,
             default: () => ([]),
+        },
+        showShadesBtn: {
+            type: Boolean,
+            default: true,
         },
     },
     data: () => ({
@@ -145,6 +161,7 @@ export default {
             'isSeparatedMode',
             'colorBlindnessType',
             'colorAdjustment',
+            'isShadesVisible',
         ]),
     },
     watch: {
@@ -164,7 +181,7 @@ export default {
         },
     },
     methods: {
-        ...mapActions(['toggleSeparatedMode', 'toggleColorSidebar', 'closeColorSidebar']),
+        ...mapActions(['toggleSeparatedMode', 'toggleColorSidebar', 'closeColorSidebar', 'toggleShades']),
         updateColors(change) {
             if (change === 'blindness') {
                 this.$router.push({
@@ -186,7 +203,7 @@ export default {
     },
 };
 </script>
-<style scoped>
+<style lang="postcss" scoped>
 .dropdown__item {
     @apply px-4 py-2 cursor-pointer bg-white hover:bg-rb-violet-100;
 }

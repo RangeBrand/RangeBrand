@@ -14,6 +14,7 @@ const state = {
         sat: 0,
         lum: 0,
     },
+    isShadesVisible: false,
 };
 
 const mutations = {
@@ -40,6 +41,9 @@ const mutations = {
     },
     setColorAdjustment(state, value) {
         state.colorAdjustment = value;
+    },
+    setShadesVisibility(state, value) {
+        state.isShadesVisible = value;
     },
 };
 
@@ -89,7 +93,10 @@ const actions = {
             dispatch('openColorSidebar', colorSidebarContent);
         }
     },
-    openColorSidebar({ commit, dispatch }, colorSidebarContent = 'favorites') {
+    openColorSidebar({ state, commit, dispatch }, colorSidebarContent = 'favorites') {
+        if (state.isShadesVisible) {
+            commit('setShadesVisibility', colorSidebarContent === 'favorites');
+        }
         commit('setColorSidebar', true);
         commit('setColorSidebarContent', colorSidebarContent);
         dispatch('closeMenuSidebar');
@@ -113,6 +120,12 @@ const actions = {
     },
     toggleSeparatedMode({ state, commit }) {
         commit('setSeparatedMode', !state.isSeparatedMode);
+    },
+    toggleShades({ state, commit, dispatch }) {
+        commit('setShadesVisibility', !state.isShadesVisible);
+        if (state.isShadesVisible && state.colorSidebarContent !== 'favorites') {
+            dispatch('closeColorSidebar');
+        }
     },
 };
 

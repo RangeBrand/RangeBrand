@@ -2,7 +2,7 @@
     <ul :class="[
             'flex flex-grow justify-center relative overflow-hidden',
             {
-                'separat': isSeparatedMode
+                'separate': isSeparatedMode
             },
         ]"
         @mousemove="translateColor"
@@ -56,7 +56,9 @@
                     dir="ltr">
                     {{ color.hex }}
                 </code>
-                <div v-if="pageMode === 'palette'" class="color__add smooth-transition">
+                <div v-if="pageMode === 'palette'"
+                     v-show="!isShadesVisible"
+                     class="color__add smooth-transition">
                     <div class="flex-center h-full">
                         <span class="button" @click="addColor(index)">
                             <icon-add class="w-8 fill-current"/>
@@ -79,6 +81,42 @@
                     </code>
                 </div>
             </transition>
+            <transition name="fade">
+                <ul v-if="!noShades"
+                    v-show="isShadesVisible"
+                    class="shade smooth-transition">
+                    <li v-for="shade in shades[index]"
+                        :key="shade.hex"
+                        :class="[
+                            'shade__color',
+                            isLight(shade.hex) ? 'color--light' : 'color--dark',
+                        ]"
+                        :style="{
+                            backgroundColor: `#${shade.hex}`,
+                        }">
+                        <div class="shade__actions flex-center smooth-transition">
+                            <span class="color__actions__icon smooth-transition">
+                                <icon-copy class="p-2 fill-current w-9 block"
+                                           @click="$emit('copy', shade.hex)"/>
+                            </span>
+                            <span class="color__actions__icon smooth-transition">
+                                <component :is="favoriteColors.indexOf(shade.hex) === -1 ? 'IconHeartEmpty' : 'IconHeartFilled'"
+                                           class="p-2 fill-current w-9 block"
+                                           @click="toggleFavoriteColor(shade.hex)"/>
+                            </span>
+                        </div>
+                        <code v-if="device.isDesktop"
+                              class="color__code smooth-transition"
+                              dir="ltr">
+                            {{ shade.hex }}
+                        </code>
+                    </li>
+                    <li class="shade__color border-t-4 border-white"
+                        :style="{
+                            backgroundColor: `#${color.hex}`,
+                        }"/>
+                </ul>
+            </transition>
         </li>
     </ul>
 </template>
@@ -91,11 +129,12 @@ import IconHeartEmpty from '~/assets/icons/heart-empty.svg';
 import IconHeartFilled from '~/assets/icons/heart-filled.svg';
 
 import { isLight } from '~/scripts/utils/luminance';
-import { HEXtoRGB, RGBtoHEX } from '~/scripts/utils/converter';
-import { manipulateHEX } from '~/scripts/utils/manipulator';
+import { HEXtoRGB, RGBtoHEX, HEXtoHSL, HSLtoHEX } from '~/scripts/utils/converter';
+import { manipulateHEX, updateLuminance } from '~/scripts/utils/manipulator';
 
 import { mapState, mapActions } from 'vuex';
 
+import uniqby from 'lodash.uniqby';
 import blinder from 'color-blind';
 
 export default {
@@ -112,6 +151,10 @@ export default {
             type: Array,
             default: () => ([]),
         },
+        noShades: {
+            type: Boolean,
+            default: false,
+        },
     },
     data: () => ({
         activeColor: null,
@@ -125,6 +168,7 @@ export default {
             'isSeparatedMode',
             'colorBlindnessType',
             'colorAdjustment',
+            'isShadesVisible',
         ]),
         inputVal: {
             get() {
@@ -165,6 +209,37 @@ export default {
             } else {
                 return this.inputVal.map(color => color.hex);
             }
+        },
+        shades() {
+            return this.inputVal.map(color => {
+                const SHADES_COUNT = 11;
+                const hsl = HEXtoHSL(color.hex);
+
+                const lighten = Array(Math.floor(SHADES_COUNT / 2))
+                    .fill(hsl)
+                    .map((_, index) => ({
+                        hex: HSLtoHEX([
+                            hsl[0],
+                            hsl[1],
+                            updateLuminance(hsl[2], ((100 - hsl[2]) / Math.ceil(SHADES_COUNT / 2)) * (index + 1)),
+                        ]),
+                    }))
+                    .reverse();
+                const darken = Array(Math.floor(SHADES_COUNT / 2))
+                    .fill(hsl)
+                    .map((_, index) => ({
+                        hex: HSLtoHEX([
+                            hsl[0],
+                            hsl[1],
+                            updateLuminance(hsl[2], (hsl[2] / Math.ceil(SHADES_COUNT / 2)) * -(index + 1)),
+                        ]),
+                    }));
+                return uniqby([
+                    ...lighten,
+                    color,
+                    ...darken,
+                ], 'hex');
+            });
         },
     },
     methods: {
@@ -225,7 +300,7 @@ export default {
     },
 };
 </script>
-<style scoped>
+<style lang="postcss" scoped>
 .color__wrapper {
     @apply absolute h-full;
 }
@@ -235,6 +310,26 @@ export default {
 }
 .color--secondary {
     @apply absolute top-0 right-0 left-0 h-1/2;
+}
+.shade {
+    @apply absolute top-0 right-0 left-0 h-full flex flex-col;
+}
+.shade__actions {
+    @apply absolute top-0 right-0 w-full h-full justify-center gap-2 z-10 opacity-0;
+}
+.shade__color {
+    @apply relative flex-grow flex-shrink;
+    &:hover {
+        .color__code {
+            @apply opacity-0;
+        }
+        .shade__actions {
+            @apply opacity-100;
+        }
+    }
+    .color__code {
+        @apply top-1/2 -translate-y-1/2 p-0 bottom-auto;
+    }
 }
 
 .color__actions {
@@ -280,17 +375,26 @@ li:first-of-type .color__add {
     @apply p-2;
 }
 
-.separat {
+.separate {
     @apply mx-1;
 }
-.separat .color__wrapper {
+.separate .color__wrapper,
+.separate .shade {
     @apply px-1 py-2;
 }
-.separat .color,
-.separat .color--secondary {
+.separate .color,
+.separate .color--secondary {
     @apply rounded-lg;
 }
-.separat .color--secondary {
+.separate .color--secondary {
     @apply top-2 right-1 left-1;
+}
+.separate .shade .shade__color {
+    &:first-of-type {
+        @apply rounded-t-lg;
+    }
+    &:last-of-type {
+        @apply rounded-b-lg;
+    }
 }
 </style>
