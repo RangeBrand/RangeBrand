@@ -41,7 +41,6 @@ export default {
         },
     },
     data: () => ({
-
         interval: false,
         count: 0,
     }),
