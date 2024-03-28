@@ -9,11 +9,15 @@
 import ColorBanner from '~/components/colors/banner';
 
 import { validateHex } from '~/scripts/utils/validator';
+import RandomColorMixin from '~/scripts/mixins/randomColor';
 
 export default {
     components: {
         ColorBanner,
     },
+    mixins: [
+        RandomColorMixin,
+    ],
     computed: {
         colors() {
             try {
@@ -25,15 +29,11 @@ export default {
             }
         },
     },
-    beforeMount() {
-        if (!this.colors.length) {
-            this.$router.replace({
-                path: '/colors/',
-            });
-        }
-    },
     methods: {
-        updateQuery(value) {
+        async updateQuery(value) {
+            if (!value.length) {
+                value = await this.getRandomColor();
+            }
             const newColors = value.join('-');
             if (newColors !== this.$route.query.colors) {
                 this.$router.push({
