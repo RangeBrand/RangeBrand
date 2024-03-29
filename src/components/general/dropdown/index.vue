@@ -1,5 +1,5 @@
 <template>
-    <div class="relative text-black text-opacity-80 text-sm">
+    <div :class="['relative', { 'text-black text-opacity-80 text-sm': type !== 'unstyled' }]">
         <div :class="[
                  'title smooth-transition',
                  `title--${type}`
@@ -57,8 +57,9 @@ export default {
     }),
 };
 </script>
-<style scoped>
-.title {
+<style lang="postcss" scoped>
+.title--styled,
+.title--simple {
     @apply px-4 py-2 rounded-full shadow-none cursor-pointer;
 }
 .title--styled {
