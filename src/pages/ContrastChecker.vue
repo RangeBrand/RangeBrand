@@ -32,6 +32,9 @@
                         <div dir="ltr" class="result-stars">
                             <icon-star v-for="i in 3" :key="i" :class="['star', i <= result.stars ? 'opacity-60' : 'opacity-10']"/>
                         </div>
+                        <code class="block font-bold text-center opacity-80 text-lg">
+                            {{ result.standard }}
+                        </code>
                     </div>
                 </div>
             </div>
@@ -143,7 +146,7 @@ export default {
         @apply text-base text-black text-opacity-80 font-semibold;
     }
     .result-stars {
-        @apply flex gap-2 p-2 justify-center;
+        @apply flex gap-2 pt-2 px-2 justify-center;
     }
     .star {
         @apply w-4 h-4;
