@@ -4,11 +4,14 @@
     "path": "/whatsapp",
     "updated_at": "2017-06-06",
     "colors": [
-        "189D0E"
+        "075E54",
+        "128c7e",
+        "25D366",
+        "dcf8c6",
+        "ece5dd"
     ],
     "tags": [
         "usa",
-        "messaging",
-        "closed"
+        "messaging"
     ]
 }
