@@ -83,6 +83,11 @@ export default {
                         title: 'محاسبه‌ی کنتراست',
                     },
                     {
+                        name: 'color',
+                        to: '/color',
+                        title: 'تبدیل RGB به HEX',
+                    },
+                    {
                         name: 'color-extractor',
                         to: '/color-extractor/',
                         title: 'استخراج رنگ از عکس',
