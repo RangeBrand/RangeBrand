@@ -7,7 +7,10 @@
             <h1 class="text-3xl font-bold mt-8 mb-4">
                 پالت رنگ‌های رسمی {{ brand.title }} به همراه کدهای RGB و HEX
             </h1>
-            <p v-if="brand.description" class="mb-2">
+            <p v-if="brand.long_description" class="mb-2">
+                {{ brand.long_description }}
+            </p>
+            <p v-else-if="brand.description" class="mb-2">
                 {{ brand.title }}
                 یک
                 {{ brand.description }}
@@ -37,6 +40,7 @@ query Brand ($path: String!) {
     title
     colors
     description
+    long_description
     tags
   }
 }
