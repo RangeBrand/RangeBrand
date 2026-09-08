@@ -21,11 +21,11 @@ import palette24 from 'rangebrand/colors/24'
 
 `brands.amazon` is the same object as the `amazon` import. Palettes work the same way (`colors['24']`).
 
-Hex values are stored without a `#` prefix.
+Hex values include a `#` prefix.
 
 ```js
 amazon.colors
-// ['ff9900', 'ffffff', '000000']
+// ['#ff9900', '#ffffff', '#000000']
 ```
 
 The package root re-exports both catalogs:
@@ -43,7 +43,7 @@ import { brands, colors } from 'rangebrand'
 | `description` | `string` | Short description |
 | `long_description` | `string?` | Optional longer description |
 | `updated_at` | `string` | Date the record was last updated |
-| `colors` | `string[]` | Hex colors without `#` |
+| `colors` | `string[]` | Hex colors with `#` |
 | `tags` | `string[]` | e.g. `iran`, `shop`, `online` |
 
 ## Palette
@@ -51,7 +51,7 @@ import { brands, colors } from 'rangebrand'
 | Field | Type | Notes |
 | --- | --- | --- |
 | `id` | `string` | Filename of the source record (`24.json` → `"24"`) |
-| `colors` | `string[]` | Hex colors without `#` |
+| `colors` | `string[]` | Hex colors with `#` |
 
 ## License
 

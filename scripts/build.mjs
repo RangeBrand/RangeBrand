@@ -19,6 +19,17 @@ function readJsonRecords(dir, extra) {
     })
 }
 
+function withHash(color) {
+  return color.startsWith('#') ? color : `#${color}`
+}
+
+function withHashedColors(record) {
+  return {
+    ...record,
+    colors: record.colors.map(withHash)
+  }
+}
+
 function write(file, contents) {
   mkdirSync(dirname(file), { recursive: true })
   writeFileSync(file, contents)
@@ -76,9 +87,9 @@ mkdirSync(dist, { recursive: true })
 
 const brands = readJsonRecords(brandsDir, (id, source) => {
   const { path: _path, ...rest } = source
-  return { id, ...rest }
+  return withHashedColors({ id, ...rest })
 })
-const palettes = readJsonRecords(colorsDir, (id, source) => ({ id, ...source }))
+const palettes = readJsonRecords(colorsDir, (id, source) => withHashedColors({ id, ...source }))
 
 for (const { id, record } of brands) {
   const base = join(dist, 'brands', id)

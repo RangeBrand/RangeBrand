@@ -12,7 +12,7 @@ const require = createRequire(import.meta.url)
 test('brand deep import matches the catalog entry', () => {
   assert.equal(amazon.id, 'amazon')
   assert.equal(amazon.title, 'آمازون')
-  assert.deepEqual(amazon.colors, ['ff9900', 'ffffff', '000000'])
+  assert.deepEqual(amazon.colors, ['#ff9900', '#ffffff', '#000000'])
   assert.equal(amazon.path, undefined)
   assert.equal(allBrands.amazon, amazon)
   assert.equal(brands.amazon, amazon)
@@ -20,7 +20,7 @@ test('brand deep import matches the catalog entry', () => {
 
 test('palette deep import matches the catalog entry', () => {
   assert.equal(palette24.id, '24')
-  assert.deepEqual(palette24.colors, ['fe938c', 'e6b89c', 'ead2ac', '9cafb7', '4281a4'])
+  assert.deepEqual(palette24.colors, ['#fe938c', '#e6b89c', '#ead2ac', '#9cafb7', '#4281a4'])
   assert.equal(allColors['24'], palette24)
   assert.equal(colors['24'], palette24)
 })
