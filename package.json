@@ -1,10 +1,69 @@
 {
   "name": "rangebrand",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Brand color codes (especially brands seen in Iran) as JSON-backed JS modules",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./brands": {
+      "types": "./dist/brands.d.ts",
+      "import": "./dist/brands.js",
+      "require": "./dist/brands.cjs"
+    },
+    "./brands/*": {
+      "types": "./dist/brands/*.d.ts",
+      "import": "./dist/brands/*.js",
+      "require": "./dist/brands/*.cjs"
+    },
+    "./colors": {
+      "types": "./dist/colors.d.ts",
+      "import": "./dist/colors.js",
+      "require": "./dist/colors.cjs"
+    },
+    "./colors/*": {
+      "types": "./dist/colors/*.d.ts",
+      "import": "./dist/colors/*.js",
+      "require": "./dist/colors/*.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && node --test"
   },
-  "dependencies": {
+  "engines": {
+    "node": ">=18"
   },
-  "devDependencies": {
-  }
+  "keywords": [
+    "brand-colors",
+    "brands",
+    "colors",
+    "hex",
+    "iran",
+    "palette"
+  ],
+  "homepage": "https://rangebrand.ir",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RangeBrand/RangeBrand.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RangeBrand/RangeBrand/issues"
+  },
+  "license": "MIT"
 }
